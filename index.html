@@ -28,8 +28,7 @@
     
     <header>
         <div class="container">
-            <div class="logo">EML</div>
-            <nav>
+            <nav style="display: cen;">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#education">Education</a></li>
@@ -38,9 +37,6 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <div class="theme-toggle">
-                <i class="fas fa-moon"></i>
-            </div>
         </div>
     </header>
 
@@ -50,7 +46,7 @@
             <div class="about-content">
                 <div class="about-text" data-aos="fade-right" data-aos-delay="200">
                     <p>Hello! I'm a Java Software Developer with expertise in developing enterprise applications and geospatial systems. I enjoy solving complex problems and creating efficient, maintainable software solutions.</p>
-                    <p>While Java is my primary language, I have experience with various technologies including Spring, Eclipse RCP, JavaScript, and Python. I'm particularly interested in the intersection of software engineering and geospatial data analysis.</p>
+                    <p>While Java is my primary language, I have experience with various technologies including Spring, Eclipse RCP, JavaScript, and Python.</p>
                     
                     <!-- Skills Section -->
                     <div class="skills">
@@ -62,27 +58,27 @@
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Spring Framework</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
                             <span class="skill-name">Java Swing / Eclipse RCP</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 85%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">JavaScript & Web Tech</span>
+                            <span class="skill-name">Python & Geospatial Data</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
+                                <div class="skill-progress" style="width: 75%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Python & Geospatial Data</span>
+                            <span class="skill-name">Spring Framework</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="width: 78%"></div>
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript & Web Tech</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 50%"></div>
                             </div>
                         </div>
                     </div>
@@ -96,14 +92,16 @@
                 <div class="about-image" data-aos="fade-left" data-aos-delay="200">
                     <!-- Replace with your image -->
                     <div class="profile-card">
-                        <div class="profile-image">Your Photo</div>
+                        <div class="profile-image">
+                            <img src="assets/images/profile.jpg" alt="Eduardo Meireles Lopes" style="width: 100%; height: 100%">
+                        </div>
                         <div class="profile-stats">
                             <div class="stat">
-                                <span class="counter">6</span>
+                                <span class="counter">8</span>
                                 <span class="label">Years Experience</span>
                             </div>
                             <div class="stat">
-                                <span class="counter">10</span>
+                                <span class="counter">15</span>
                                 <span class="label">Years in Tech</span>
                             </div>
                             <div class="stat">
@@ -287,15 +285,8 @@
                 <p>Here are some selected projects that showcase my expertise in Java development and geospatial technologies.</p>
             </div>
             
-            <div class="portfolio-filter" data-aos="fade-up" data-aos-delay="200">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="geospatial">Geospatial</button>
-                <button class="filter-btn" data-filter="java">Java</button>
-                <button class="filter-btn" data-filter="research">Research</button>
-            </div>
-            
             <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="java" data-aos="fade-up" data-aos-delay="200">
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
                             <img src="assets/images/xentis.jpg" alt="Xentis Investment Management System">
@@ -321,13 +312,13 @@
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="geospatial research" data-aos="fade-up" data-aos-delay="300">
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
-                            <img src="assets/images/thesis.jpg" alt="Spatial Error Analysis Tool">
+                            <img src="assets/images/geoportal_dee.png" alt="Spatial Error Analysis Tool">
                             <div class="portfolio-overlay">
                                 <div class="portfolio-preview">
-                                    <a href="#" class="github-link" target="_blank"><i class="fab fa-github"></i></a>
+                                    <a href="https://github.com/eduardofilipelml/deeapp" class="github-link" target="_blank"><i class="fab fa-github"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -346,7 +337,7 @@
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="java geospatial" data-aos="fade-up" data-aos-delay="400">
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="400">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
                             <img src="assets/images/esov.jpg" alt="ESOV NG Visualization Tool">
@@ -371,10 +362,10 @@
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="java geospatial" data-aos="fade-up" data-aos-delay="450">
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="450">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
-                            <img src="assets/images/dfdl4s.jpg" alt="DFDL4S Library">
+                            <img src="assets/images/dfdl4s.png " alt="DFDL4S Data Format Description Language for Space">
                             <div class="portfolio-overlay">
                                 <div class="portfolio-preview">
                                     <a href="https://eop-cfi.esa.int/index.php/applications/dfdl4s" target="_blank"><i class="fas fa-external-link-alt"></i></a>
@@ -395,7 +386,7 @@
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="java geospatial" data-aos="fade-up" data-aos-delay="500">
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="500">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
                             <img src="assets/images/s2g.jpg" alt="S2G Data Viewer">
@@ -419,7 +410,7 @@
                     </div>
                 </div>
                 
-                <div class="portfolio-item" data-category="research" data-aos="fade-up" data-aos-delay="600">
+                <div class="portfolio-item" data-aos="fade-up" data-aos-delay="600">
                     <div class="portfolio-card">
                         <div class="portfolio-image">
                             <img src="assets/images/hidralerta.jpg" alt="HIDRALERTA Flood Alert System">
@@ -447,7 +438,7 @@
             
             <div class="portfolio-cta" data-aos="fade-up">
                 <p>Interested in seeing more of my work?</p>
-                <a href="https://github.com/filipedu11" class="btn btn-primary" target="_blank">View GitHub Projects</a>
+                <a href="https://github.com/eduardofilipelml" class="btn btn-primary" target="_blank">View GitHub Projects</a>
             </div>
         </div>
     </section>
@@ -502,8 +493,8 @@
                         <div class="contact-social">
                             <h4>Connect with me</h4>
                             <div class="social-icons">
-                                <a href="https://www.linkedin.com/in/eduardo-lopes/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                <a href="https://github.com/filipedu11" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/eduardomeireleslopes/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://github.com/eduardofilipelml" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
@@ -548,7 +539,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <div class="logo">EML</div>
+                    <div class="logo">EFLML</div>
                     <p>Developing robust Java solutions with expertise in enterprise and geospatial technologies.</p>
                 </div>
                 
@@ -566,8 +557,8 @@
                 <div class="footer-social">
                     <h4>Connect</h4>
                     <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/eduardo-lopes/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/filipedu11" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/eduardomeireleslopes/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/eduardofilipelml" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </div>

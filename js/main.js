@@ -30,37 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Portfolio filtering
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    
-    if (filterButtons.length > 0) {
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                
-                // Add active class to clicked button
-                this.classList.add('active');
-                
-                const filterValue = this.getAttribute('data-filter');
-                
-                // Show/hide portfolio items based on filter
-                portfolioItems.forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.style.display = 'block';
-                        // Re-trigger AOS animation
-                        setTimeout(() => {
-                            AOS.refresh();
-                        }, 100);
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-    }
-    
     // Contact form submission
     const contactForm = document.getElementById('contact-form');
     
@@ -143,39 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 behavior: 'smooth'
             });
         });
-    }
-    
-    // Theme toggle functionality
-    const themeToggle = document.querySelector('.theme-toggle');
-    
-    if (themeToggle) {
-        themeToggle.addEventListener('click', function() {
-            document.body.classList.toggle('dark-theme');
-            
-            // Toggle icon
-            const icon = this.querySelector('i');
-            if (icon.classList.contains('fa-moon')) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
-            }
-            
-            // Save theme preference to localStorage
-            const isDarkTheme = document.body.classList.contains('dark-theme');
-            localStorage.setItem('dark-theme', isDarkTheme);
-        });
-        
-        // Check for saved theme preference
-        const savedTheme = localStorage.getItem('dark-theme');
-        
-        if (savedTheme === 'true') {
-            document.body.classList.add('dark-theme');
-            const icon = themeToggle.querySelector('i');
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-        }
     }
     
     // Animate counters
