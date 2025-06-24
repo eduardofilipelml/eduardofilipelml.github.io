@@ -1,60 +1,103 @@
-# Personal Portfolio Website
+# Portfolio Site - Modular Structure
 
-A responsive, interactive portfolio website to showcase my professional experience, education, and projects as a Java Software Developer.
+This portfolio has been restructured into a modular system for better maintainability and organization.
 
-## Overview
+## Project Structure
 
-This portfolio is designed to provide a comprehensive overview of my skills, experience, and projects in an engaging and visually appealing format. The single-page application uses modern web technologies and interactive elements to create a seamless user experience.
+```
+├── index.html (main file)
+├── components/
+│   ├── navigation.html
+│   ├── hero.html        # Hero + About merged
+│   ├── experience.html  # Professional Journey (Experience + Education merged)
+│   ├── portfolio.html
+│   ├── contact.html
+│   └── footer.html
+├── css/
+│   ├── base.css (common styles and variables)
+│   └── components/
+│       ├── navigation.css
+│       ├── hero.css
+│       ├── experience.css
+│       ├── portfolio.css
+│       ├── contact.css
+│       └── footer.css
+└── js/
+    ├── component-loader.js (handles dynamic loading)
+    └── main.js (main JavaScript functionality)
+```
 
-## Features
+## How It Works
 
-- **Responsive Design**: Fully responsive layout that works on mobile, tablet, and desktop devices
-- **Interactive Elements**: 
-  - Animated skill bars
-  - Interactive timeline for education history
-  - Filterable portfolio projects
-  - Smooth scrolling navigation
-  - Dark/light theme toggle
-- **Modern Aesthetics**: Clean, professional design with a midnight & electric blue color scheme
-- **Performance Optimized**: Fast loading times and smooth animations
+### Component Loading
+The `component-loader.js` script dynamically loads HTML components into designated containers when the page loads. Each section is now:
 
-## Sections
+1. **Separated into its own HTML file** in the `components/` directory
+2. **Has its own CSS file** in the `css/components/` directory
+3. **Loaded dynamically** into the main page
 
-- **About**: Professional summary and technical skills
-- **Education**: Academic background and qualifications
-- **Experience**: Professional work history and responsibilities
-- **Portfolio**: Showcase of key projects with descriptions and technologies
-- **Contact**: Contact information and social links
+### CSS Architecture
+- `base.css` contains common styles, CSS variables, and utility classes
+- Each component has its own CSS file with component-specific styles
+- CSS variables ensure consistent theming across all components
 
-## Technologies Used
+### Benefits
 
-- HTML5
-- CSS3 (with custom variables for theming)
-- Vanilla JavaScript
-- Font Awesome for icons
-- AOS (Animate On Scroll) library
-- No frameworks or build tools required
+1. **Maintainability**: Each section can be edited independently
+2. **Reusability**: Components can be easily reused or rearranged
+3. **Organization**: Clear separation of concerns
+4. **Performance**: Modular CSS allows for better caching
+5. **Development**: Easier to work on specific sections without affecting others
 
-## Setup
+## Usage
 
-This is a static website that requires no build process or dependencies to run:
+### Development Mode
+Use `index-modular.html` for the new modular structure:
+```html
+<!-- Load the modular version -->
+http://localhost/index-modular.html
+```
 
-1. Clone the repository
-2. Open `index.html` in your browser
+### Editing Components
+1. **HTML Content**: Edit files in `components/` directory
+2. **Styling**: Edit corresponding CSS files in `css/components/` directory
+3. **Common Styles**: Edit `css/base.css` for site-wide changes
 
-## Customization
+### Adding New Components
+1. Create HTML file in `components/` directory
+2. Create CSS file in `css/components/` directory
+3. Add component to `component-loader.js`
+4. Add CSS link to main HTML file
+5. Add container div to main HTML file
 
-The website is designed to be easily customizable:
+## CSS Variables (Theming)
 
-- Change colors by modifying CSS variables in `css/styles.css`
-- Update content by editing the HTML file
-- Add or remove sections as needed
-- Replace images in the `assets/images` directory
+Located in `css/base.css`:
+```css
+:root {
+    --primary-color: #007bff;
+    --accent-color: #6f42c1;
+    --text-color: #333;
+    --text-light: #666;
+    --background-color: #ffffff;
+    --section-padding: 5rem 0;
+}
+```
 
-## License
+## Component Structure
 
-Feel free to use this template for your own personal portfolio.
+Each component follows this pattern:
+- **HTML**: Contains the markup for the section
+- **CSS**: Contains styles specific to that component
+- **Responsive**: Mobile-first responsive design
+- **Accessible**: Semantic HTML and ARIA labels where appropriate
 
----
 
-© 2025 Eduardo Meireles Lopes. All Rights Reserved.
+## Browser Compatibility
+
+The modular loading system uses:
+- ES6 async/await
+- Fetch API
+- Modern CSS features
+
+Supports all modern browsers. For IE11 support, polyfills would be needed.
