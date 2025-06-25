@@ -1,232 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eduardo Meireles Lopes – Java Developer & AI Explorer</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Meireles Lopes</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Minimalist Navigation Dots -->
-  <nav class="nav-dots">
-    <div class="nav-dot active" data-section="hero"></div>
-    <div class="nav-dot" data-section="about"></div>
-    <div class="nav-dot" data-section="work"></div>
-    <div class="nav-dot" data-section="projects"></div>
-    <div class="nav-dot" data-section="connect"></div>
-  </nav>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
 
-  <!-- Hero Section: Zen Focus -->
-  <section class="section hero-zen" id="hero">
-    <div class="zen-container">
-      <div class="profile-orbit">
-        <img src="assets/images/profile.jpg" alt="Eduardo Meireles Lopes" class="profile-img">
-        <div class="orbit-ring"></div>
-      </div>
-      <div class="zen-content">
-        <h1 class="zen-name">Eduardo Meireles Lopes</h1>
-        <p class="zen-tagline">Java Developer • AI Explorer</p>
-        <div class="zen-location">Lisbon, Portugal</div>
-        <div class="zen-philosophy">
-          <em>"Embracing tranquility in code, while constantly experimenting with new possibilities"</em>
-        </div>
-      </div>
-      <div class="scroll-hint">
-        <div class="scroll-line"></div>
-        <span>scroll</span>
-      </div>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile">
+                    <img src="assets/images/profile.jpg" alt="Eduardo Meireles Lopes" class="profile-image">
+                </div>
+                
+                <div class="intro">
+                    <h1 class="name">Eduardo Meireles Lopes</h1>
+                    <p class="role">Code Architect & Digital Dreamer</p>
+                    <p class="location">📍 Mafra / Lisbon, Portugal</p>
+                    <p class="hero-tagline">Where logic meets imagination, and every line of code tells a story</p>
+                </div>
 
-  <!-- About Section: Personality & Skills -->
-  <section class="section about-flow" id="about">
-    <div class="flow-container">
-      <div class="flow-left">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-text">
-          <p>Hello! I'm a Java Software Developer passionate about solving complex problems and building efficient, maintainable software solutions.</p>
-          <p>I believe in finding balance between tranquility and innovation.
-          When I need to slow down, I do. But I'm constantly experimenting with
-          new technologies—especially AI modules for creative static websites
-          (like this one).</p>
-        </div>
-        
-        <div class="about-highlights">
-          <div class="highlight-item">
-            <span class="highlight-number">8+</span>
-            <span class="highlight-label">Years Experience</span>
-          </div>
-          <div class="highlight-item">
-            <span class="highlight-number">2</span>
-            <span class="highlight-label">Major Companies</span>
-          </div>
-          <div class="highlight-item">
-            <span class="highlight-number">15+</span>
-            <span class="highlight-label">Years in Tech</span>
-          </div>
-        </div>
-      </div>
-      <div class="flow-right">
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Core</h3>
-            <div class="skill-tags">
-              <span class="skill-tag primary">Java</span>
-              <span class="skill-tag">Spring Framework</span>
-              <span class="skill-tag">Eclipse RCP</span>
-              <span class="skill-tag">Java Swing</span>
+
             </div>
-          </div>
-          <div class="skill-category">
-            <h3>Exploring</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">AI Modules</span>
-              <span class="skill-tag">Geospatial Data</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="about-content">
+                <p class="bio">
+                    I'm Eduardo—a passionate developer who bridges the gap between complex technical challenges and elegant solutions. 
+                    With deep expertise spanning from satellite data systems for ESA space missions to sophisticated financial platforms, 
+                    I craft code that not only works beautifully but solves real-world problems. My journey through computer science, 
+                    from academic foundations to cutting-edge AI exploration, is driven by an unwavering curiosity and belief that 
+                    every line of code can make a meaningful impact.
+                </p>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Years Java</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Years Tech</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Curiosity Level</span>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="skill-category">
-            <h3>Domains</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Enterprise Software</span>
-              <span class="skill-tag">Financial Systems</span>
-              <span class="skill-tag">Earth Observation</span>
-              <span class="skill-tag">Data Visualization</span>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="journey">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker education"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2007-2010</span>
+                        <h3>Socio-Economic Sciences</h3>
+                        <p>Forte da Casa High School</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker education"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2010-2015</span>
+                        <h3>Bachelor in Computer Science</h3>
+                        <p>FCT-UNL</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker education"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2015-2020</span>
+                        <h3>Master in Computer Science</h3>
+                        <p>FCT-UNL</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker work"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2017-2021</span>
+                        <h3>Software Engineer</h3>
+                        <p>Deimos Engenharia • ESA Projects</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker work current"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2021-Present</span>
+                        <h3>Java Developer</h3>
+                        <p>Profidata • Xentis System</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Work Experience: Timeline -->
-  <section class="section work-timeline" id="work">
-    <div class="timeline-container">
-      <h2 class="section-title">Professional Journey</h2>
-      <div class="timeline">
-        <div class="timeline-item current">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <h3>Java Developer</h3>
-            <div class="company">Profidata</div>
-            <div class="period">2021 – Present</div>
-            <p>Development and maintenance of Xentis software using Java, Spring, Swing, and Eclipse RCP for investment management solutions.</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <h3>Software Engineer</h3>
-            <div class="company">Deimos Engenharia</div>
-            <div class="period">2017 – 2021</div>
-            <p>ESA Earth Observation Applications including S2G, ESOV, DFDL4S, and Geoportals using Java, Eclipse RCP, and C++.</p>
-          </div>        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Projects Section -->
+    <section id="projects" class="work">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Xentis Investment Management</h3>
+                        <span class="project-status current">Current</span>
+                    </div>
+                    <p>Enterprise financial software for complex investment scenarios.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Spring</span>
+                        <span class="tech-tag">Swing</span>
+                    </div>
+                </div>
 
-  <!-- Projects: Minimal Cards -->
-  <section class="section projects-minimal" id="projects">
-    <div class="projects-container">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card" data-project="xentis">
-          <div class="project-header">
-            <h3>Xentis</h3>
-            <span class="project-type">Enterprise</span>
-          </div>
-          <p>Investment management system with robust architecture and intuitive interfaces.</p>
-          <div class="project-tech">
-            <span>Java</span>
-            <span>Spring</span>
-            <span>Eclipse RCP</span>
-          </div>
-          <a href="https://www.profidata.com/products/xentis/" target="_blank" class="project-link">
-            View Project →
-          </a>
-        </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>ESOV NG Visualization</h3>
+                        <span class="project-status">ESA</span>
+                    </div>
+                    <p>Satellite data visualization tools for space missions.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Eclipse RCP</span>
+                    </div>
+                </div>
 
-        <div class="project-card" data-project="esov">
-          <div class="project-header">
-            <h3>ESOV NG</h3>
-            <span class="project-type">Visualization</span>
-          </div>
-          <p>ESA satellite swaths and orbits visualization tool for space mission planning.</p>
-          <div class="project-tech">
-            <span>Java</span>
-            <span>Swing</span>
-            <span>XML</span>
-          </div>
-          <a href="https://earth.esa.int/eogateway/tools/esov-software-tools-esov-ng-" target="_blank" class="project-link">
-            View Project →
-          </a>
-        </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>DFDL4S Data Format</h3>
+                        <span class="project-status">ESA</span>
+                    </div>
+                    <p>Binary data binding library for space data management.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">XML</span>
+                    </div>
+                </div>
 
-        <div class="project-card" data-project="dfdl4s">
-          <div class="project-header">
-            <h3>DFDL4S</h3>
-            <span class="project-type">Data Processing</span>
-          </div>
-          <p>Binary data binding library for space data format description and processing.</p>
-          <div class="project-tech">
-            <span>Java</span>
-            <span>C++</span>
-            <span>XML</span>
-          </div>
-          <a href="https://eop-cfi.esa.int/index.php/applications/dfdl4s" target="_blank" class="project-link">
-            View Project →
-          </a>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>S2G Earth Observation</h3>
+                        <span class="project-status">ESA</span>
+                    </div>
+                    <p>Sentinel-2 satellite data processing and visualization platform.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">GIS</span>
+                        <span class="tech-tag">Satellite Data</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="project-card" data-project="s2g">
-          <div class="project-header">
-            <h3>S2G Data Viewer</h3>
-            <span class="project-type">Analysis</span>
-          </div>
-          <p>Inspection tool for CCSDS-compliant satellite data with advanced viewing capabilities.</p>
-          <div class="project-tech">
-            <span>Java</span>
-            <span>Eclipse RCP</span>
-            <span>JNI</span>
-          </div>
-          <a href="https://earth.esa.int/eogateway/tools/s2g-data-viewer" target="_blank" class="project-link">
-            View Project →
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            
+            <div class="contact-content">
+                <div class="contact-hero">
+                    <p class="contact-intro">
+                        Ready to explore new dimensions together? Whether you're curious about technology, 
+                        seeking collaboration, or simply want to share ideas—let's connect and create something extraordinary.
+                    </p>
+                </div>
+                
+                <div class="contact-methods">
+                    <a href="mailto:eduardofilipelml@gmail.com" class="contact-card primary">
+                        <div class="contact-icon-wrapper">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Direct Connect</h4>
+                            <span>eduardofilipelml@gmail.com</span>
+                        </div>
+                    </a>
 
-  <!-- Connect: Simple & Direct -->
-  <section class="section connect-simple" id="connect">
-    <div class="connect-container">
-      <div class="connect-content">
-        <h2 class="connect-title">Let's Connect</h2>
-        <p class="connect-text">
-          Whether you want to collaborate on a project, discuss new technologies, or just have a chat about AI and development, I'd love to hear from you.
-        </p>
-        <div class="connect-methods">
-          <a href="mailto:eduardofilipelml@gmail.com" class="connect-link primary">
-            <span>Send Email</span>
-          </a>
-          <a href="https://www.linkedin.com/in/eduardomeireleslopes/" target="_blank" class="connect-link">
-            <span>LinkedIn</span>
-          </a>
-          <a href="https://github.com/eduardofilipelml" target="_blank" class="connect-link">
-            <span>GitHub</span>
-          </a>
+                    <a href="https://www.linkedin.com/in/eduardomeireleslopes/" target="_blank" class="contact-card">
+                        <div class="contact-icon-wrapper">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Professional Network</h4>
+                            <span>LinkedIn Profile</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://github.com/eduardofilipelml" target="_blank" class="contact-card">
+                        <div class="contact-icon-wrapper">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Code Repository</h4>
+                            <span>GitHub Profile</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="connect-note">
-          <em>Currently exploring AI-assisted web development • Always open to new opportunities</em>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <script src="js/main.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-quote">
+                    <p>"In the symphony of code and creativity, every bug is just a note waiting to find its harmony."</p>
+                    <cite>— Eduardo Meireles Lopes</cite>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="mailto:eduardofilipelml@gmail.com" class="footer-link">
+                        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/eduardomeireleslopes/" target="_blank" class="footer-link">
+                        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/eduardofilipelml" target="_blank" class="footer-link">
+                        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Eduardo Meireles Lopes • Rooted in nature, growing through code 🌱</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

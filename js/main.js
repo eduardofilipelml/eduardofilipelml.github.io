@@ -1,138 +1,112 @@
-// Zen Portfolio - Minimal & Tranquil JavaScript
+// Minimalistic Portfolio - Interactive Behaviors
+
 document.addEventListener('DOMContentLoaded', function() {
-  
-  // Navigation Dots Functionality
-  const navDots = document.querySelectorAll('.nav-dot');
-  const sections = document.querySelectorAll('.section');
-  
-  // Update active navigation dot
-  function updateActiveNav(sectionId) {
-    navDots.forEach(dot => {
-      dot.classList.toggle('active', dot.dataset.section === sectionId);
-    });
-  }
-  
-  // Smooth scroll to section
-  function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
+    // Navigation highlighting
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
+
+    // Update active nav link on scroll
+    function updateActiveNavLink() {
+        const scrollPosition = window.scrollY + 100;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
     }
-  }
-  
-  // Navigation dot click handlers
-  navDots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      const sectionId = dot.dataset.section;
-      scrollToSection(sectionId);
-      updateActiveNav(sectionId);
+
+    // Smooth scroll for navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                const navHeight = document.querySelector('.nav').offsetHeight;
+                const targetPosition = targetSection.offsetTop - navHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
-  });
-  
-  // Intersection Observer for section visibility
-  const observerOptions = {
-    root: null,
-    rootMargin: '-20% 0px -70% 0px',
-    threshold: 0
-  };
-  
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        updateActiveNav(entry.target.id);
-      }
+
+    // Scroll event listener
+    let scrollTimer = null;
+    window.addEventListener('scroll', function() {
+        if (scrollTimer !== null) {
+            clearTimeout(scrollTimer);
+        }
+        scrollTimer = setTimeout(updateActiveNavLink, 50);
     });
-  }, observerOptions);
-  
-  // Observe all sections
-  sections.forEach(section => {
-    sectionObserver.observe(section);
-  });
-  
-  // Gentle reveal animations for elements
-  const observeElements = document.querySelectorAll('.timeline-item, .project-card, .skill-category');
-  
-  const elementObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  });
-  
-  observeElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    elementObserver.observe(el);
-  });
-  
-  // Profile image orbit animation on scroll
-  const profileOrbit = document.querySelector('.profile-orbit');
-  let scrollY = 0;
-  
-  function updateOrbit() {
-    scrollY = window.scrollY;
-    if (profileOrbit) {
-      const rotation = scrollY * 0.1;
-      profileOrbit.style.transform = `rotate(${rotation}deg)`;
-    }
-  }
-  
-  // Throttled scroll handler
-  let ticking = false;
-  function onScroll() {
-    if (!ticking) {
-      requestAnimationFrame(updateOrbit);
-      ticking = true;
-      setTimeout(() => { ticking = false; }, 16);
-    }
-  }
-  
-  window.addEventListener('scroll', onScroll);
-  
-  // Project card hover effects
-  const projectCards = document.querySelectorAll('.project-card');
-  
-  projectCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      card.style.transform = 'translateY(-4px)';
-    });
+
+    // Initial call
+    updateActiveNavLink();
+
+    // Intersection Observer for timeline animations
+    const timelineItems = document.querySelectorAll('.timeline-item');
     
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'translateY(0)';
+    const timelineObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     });
-  });
-  
-  // Zen scroll hint animation
-  const scrollHint = document.querySelector('.scroll-hint');
-  if (scrollHint) {
-    // Hide scroll hint after user starts scrolling
-    let hasScrolled = false;
-    window.addEventListener('scroll', () => {
-      if (!hasScrolled && window.scrollY > 50) {
-        hasScrolled = true;
-        scrollHint.style.opacity = '0';
-        scrollHint.style.transform = 'translateY(10px)';
-      }
+
+    timelineItems.forEach(item => {
+        item.style.animationPlayState = 'paused';
+        timelineObserver.observe(item);
     });
-  }
-  
-  // Smooth parallax effect for hero background
-  const hero = document.querySelector('.hero-zen');
-  if (hero) {
-    window.addEventListener('scroll', () => {
-      const scrolled = window.scrollY;
-      const parallax = scrolled * 0.3;
-      hero.style.transform = `translateY(${parallax}px)`;
+
+    // Add subtle entrance animations for contact cards
+    const contactCards = document.querySelectorAll('.contact-card');
+    
+    const contactObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 100);
+            }
+        });
+    }, {
+        threshold: 0.1
     });
-  }
-  
+
+    contactCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        contactObserver.observe(card);
+    });
+
+    // Profile image interaction
+    const profileImage = document.querySelector('.profile-image');
+    if (profileImage) {
+        profileImage.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05) rotate(2deg)';
+        });
+        
+        profileImage.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) rotate(0deg)';
+        });
+    }
 });
