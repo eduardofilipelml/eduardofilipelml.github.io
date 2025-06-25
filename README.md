@@ -1,60 +1,70 @@
-# Personal Portfolio Website
+# Eduardo Meireles Lopes – Personal Portfolio Website
 
-A responsive, interactive portfolio website to showcase my professional experience, education, and projects as a Java Software Developer.
+Welcome to my personal portfolio! This website showcases my professional journey as a Java Software Developer, including my skills, education, experience, and selected projects in enterprise and geospatial technologies.
 
-## Overview
+I'm also a AI explorer in my free-time. Love to build static web pages that are awesome.
+---
 
-This portfolio is designed to provide a comprehensive overview of my skills, experience, and projects in an engaging and visually appealing format. The single-page application uses modern web technologies and interactive elements to create a seamless user experience.
+## 🌟 About Me
 
-## Features
+Hello! I'm **Eduardo Meireles Lopes**, a Java Software Developer based in Lisbon, Portugal. Passioned for solving complex problems and building efficient, maintainable software solutions.
 
-- **Responsive Design**: Fully responsive layout that works on mobile, tablet, and desktop devices
-- **Interactive Elements**: 
-  - Animated skill bars
-  - Interactive timeline for education history
-  - Filterable portfolio projects
-  - Smooth scrolling navigation
-  - Dark/light theme toggle
-- **Modern Aesthetics**: Clean, professional design with a midnight & electric blue color scheme
-- **Performance Optimized**: Fast loading times and smooth animations
+- **Primary Language:** Java
+- **Other Technologies:** Spring, Swing, Eclipse RCP, JavaScript, Python
+- **Years of Experience:** 8+ (15+ years in tech)
 
-## Sections
-
-- **About**: Professional summary and technical skills
-- **Education**: Academic background and qualifications
-- **Experience**: Professional work history and responsibilities
-- **Portfolio**: Showcase of key projects with descriptions and technologies
-- **Contact**: Contact information and social links
-
-## Technologies Used
-
-- HTML5
-- CSS3 (with custom variables for theming)
-- Vanilla JavaScript
-- Font Awesome for icons
-- AOS (Animate On Scroll) library
-- No frameworks or build tools required
-
-## Setup
-
-This is a static website that requires no build process or dependencies to run:
-
-1. Clone the repository
-2. Open `index.html` in your browser
-
-## Customization
-
-The website is designed to be easily customizable:
-
-- Change colors by modifying CSS variables in `css/styles.css`
-- Update content by editing the HTML file
-- Add or remove sections as needed
-- Replace images in the `assets/images` directory
-
-## License
-
-Feel free to use this template for your own personal portfolio.
+### Technical Skills
+- Java
+- Java Swing / Eclipse RCP
+- Python & Geospatial Data
+- Spring Framework
+- JavaScript & Web Tech
 
 ---
+
+## 🎓 Education
+- **Master in Computer Science** – FCT-UNL (2015–2020)
+  - Focus: Web development, data analysis, machine learning, visualization
+- **Bachelor in Computer Science** – FCT-UNL (2010–2015)
+  - Focus: Software development, algorithms, OOP
+- **Diploma in Socio-Economic Sciences** – Forte da Casa High School (2007–2010)
+
+---
+
+## 💼 Professional Experience
+- **Java Developer** @ Profidata (2021–Present)
+  - Development and maintenance of Xentis software (Java, Spring, Swing, Eclipse RCP)
+- **Software Engineer** @ Deimos Engenharia (2017–2021)
+  - ESA Earth Observation Applications: S2G, ESOV, DFDL4S, Geoportals (Java, Eclipse RCP, C++)
+
+---
+
+## 🚀 Featured Projects
+
+- **[Xentis Investment Management System](https://www.profidata.com/products/xentis/)**  
+  Enterprise financial software for investment management (Java, Spring, Swing, Eclipse RCP, QF-Test)
+
+- **[ESOV NG Visualization Tool](https://earth.esa.int/eogateway/tools/esov-software-tools-esov-ng-)**  
+  Visualization of ESA satellite swaths and orbits (Java, Swing, Eclipse RCP, XML)
+
+- **[DFDL4S Data Format Description Language for Space](https://eop-cfi.esa.int/index.php/applications/dfdl4s)**  
+  Binary data binding library for space data (Java, C++, XML)
+
+- **[S2G Data Viewer](https://earth.esa.int/eogateway/tools/s2g-data-viewer)**  
+  Inspection of CCSDS-compliant satellite data (Java, Eclipse RCP, JNI)
+
+---
+
+## 📬 Contact
+- **Email:** [eduardofilipelml@gmail.com](mailto:eduardofilipelml@gmail.com)
+- **LinkedIn:** [linkedin.com/in/eduardomeireleslopes](https://www.linkedin.com/in/eduardomeireleslopes/)
+- **GitHub:** [github.com/eduardofilipelml](https://github.com/eduardofilipelml)
+- **Location:** Mafra / Lisbon, Portugal
+
+---
+
+## 📝 License
+
+Feel free to use this template for your own personal portfolio.
 
 © 2025 Eduardo Meireles Lopes. All Rights Reserved.
