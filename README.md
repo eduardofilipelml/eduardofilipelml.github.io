@@ -1,103 +1,70 @@
-# Portfolio Site - Modular Structure
+# Eduardo Meireles Lopes – Personal Portfolio Website
 
-This portfolio has been restructured into a modular system for better maintainability and organization.
+Welcome to my personal portfolio! This website showcases my professional journey as a Java Software Developer, including my skills, education, experience, and selected projects in enterprise and geospatial technologies.
 
-## Project Structure
+I'm also a AI explorer in my free-time. Love to build static web pages that are awesome.
+---
 
-```
-├── index.html (main file)
-├── components/
-│   ├── navigation.html
-│   ├── hero.html        # Hero + About merged
-│   ├── experience.html  # Professional Journey (Experience + Education merged)
-│   ├── portfolio.html
-│   ├── contact.html
-│   └── footer.html
-├── css/
-│   ├── base.css (common styles and variables)
-│   └── components/
-│       ├── navigation.css
-│       ├── hero.css
-│       ├── experience.css
-│       ├── portfolio.css
-│       ├── contact.css
-│       └── footer.css
-└── js/
-    ├── component-loader.js (handles dynamic loading)
-    └── main.js (main JavaScript functionality)
-```
+## 🌟 About Me
 
-## How It Works
+Hello! I'm **Eduardo Meireles Lopes**, a Java Software Developer based in Lisbon, Portugal. Passioned for solving complex problems and building efficient, maintainable software solutions.
 
-### Component Loading
-The `component-loader.js` script dynamically loads HTML components into designated containers when the page loads. Each section is now:
+- **Primary Language:** Java
+- **Other Technologies:** Spring, Swing, Eclipse RCP, JavaScript, Python
+- **Years of Experience:** 8+ (15+ years in tech)
 
-1. **Separated into its own HTML file** in the `components/` directory
-2. **Has its own CSS file** in the `css/components/` directory
-3. **Loaded dynamically** into the main page
+### Technical Skills
+- Java
+- Java Swing / Eclipse RCP
+- Python & Geospatial Data
+- Spring Framework
+- JavaScript & Web Tech
 
-### CSS Architecture
-- `base.css` contains common styles, CSS variables, and utility classes
-- Each component has its own CSS file with component-specific styles
-- CSS variables ensure consistent theming across all components
+---
 
-### Benefits
+## 🎓 Education
+- **Master in Computer Science** – FCT-UNL (2015–2020)
+  - Focus: Web development, data analysis, machine learning, visualization
+- **Bachelor in Computer Science** – FCT-UNL (2010–2015)
+  - Focus: Software development, algorithms, OOP
+- **Diploma in Socio-Economic Sciences** – Forte da Casa High School (2007–2010)
 
-1. **Maintainability**: Each section can be edited independently
-2. **Reusability**: Components can be easily reused or rearranged
-3. **Organization**: Clear separation of concerns
-4. **Performance**: Modular CSS allows for better caching
-5. **Development**: Easier to work on specific sections without affecting others
+---
 
-## Usage
+## 💼 Professional Experience
+- **Java Developer** @ Profidata (2021–Present)
+  - Development and maintenance of Xentis software (Java, Spring, Swing, Eclipse RCP)
+- **Software Engineer** @ Deimos Engenharia (2017–2021)
+  - ESA Earth Observation Applications: S2G, ESOV, DFDL4S, Geoportals (Java, Eclipse RCP, C++)
 
-### Development Mode
-Use `index-modular.html` for the new modular structure:
-```html
-<!-- Load the modular version -->
-http://localhost/index-modular.html
-```
+---
 
-### Editing Components
-1. **HTML Content**: Edit files in `components/` directory
-2. **Styling**: Edit corresponding CSS files in `css/components/` directory
-3. **Common Styles**: Edit `css/base.css` for site-wide changes
+## 🚀 Featured Projects
 
-### Adding New Components
-1. Create HTML file in `components/` directory
-2. Create CSS file in `css/components/` directory
-3. Add component to `component-loader.js`
-4. Add CSS link to main HTML file
-5. Add container div to main HTML file
+- **[Xentis Investment Management System](https://www.profidata.com/products/xentis/)**  
+  Enterprise financial software for investment management (Java, Spring, Swing, Eclipse RCP, QF-Test)
 
-## CSS Variables (Theming)
+- **[ESOV NG Visualization Tool](https://earth.esa.int/eogateway/tools/esov-software-tools-esov-ng-)**  
+  Visualization of ESA satellite swaths and orbits (Java, Swing, Eclipse RCP, XML)
 
-Located in `css/base.css`:
-```css
-:root {
-    --primary-color: #007bff;
-    --accent-color: #6f42c1;
-    --text-color: #333;
-    --text-light: #666;
-    --background-color: #ffffff;
-    --section-padding: 5rem 0;
-}
-```
+- **[DFDL4S Data Format Description Language for Space](https://eop-cfi.esa.int/index.php/applications/dfdl4s)**  
+  Binary data binding library for space data (Java, C++, XML)
 
-## Component Structure
+- **[S2G Data Viewer](https://earth.esa.int/eogateway/tools/s2g-data-viewer)**  
+  Inspection of CCSDS-compliant satellite data (Java, Eclipse RCP, JNI)
 
-Each component follows this pattern:
-- **HTML**: Contains the markup for the section
-- **CSS**: Contains styles specific to that component
-- **Responsive**: Mobile-first responsive design
-- **Accessible**: Semantic HTML and ARIA labels where appropriate
+---
 
+## 📬 Contact
+- **Email:** [eduardofilipelml@gmail.com](mailto:eduardofilipelml@gmail.com)
+- **LinkedIn:** [linkedin.com/in/eduardomeireleslopes](https://www.linkedin.com/in/eduardomeireleslopes/)
+- **GitHub:** [github.com/eduardofilipelml](https://github.com/eduardofilipelml)
+- **Location:** Mafra / Lisbon, Portugal
 
-## Browser Compatibility
+---
 
-The modular loading system uses:
-- ES6 async/await
-- Fetch API
-- Modern CSS features
+## 📝 License
 
-Supports all modern browsers. For IE11 support, polyfills would be needed.
+Feel free to use this template for your own personal portfolio.
+
+© 2025 Eduardo Meireles Lopes. All Rights Reserved.
