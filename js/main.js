@@ -128,6 +128,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const key = element.getAttribute('data-translate');
             if (translations[lang] && translations[lang][key]) {
                 element.textContent = translations[lang][key];
+            } else {
+                console.warn(`Missing translation for key: "${key}" in language: "${lang}"`);
+                element.textContent = '[Missing translation]';
             }
         });
 
@@ -135,7 +138,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.classList.remove('active');
         });
-        document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+        const activeLangButton = document.querySelector(`[data-lang="${lang}"]`);
+        if (activeLangButton) {
+            activeLangButton.classList.add('active');
+        }
 
         // Save preference
         localStorage.setItem('language', lang);
