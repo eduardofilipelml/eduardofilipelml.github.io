@@ -1,11 +1,10 @@
-// Minimalistic Portfolio - Interactive Behaviors
+// Portfolio JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     // Navigation highlighting
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
 
-    // Update active nav link on scroll
     function updateActiveNavLink() {
         const scrollPosition = window.scrollY + 100;
 
@@ -45,68 +44,118 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Scroll event listener
-    let scrollTimer = null;
-    window.addEventListener('scroll', function() {
-        if (scrollTimer !== null) {
-            clearTimeout(scrollTimer);
-        }
-        scrollTimer = setTimeout(updateActiveNavLink, 50);
-    });
-
-    // Initial call
+    window.addEventListener('scroll', updateActiveNavLink);
     updateActiveNavLink();
 
-    // Intersection Observer for timeline animations
+    // Timeline animations
     const timelineItems = document.querySelectorAll('.timeline-item');
-    
     const timelineObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.animationPlayState = 'running';
             }
         });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
+    }, { threshold: 0.1 });
 
     timelineItems.forEach(item => {
         item.style.animationPlayState = 'paused';
         timelineObserver.observe(item);
     });
 
-    // Add subtle entrance animations for contact cards
-    const contactCards = document.querySelectorAll('.contact-card');
-    
-    const contactObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, index * 100);
+    // Translation functionality
+    const translations = {
+        en: {
+            'nav.home': 'Home',
+            'nav.about': 'About',
+            'nav.experience': 'Experience',
+            'nav.projects': 'Projects',
+            'nav.contact': 'Contact',
+            'hero.role': 'Java Software Developer & AI Explorer',
+            'hero.location': 'Mafra / Lisbon, Portugal',
+            'hero.tagline': 'Letting curiosity lead—where nature, code, and AI meet, logic and imagination grow, and every line becomes a story.',
+            'about.title': 'About Me',
+            'about.bio': "I'm Eduardo—a passionate developer who bridges the gap between complex technical challenges and elegant solutions. With deep expertise spanning from satellite data systems for ESA space missions to sophisticated financial platforms, I craft code that not only works beautifully but solves real-world problems. My journey through computer science, from academic foundations to cutting-edge AI exploration, is driven by an unwavering curiosity and belief that every line of code can make a meaningful impact.",
+            'about.stats.java': 'Years Java',
+            'about.stats.tech': 'Years Tech',
+            'about.stats.curiosity': 'Curiosity Level',
+            'experience.title': 'Experience',
+            'projects.title': 'Projects',
+            'contact.title': 'Contact',
+            'contact.intro': "Ready to explore new dimensions together? Whether you're curious about technology, seeking collaboration, or simply want to share ideas—let's connect and create something extraordinary.",
+            'contact.email.title': 'Direct Connect',
+            'contact.linkedin.title': 'Professional Network',
+            'contact.linkedin.subtitle': 'LinkedIn Profile',
+            'contact.github.title': 'Code Repository',
+            'contact.github.subtitle': 'GitHub Profile',
+            'footer.quote': '"In the symphony of code and creativity, every bug is just a note waiting to find its harmony."',
+            'footer.copyright': '© 2025 Eduardo Meireles Lopes • Rooted in nature, growing through code 🌱'
+        },
+        pt: {
+            'nav.home': 'Início',
+            'nav.about': 'Sobre',
+            'nav.experience': 'Experiência',
+            'nav.projects': 'Projectos',
+            'nav.contact': 'Contacto',
+            'hero.role': 'Programador Java & Explorador de IA',
+            'hero.location': 'Mafra / Lisboa, Portugal',
+            'hero.tagline': 'Deixando a curiosidade liderar—onde a natureza, código e IA se encontram, lógica e imaginação crescem, e cada linha torna-se uma história.',
+            'about.title': 'Sobre Mim',
+            'about.bio': 'Sou o Eduardo—um programador apaixonado que faz a ponte entre desafios técnicos complexos e soluções elegantes. Com experiência profunda que vai desde sistemas de dados de satélite para missões espaciais da ESA até plataformas financeiras sofisticadas, desenvolvo código que não só funciona lindamente como resolve problemas do mundo real. A minha jornada pela ciência da computação, desde fundações académicas até à exploração de IA de vanguarda, é movida por uma curiosidade inabalável e pela crença de que cada linha de código pode ter um impacto significativo.',
+            'about.stats.java': 'Anos Java',
+            'about.stats.tech': 'Anos Tech',
+            'about.stats.curiosity': 'Nível Curiosidade',
+            'experience.title': 'Experiência',
+            'projects.title': 'Projectos',
+            'contact.title': 'Contacto',
+            'contact.intro': 'Pronto para explorar novas dimensões em conjunto? Seja por curiosidade sobre tecnologia, procura de colaboração, ou simplesmente para partilhar ideias—vamos conectar-nos e criar algo extraordinário.',
+            'contact.email.title': 'Contacto Directo',
+            'contact.linkedin.title': 'Rede Profissional',
+            'contact.linkedin.subtitle': 'Perfil LinkedIn',
+            'contact.github.title': 'Repositório de Código',
+            'contact.github.subtitle': 'Perfil GitHub',
+            'footer.quote': '"Na sinfonia do código e criatividade, cada erro é apenas uma nota à espera de encontrar a sua harmonia."',
+            'footer.copyright': '© 2025 Eduardo Meireles Lopes • Enraizado na natureza, crescendo através do código 🌱'
+        }
+    };
+
+    let currentLang = 'en';
+
+    function translatePage(lang) {
+        currentLang = lang;
+        
+        // Update all translated elements
+        document.querySelectorAll('[data-translate]').forEach(element => {
+            const key = element.getAttribute('data-translate');
+            if (translations[lang] && translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            } else {
+                console.warn(`Missing translation for key: "${key}" in language: "${lang}"`);
+                element.textContent = '[Missing translation]';
             }
         });
-    }, {
-        threshold: 0.1
-    });
 
-    contactCards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        contactObserver.observe(card);
-    });
+        // Update button states
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        const activeLangButton = document.querySelector(`[data-lang="${lang}"]`);
+        if (activeLangButton) {
+            activeLangButton.classList.add('active');
+        }
 
-    // Profile image interaction
-    const profileImage = document.querySelector('.profile-image');
-    if (profileImage) {
-        profileImage.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.05) rotate(2deg)';
-        });
-        
-        profileImage.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1) rotate(0deg)';
-        });
+        // Save preference
+        localStorage.setItem('language', lang);
     }
+
+    // Set up language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            translatePage(lang);
+        });
+    });
+
+    // Initialize with saved language or default to English
+    const savedLang = localStorage.getItem('language') || 'en';
+    translatePage(savedLang);
 });
