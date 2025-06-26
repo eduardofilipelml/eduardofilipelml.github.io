@@ -138,7 +138,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.classList.remove('active');
         });
-        document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+        const activeLangButton = document.querySelector(`[data-lang="${lang}"]`);
+        if (activeLangButton) {
+            activeLangButton.classList.add('active');
+        }
 
         // Save preference
         localStorage.setItem('language', lang);
