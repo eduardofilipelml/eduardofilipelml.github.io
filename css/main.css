@@ -94,7 +94,30 @@ body {
     padding: 0 var(--space-6);
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-menu {
+    display: flex;
     gap: var(--space-8);
+}
+
+.nav-language {
+    position: absolute;
+    right: var(--space-6);
+    display: flex;
+    gap: var(--space-1);
+}
+
+.nav-menu {
+    display: flex;
+    gap: var(--space-8);
+}
+
+.nav-language {
+    display: flex;
+    gap: var(--space-1);
 }
 
 .nav-link {
@@ -333,90 +356,171 @@ section {
 .timeline-marker {
     position: absolute;
     top: var(--space-4);
-    width: 50px;
-    height: 50px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    border: 4px solid var(--bg-primary);
-    background: var(--primary-100);
+    border: 3px solid var(--bg-primary);
     z-index: 3;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 
-        0 0 0 2px var(--primary-200),
-        0 4px 12px rgba(90, 138, 90, 0.15);
     transition: all 0.3s ease;
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 
 .timeline-item:nth-child(odd) .timeline-marker {
-    right: -25px;
+    right: -16px;
 }
 
 .timeline-item:nth-child(even) .timeline-marker {
-    left: -25px;
+    left: -16px;
 }
 
-.timeline-marker::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--primary-500);
-}
-
-.timeline-item:hover .timeline-marker {
-    transform: scale(1.1);
+/* Education markers - Light green academic theme */
+.timeline-marker.education {
+    background: linear-gradient(135deg, var(--primary-50) 0%, var(--primary-100) 100%);
+    color: var(--primary-700);
     box-shadow: 
-        0 0 0 2px var(--primary-300),
-        0 6px 16px rgba(90, 138, 90, 0.25);
+        0 0 0 2px var(--primary-200),
+        0 4px 12px rgba(90, 138, 90, 0.12);
 }
 
 .timeline-marker.education::after {
-    background: var(--primary-600);
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timeline-marker.education::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* Work markers - Medium green professional theme */
+.timeline-marker.work {
+    background: linear-gradient(135deg, var(--primary-200) 0%, var(--primary-300) 100%);
+    color: var(--primary-800);
+    box-shadow: 
+        0 0 0 2px var(--primary-300),
+        0 4px 12px rgba(90, 138, 90, 0.15);
 }
 
 .timeline-marker.work::after {
-    background: var(--primary-700);
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 10px;
+    border: 2px solid currentColor;
+    border-radius: 2px 2px 0 0;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
+.timeline-marker.work::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background: currentColor;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1px;
+}
+
+/* Current work marker - Dark green special highlighting */
 .timeline-marker.current {
-    background: var(--primary-500);
+    background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-600) 100%);
+    color: white;
     box-shadow: 
         0 0 0 2px var(--primary-400),
         0 0 0 6px rgba(90, 138, 90, 0.2),
-        0 4px 12px rgba(90, 138, 90, 0.3);
+        0 4px 16px rgba(90, 138, 90, 0.25);
     animation: pulseTimeline 3s infinite;
 }
 
 .timeline-marker.current::after {
-    background: var(--bg-primary);
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 10px;
+    border: 2px solid currentColor;
+    border-radius: 2px 2px 0 0;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timeline-marker.current::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background: currentColor;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1px;
+    box-shadow: 0 0 8px currentColor;
+}
+
+.timeline-item:hover .timeline-marker {
+    transform: scale(1.15);
+}
+
+.timeline-item:hover .timeline-marker.education {
+    box-shadow: 
+        0 0 0 2px var(--primary-300),
+        0 6px 16px rgba(90, 138, 90, 0.18);
+}
+
+.timeline-item:hover .timeline-marker.work {
+    box-shadow: 
+        0 0 0 2px var(--primary-400),
+        0 6px 16px rgba(90, 138, 90, 0.25);
 }
 
 @keyframes pulseTimeline {
     0%, 100% { 
         box-shadow: 
-            0 0 0 2px var(--primary-400),
+            0 0 0 2px var(--primary-300),
             0 0 0 6px rgba(90, 138, 90, 0.2),
-            0 4px 12px rgba(90, 138, 90, 0.3);
+            0 4px 16px rgba(90, 138, 90, 0.25);
     }
     50% { 
         box-shadow: 
-            0 0 0 2px var(--primary-400),
-            0 0 0 10px rgba(90, 138, 90, 0.3),
-            0 8px 20px rgba(90, 138, 90, 0.4);
+            0 0 0 2px var(--primary-300),
+            0 0 0 12px rgba(90, 138, 90, 0.3),
+            0 8px 24px rgba(90, 138, 90, 0.35);
     }
 }
 
 .timeline-content {
     background: var(--bg-primary);
     padding: var(--space-6);
-    border-radius: 12px;
+    border-radius: 16px;
     border: 1px solid var(--border);
     box-shadow: 
         0 4px 8px rgba(0, 0, 0, 0.04),
         0 1px 3px rgba(90, 138, 90, 0.1);
     transition: all 0.3s ease;
     position: relative;
+    backdrop-filter: blur(10px);
 }
 
 .timeline-item:nth-child(odd) .timeline-content::after {
@@ -444,25 +548,46 @@ section {
 }
 
 .timeline-content:hover {
-    transform: translateY(-2px);
-    box-shadow: 
-        0 8px 16px rgba(0, 0, 0, 0.08),
-        0 2px 8px rgba(90, 138, 90, 0.15);
-    border-color: var(--primary-200);
+    transform: translateY(-4px);
+    border-color: var(--primary-300);
 }
 
 .timeline-year {
-    font-size: 0.75rem;
-    color: var(--primary-700);
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     margin-bottom: var(--space-3);
     display: inline-block;
-    background: linear-gradient(135deg, var(--primary-50), var(--primary-100));
-    padding: var(--space-2) var(--space-3);
-    border-radius: 16px;
-    border: 1px solid var(--primary-200);
+    padding: var(--space-1) var(--space-3);
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+}
+
+/* Progressive year styling - subtle and clean */
+.timeline-item:has(.timeline-marker.education) .timeline-year {
+    color: var(--primary-600);
+    border-color: var(--primary-200);
+}
+
+.timeline-item:has(.timeline-marker.work) .timeline-year {
+    color: var(--primary-700);
+    border-color: var(--primary-300);
+}
+
+.timeline-item:has(.timeline-marker.current) .timeline-year {
+    color: var(--primary-800);
+    border-color: var(--primary-400);
+    background: var(--primary-50);
     font-weight: 600;
+}
+
+.timeline-content:hover .timeline-year {
+    transform: translateY(-1px);
 }
 
 .timeline-content h3 {
@@ -782,6 +907,100 @@ section {
     font-size: 0.9rem;
 }
 
+/* Timeline focus area styling - clean and minimalistic */
+.timeline-focus {
+    margin-top: var(--space-3);
+    padding: var(--space-2) var(--space-3);
+    background: rgba(90, 138, 90, 0.05);
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-style: italic;
+    color: var(--primary-700);
+    line-height: 1.4;
+    transition: all 0.3s ease;
+}
+
+/* Different focus styling for education vs work - subtle variations */
+.timeline-item:has(.timeline-marker.education) .timeline-focus {
+    background: rgba(90, 138, 90, 0.04);
+    color: var(--primary-600);
+}
+
+.timeline-item:has(.timeline-marker.work) .timeline-focus {
+    background: rgba(90, 138, 90, 0.06);
+    color: var(--primary-700);
+}
+
+.timeline-item:has(.timeline-marker.current) .timeline-focus {
+    background: rgba(90, 138, 90, 0.08);
+    color: var(--primary-800);
+    font-weight: 500;
+}
+
+/* Language Buttons - Ultra Simple */
+.lang-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: var(--space-2);
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+.lang-btn:hover {
+    color: var(--text-primary);
+}
+
+.lang-btn.active {
+    color: var(--primary-600);
+    font-weight: 600;
+}
+
+.lang-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: var(--primary-600);
+    border-radius: 1px;
+}
+
+/* Custom Scrollbar - Green Theme */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--slate-50);
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-300);
+    border-radius: 0;
+    border: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-500);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--primary-600);
+}
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-300) var(--slate-50);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -790,7 +1009,22 @@ section {
     
     .nav-container {
         padding: 0 var(--space-4);
+        flex-direction: column;
+        gap: var(--space-2);
+        position: static;
+    }
+    
+    .nav-language {
+        position: static;
+        align-self: center;
+    }
+    
+    .nav-menu {
         gap: var(--space-4);
+    }
+    
+    .nav-language {
+        gap: var(--space-3);
     }
     
     .nav-link {
@@ -816,7 +1050,7 @@ section {
     }
 
     .timeline::before {
-        left: var(--space-6);
+        left: 30px;
         transform: none;
     }
     
@@ -824,45 +1058,21 @@ section {
         width: 100%;
         left: 0 !important;
         text-align: left;
-        padding-left: var(--space-16);
-        margin-bottom: var(--space-12);
-    }
-
-    .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even) {
-        transform: translateX(-20px);
+        margin-left: 60px;
+        transform: none !important;
     }
     
     .timeline-marker {
-        left: 0 !important;
+        left: 14px !important;
         right: auto !important;
-        width: 40px;
-        height: 40px;
-    }
-
-    .timeline-marker::after {
-        width: 16px;
-        height: 16px;
     }
 
     .timeline-content::after {
         display: none;
     }
 
-    .timeline-content::before {
-        content: '';
-        position: absolute;
-        left: -8px;
-        top: 16px;
-        width: 0;
-        height: 0;
-        border-top: 8px solid transparent;
-        border-bottom: 8px solid transparent;
-        border-right: 8px solid var(--bg-primary);
-    }
-
-    .timeline-content {
-        padding: var(--space-4);
+    .timeline-item .timeline-content {
+        margin-left: 0;
     }
     
     .projects-grid {

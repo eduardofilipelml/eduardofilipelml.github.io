@@ -11,11 +11,17 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="#home" class="nav-link active">Home</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#experience" class="nav-link">Experience</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#contact" class="nav-link">Contact</a>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active" data-translate="nav.home">Home</a>
+                <a href="#about" class="nav-link" data-translate="nav.about">About</a>
+                <a href="#experience" class="nav-link" data-translate="nav.experience">Experience</a>
+                <a href="#projects" class="nav-link" data-translate="nav.projects">Projects</a>
+                <a href="#contact" class="nav-link" data-translate="nav.contact">Contact</a>
+            </div>
+            <div class="nav-language">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="pt">PT</button>
+            </div>
         </div>
     </nav>
 
@@ -29,9 +35,9 @@
                 
                 <div class="intro">
                     <h1 class="name">Eduardo Meireles Lopes</h1>
-                    <p class="role">Code Architect & Digital Dreamer</p>
-                    <p class="location">📍 Mafra / Lisbon, Portugal</p>
-                    <p class="hero-tagline">Where logic meets imagination, and every line of code tells a story</p>
+                    <p class="role" data-translate="hero.role">Java Software Developer & AI Explorer</p>
+                    <p class="location">📍 <span data-translate="hero.location">Mafra / Lisbon, Portugal</span></p>
+                    <p class="hero-tagline" data-translate="hero.tagline">Letting curiosity lead—where nature, code, and AI meet, logic and imagination grow, and every line becomes a story.</p>
                 </div>
 
 
@@ -42,10 +48,10 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title" data-translate="about.title">About Me</h2>
             
             <div class="about-content">
-                <p class="bio">
+                <p class="bio" data-translate="about.bio">
                     I'm Eduardo—a passionate developer who bridges the gap between complex technical challenges and elegant solutions. 
                     With deep expertise spanning from satellite data systems for ESA space missions to sophisticated financial platforms, 
                     I craft code that not only works beautifully but solves real-world problems. My journey through computer science, 
@@ -55,16 +61,16 @@
                 
                 <div class="stats">
                     <div class="stat">
-                        <span class="stat-number">8</span>
-                        <span class="stat-label">Years Java</span>
+                        <span class="stat-number">+8</span>
+                        <span class="stat-label" data-translate="about.stats.java">Years Java</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">15</span>
-                        <span class="stat-label">Years Tech</span>
+                        <span class="stat-number">+15</span>
+                        <span class="stat-label" data-translate="about.stats.tech">Years Tech</span>
                     </div>
                     <div class="stat">
                         <span class="stat-number">∞</span>
-                        <span class="stat-label">Curiosity Level</span>
+                        <span class="stat-label" data-translate="about.stats.curiosity">Curiosity Level</span>
                     </div>
                 </div>
             </div>
@@ -74,7 +80,7 @@
     <!-- Experience Section -->
     <section id="experience" class="journey">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
+            <h2 class="section-title" data-translate="experience.title">Experience</h2>
             
             <div class="timeline">
                 <div class="timeline-item">
@@ -83,6 +89,7 @@
                         <span class="timeline-year">2007-2010</span>
                         <h3>Socio-Economic Sciences</h3>
                         <p>Forte da Casa High School</p>
+                        <div class="timeline-focus">Foundation studies</div>
                     </div>
                 </div>
 
@@ -92,6 +99,7 @@
                         <span class="timeline-year">2010-2015</span>
                         <h3>Bachelor in Computer Science</h3>
                         <p>FCT-UNL</p>
+                        <div class="timeline-focus">Software development, algorithms, OOP</div>
                     </div>
                 </div>
 
@@ -101,6 +109,7 @@
                         <span class="timeline-year">2015-2020</span>
                         <h3>Master in Computer Science</h3>
                         <p>FCT-UNL</p>
+                        <div class="timeline-focus">Web development, data analysis, machine learning, visualization</div>
                     </div>
                 </div>
 
@@ -110,6 +119,7 @@
                         <span class="timeline-year">2017-2021</span>
                         <h3>Software Engineer</h3>
                         <p>Deimos Engenharia • ESA Projects</p>
+                        <div class="timeline-focus">ESA Earth Observation Applications: S2G, ESOV, DFDL4S, Geoportals</div>
                     </div>
                 </div>
 
@@ -119,6 +129,7 @@
                         <span class="timeline-year">2021-Present</span>
                         <h3>Java Developer</h3>
                         <p>Profidata • Xentis System</p>
+                        <div class="timeline-focus">Enterprise financial software for investment management</div>
                     </div>
                 </div>
             </div>
@@ -128,7 +139,7 @@
     <!-- Projects Section -->
     <section id="projects" class="work">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title" data-translate="projects.title">Projects</h2>
             
             <div class="projects-grid">
                 <div class="project-card">
@@ -188,11 +199,11 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
+            <h2 class="section-title" data-translate="contact.title">Contact</h2>
             
             <div class="contact-content">
                 <div class="contact-hero">
-                    <p class="contact-intro">
+                    <p class="contact-intro" data-translate="contact.intro">
                         Ready to explore new dimensions together? Whether you're curious about technology, 
                         seeking collaboration, or simply want to share ideas—let's connect and create something extraordinary.
                     </p>
@@ -207,7 +218,7 @@
                             </svg>
                         </div>
                         <div class="contact-details">
-                            <h4>Direct Connect</h4>
+                            <h4 data-translate="contact.email.title">Direct Connect</h4>
                             <span>eduardofilipelml@gmail.com</span>
                         </div>
                     </a>
@@ -221,8 +232,8 @@
                             </svg>
                         </div>
                         <div class="contact-details">
-                            <h4>Professional Network</h4>
-                            <span>LinkedIn Profile</span>
+                            <h4 data-translate="contact.linkedin.title">Professional Network</h4>
+                            <span data-translate="contact.linkedin.subtitle">LinkedIn Profile</span>
                         </div>
                     </a>
                     
@@ -233,8 +244,8 @@
                             </svg>
                         </div>
                         <div class="contact-details">
-                            <h4>Code Repository</h4>
-                            <span>GitHub Profile</span>
+                            <h4 data-translate="contact.github.title">Code Repository</h4>
+                            <span data-translate="contact.github.subtitle">GitHub Profile</span>
                         </div>
                     </a>
                 </div>
@@ -247,7 +258,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-quote">
-                    <p>"In the symphony of code and creativity, every bug is just a note waiting to find its harmony."</p>
+                    <p data-translate="footer.quote">"In the symphony of code and creativity, every bug is just a note waiting to find its harmony."</p>
                     <cite>— Eduardo Meireles Lopes</cite>
                 </div>
                 
@@ -276,7 +287,7 @@
                 </div>
                 
                 <div class="footer-copyright">
-                    <p>&copy; 2025 Eduardo Meireles Lopes • Rooted in nature, growing through code 🌱</p>
+                    <p data-translate="footer.copyright">&copy; 2025 Eduardo Meireles Lopes • Rooted in nature, growing through code 🌱</p>
                 </div>
             </div>
         </div>
