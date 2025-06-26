@@ -122,6 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function translatePage(lang) {
         currentLang = lang;
+        // Update <html lang> attribute for accessibility/SEO
+        document.documentElement.setAttribute('lang', lang);
         
         // Update all translated elements
         document.querySelectorAll('[data-translate]').forEach(element => {

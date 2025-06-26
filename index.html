@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eduardo Meireles Lopes</title>
+    <meta name="description" content="Eduardo Meireles Lopes – Java Software Developer & AI Explorer. Portfolio showcasing experience in satellite data systems, financial platforms, and AI, based in Mafra/Lisbon, Portugal.">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Eduardo Meireles Lopes – Portfolio">
+    <meta property="og:description" content="Java Software Developer & AI Explorer. Portfolio showcasing experience in satellite data systems, financial platforms, and AI.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eduardofilipelml.github.io/">
+    <meta property="og:image" content="https://eduardofilipelml.github.io/assets/images/profile.jpg">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Eduardo Meireles Lopes – Portfolio">
+    <meta name="twitter:description" content="Java Software Developer & AI Explorer. Portfolio showcasing experience in satellite data systems, financial platforms, and AI.">
+    <meta name="twitter:image" content="https://eduardofilipelml.github.io/assets/images/profile.jpg">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet">
 </head>
@@ -12,7 +24,7 @@
     <nav class="nav">
         <div class="nav-container">
             <div class="nav-menu">
-                <a href="#home" class="nav-link active" data-translate="nav.home" aria-current="page">Home</a>
+                <a href="#home" class="nav-link active" data-translate="nav.home">Home</a>
                 <a href="#about" class="nav-link" data-translate="nav.about">About</a>
                 <a href="#experience" class="nav-link" data-translate="nav.experience">Experience</a>
                 <a href="#projects" class="nav-link" data-translate="nav.projects">Projects</a>
@@ -25,6 +37,7 @@
         </div>
     </nav>
 
+    <main id="main-content">
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
@@ -210,9 +223,9 @@
                 </div>
                 
                 <div class="contact-methods">
-                    <a href="mailto:eduardofilipelml@gmail.com" class="contact-card primary">
+                    <a href="mailto:eduardofilipelml@gmail.com" class="contact-card">
                         <div class="contact-icon-wrapper">
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                                 <polyline points="22,6 12,13 2,6"/>
                             </svg>
@@ -223,9 +236,9 @@
                         </div>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/eduardomeireleslopes/" target="_blank" class="contact-card">
+                    <a href="https://www.linkedin.com/in/eduardomeireleslopes/" target="_blank" rel="noopener noreferrer" class="contact-card">
                         <div class="contact-icon-wrapper">
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
                                 <rect x="2" y="9" width="4" height="12"/>
                                 <circle cx="4" cy="4" r="2"/>
@@ -233,25 +246,26 @@
                         </div>
                         <div class="contact-details">
                             <h4 data-translate="contact.linkedin.title">Professional Network</h4>
-                            <span data-translate="contact.linkedin.subtitle">LinkedIn Profile</span>
+                            <span data-translate="contact.linkedin.subtitle">LinkedIn</span>
                         </div>
                     </a>
                     
-                    <a href="https://github.com/eduardofilipelml" target="_blank" class="contact-card">
+                    <a href="https://github.com/eduardofilipelml" target="_blank" rel="noopener noreferrer" class="contact-card">
                         <div class="contact-icon-wrapper">
-                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
                             </svg>
                         </div>
                         <div class="contact-details">
                             <h4 data-translate="contact.github.title">Code Repository</h4>
-                            <span data-translate="contact.github.subtitle">GitHub Profile</span>
+                            <span data-translate="contact.github.subtitle">GitHub</span>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -263,26 +277,23 @@
                 </div>
                 
                 <div class="footer-links">
-                    <a href="mailto:eduardofilipelml@gmail.com" class="footer-link">
-                        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <a href="mailto:eduardofilipelml@gmail.com" class="footer-link" aria-label="Email Eduardo Meireles Lopes">
+                        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                             <polyline points="22,6 12,13 2,6"/>
                         </svg>
-                        Email
                     </a>
-                    <a href="https://www.linkedin.com/in/eduardomeireleslopes/" target="_blank" class="footer-link">
-                        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <a href="https://www.linkedin.com/in/eduardomeireleslopes/" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="LinkedIn Profile of Eduardo Meireles Lopes">
+                        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
                             <rect x="2" y="9" width="4" height="12"/>
                             <circle cx="4" cy="4" r="2"/>
                         </svg>
-                        LinkedIn
                     </a>
-                    <a href="https://github.com/eduardofilipelml" target="_blank" class="footer-link">
-                        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <a href="https://github.com/eduardofilipelml" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="GitHub Profile of Eduardo Meireles Lopes">
+                        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
                         </svg>
-                        GitHub
                     </a>
                 </div>
                 
