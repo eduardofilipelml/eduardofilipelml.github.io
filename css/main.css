@@ -719,7 +719,8 @@ section {
 
 .contact-card {
     background: var(--bg-primary);
-    padding: var(--space-6);
+    padding-bottom: var(--space-6);
+    padding-top: var(--space-6);
     border-radius: 16px;
     border: 1px solid var(--border);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
