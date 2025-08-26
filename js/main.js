@@ -213,21 +213,75 @@ timelineItems.forEach(item => {
 // Translation functionality
 const translations = {
     en: {
+        // Navigation
         'nav.home': 'Home',
         'nav.about': 'About',
         'nav.experience': 'Experience',
         'nav.projects': 'Projects',
         'nav.contact': 'Contact',
+        
+        // Hero section
         'hero.role': 'Java Software Developer & Creative AI User',
         'hero.location': 'Mafra / Lisbon, Portugal',
         'hero.tagline': 'Turning curiosity into creation—where code meets imagination, and AI expands what\'s possible.',
+        
+        // About section
         'about.title': 'About Me',
         'about.bio': 'With a foundation in computer science and a career spanning space technology and finance, I thrive on bridging the gap between intricate problems and clear, creative solutions. My journey is fueled by curiosity and a belief that every line of code can shape something valuable—especially when inspired by the possibilities of AI.',
         'about.stats.java': 'Years Java',
         'about.stats.tech': 'Years Tech',
         'about.stats.curiosity': 'Curiosity Level',
+        
+        // Experience section
         'experience.title': 'Experience',
+        'experience.education1.period': '2007-2010',
+        'experience.education1.title': 'Socio-Economic Sciences',
+        'experience.education1.org': 'Forte da Casa High School',
+        'experience.education1.desc': 'Foundation studies',
+        
+        'experience.education2.period': '2010-2015',
+        'experience.education2.title': 'Bachelor in Computer Science',
+        'experience.education2.org': 'FCT-UNL',
+        'experience.education2.desc': 'Software development, algorithms, OOP',
+        
+        'experience.education3.period': '2015-2020',
+        'experience.education3.title': 'Master in Computer Science',
+        'experience.education3.org': 'FCT-UNL',
+        'experience.education3.desc': 'Web development, data analysis, machine learning, visualization',
+        
+        'experience.job1.period': '2017-2021',
+        'experience.job1.title': 'Software Engineer',
+        'experience.job1.org': 'Deimos Engenharia • ESA Projects',
+        'experience.job1.desc': 'ESA Earth Observation Applications: S2G, ESOV, DFDL4S, Geoportals',
+        
+        'experience.job2.period': '2021-PRESENT',
+        'experience.job2.title': 'Java Developer',
+        'experience.job2.org': 'Profidata • Xentis System',
+        'experience.job2.desc': 'Enterprise financial software for investment management',
+        
+        // Projects section
         'projects.title': 'Projects',
+        'projects.xentis.title': 'Xentis Investment Management',
+        'projects.xentis.status': 'CURRENT',
+        'projects.xentis.desc': 'Enterprise financial software for complex investment scenarios.',
+        'projects.xentis.tech': 'Java Spring Swing',
+        
+        'projects.esov.title': 'ESOV NG Visualization',
+        'projects.esov.status': 'ESA',
+        'projects.esov.desc': 'Satellite data visualization tools for space missions.',
+        'projects.esov.tech': 'Java Eclipse RCP',
+        
+        'projects.dfdl.title': 'DFDL4S Data Format',
+        'projects.dfdl.status': 'ESA',
+        'projects.dfdl.desc': 'Binary data binding library for space data management.',
+        'projects.dfdl.tech': 'Java C++ XML',
+        
+        'projects.s2g.title': 'S2G Earth Observation',
+        'projects.s2g.status': 'ESA',
+        'projects.s2g.desc': 'Sentinel-2 satellite data processing and visualization platform.',
+        'projects.s2g.tech': 'Java GIS Satellite Data',
+        
+        // Contact section
         'contact.title': 'Contact',
         'contact.intro': "Ready to explore new dimensions together? Whether you're curious about technology, seeking collaboration, or simply want to share ideas—let's connect and create something extraordinary.",
         'contact.email.title': 'Direct Connect',
@@ -235,40 +289,100 @@ const translations = {
         'contact.linkedin.subtitle': 'LinkedIn Profile',
         'contact.github.title': 'Code Repository',
         'contact.github.subtitle': 'GitHub Profile',
+        
+        // Footer
         'footer.quote': '"In the symphony of code and creativity, every bug is just a note waiting to find its harmony."',
+        'footer.author': '— Eduardo Meireles Lopes',
         'footer.copyright': '© 2025 Eduardo Meireles Lopes • Rooted in nature, growing through code 🌱',
-        'cv.back': 'Back to Profile',
-        'cv.download': 'Want the full CV? Download it or contact me.',
-        'cv.pdf': 'Download PDF'
+        
+        // CV
+        'cv.back': 'Back to Profile'
     },
     pt: {
+        // Navigation
         'nav.home': 'Início',
         'nav.about': 'Sobre',
         'nav.experience': 'Experiência',
-        'nav.projects': 'Projectos',
+        'nav.projects': 'Projetos',
         'nav.contact': 'Contacto',
+        
+        // Hero section
         'hero.role': 'Programador Java & Utilizador Criativo de IA',
         'hero.location': 'Mafra / Lisboa, Portugal',
         'hero.tagline': 'Transformo curiosidade em criação—onde o código encontra a imaginação e a IA amplia o possível.',
+        
+        // About section
         'about.title': 'Sobre Mim',
         'about.bio': 'Com uma base sólida em ciência da computação e uma carreira que abrange tecnologia espacial e finanças, prospero ao fazer a ponte entre problemas complexos e soluções claras e criativas. A minha jornada é movida pela curiosidade e pela crença de que cada linha de código pode criar algo valioso—especialmente quando inspirada pelas possibilidades da IA.',
         'about.stats.java': 'Anos Java',
         'about.stats.tech': 'Anos Tech',
         'about.stats.curiosity': 'Nível Curiosidade',
+        
+        // Experience section
         'experience.title': 'Experiência',
-        'projects.title': 'Projectos',
+        'experience.education1.period': '2007-2010',
+        'experience.education1.title': 'Ciências Socio-Económicas',
+        'experience.education1.org': 'Escola Secundária de Forte da Casa',
+        'experience.education1.desc': 'Estudos base',
+        
+        'experience.education2.period': '2010-2015',
+        'experience.education2.title': 'Licenciatura em Ciências da Computação',
+        'experience.education2.org': 'FCT-UNL',
+        'experience.education2.desc': 'Desenvolvimento de software, algoritmos, POO',
+        
+        'experience.education3.period': '2015-2020',
+        'experience.education3.title': 'Mestrado em Ciências da Computação',
+        'experience.education3.org': 'FCT-UNL',
+        'experience.education3.desc': 'Desenvolvimento web, análise de dados, aprendizagem automática, visualização',
+        
+        'experience.job1.period': '2017-2021',
+        'experience.job1.title': 'Engenheiro de Software',
+        'experience.job1.org': 'Deimos Engenharia • Projetos ESA',
+        'experience.job1.desc': 'Aplicações de Observação da Terra ESA: S2G, ESOV, DFDL4S, Geoportais',
+        
+        'experience.job2.period': '2021-PRESENTE',
+        'experience.job2.title': 'Programador Java',
+        'experience.job2.org': 'Profidata • Sistema Xentis',
+        'experience.job2.desc': 'Software financeiro empresarial para gestão de investimentos',
+        
+        // Projects section
+        'projects.title': 'Projetos',
+        'projects.xentis.title': 'Gestão de Investimentos Xentis',
+        'projects.xentis.status': 'ATUAL',
+        'projects.xentis.desc': 'Software financeiro empresarial para cenários complexos de investimento.',
+        'projects.xentis.tech': 'Java Spring Swing',
+        
+        'projects.esov.title': 'Visualização ESOV NG',
+        'projects.esov.status': 'ESA',
+        'projects.esov.desc': 'Ferramentas de visualização de dados de satélite para missões espaciais.',
+        'projects.esov.tech': 'Java Eclipse RCP',
+        
+        'projects.dfdl.title': 'Formato de Dados DFDL4S',
+        'projects.dfdl.status': 'ESA',
+        'projects.dfdl.desc': 'Biblioteca de vinculação de dados binários para gestão de dados espaciais.',
+        'projects.dfdl.tech': 'Java C++ XML',
+        
+        'projects.s2g.title': 'Observação da Terra S2G',
+        'projects.s2g.status': 'ESA',
+        'projects.s2g.desc': 'Plataforma de processamento e visualização de dados do satélite Sentinel-2.',
+        'projects.s2g.tech': 'Java SIG Dados de Satélite',
+        
+        // Contact section
         'contact.title': 'Contacto',
         'contact.intro': 'Pronto para explorar novas dimensões em conjunto? Seja por curiosidade sobre tecnologia, procura de colaboração, ou simplesmente para partilhar ideias—vamos conectar-nos e criar algo extraordinário.',
-        'contact.email.title': 'Contacto Directo',
+        'contact.email.title': 'Contacto Direto',
         'contact.linkedin.title': 'Rede Profissional',
         'contact.linkedin.subtitle': 'Perfil LinkedIn',
         'contact.github.title': 'Repositório de Código',
         'contact.github.subtitle': 'Perfil GitHub',
+        
+        // Footer
         'footer.quote': '"Na sinfonia do código e criatividade, cada erro é apenas uma nota à espera de encontrar a sua harmonia."',
+        'footer.author': '— Eduardo Meireles Lopes',
         'footer.copyright': '© 2025 Eduardo Meireles Lopes • Enraizado na natureza, crescendo através do código 🌱',
-        'cv.back': 'Voltar ao Perfil',
-        'cv.download': 'Quer o CV completo? Descarregue-o ou contacte-me.',
-        'cv.pdf': 'Descarregar PDF'
+        
+        // CV
+        'cv.back': 'Voltar ao Perfil'
     }
 };
 
