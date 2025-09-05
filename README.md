@@ -10,7 +10,7 @@ I'm also a AI explorer in my free-time. Love to build static web pages that are 
 Hello! I'm **Eduardo Meireles Lopes**, a Java Software Developer based in Lisbon, Portugal. Passioned for solving complex problems and building efficient, maintainable software solutions.
 
 - **Primary Language:** Java
-- **Other Technologies:** Spring, Swing, Eclipse RCP, JavaScript, Python
+- **Other Technologies:** Spring, Swing, Eclipse RCP, JavaScript, Python, Vaadin
 - **Years of Experience:** 8+ (15+ years in tech)
 
 ### Technical Skills
@@ -24,7 +24,8 @@ Hello! I'm **Eduardo Meireles Lopes**, a Java Software Developer based in Lisbon
 
 ## 🎓 Education
 - **Master in Computer Science** – FCT-UNL (2015–2020)
-  - Focus: Web development, data analysis, machine learning, visualization
+  - Focus: Web development, data analysis, machine learning, visualization,
+    Leaflet/Openlayers, JS / CSS / HTML
 - **Bachelor in Computer Science** – FCT-UNL (2010–2015)
   - Focus: Software development, algorithms, OOP
 - **Diploma in Socio-Economic Sciences** – Forte da Casa High School (2007–2010)
@@ -37,7 +38,7 @@ Hello! I'm **Eduardo Meireles Lopes**, a Java Software Developer based in Lisbon
     RCP, QF-Test, JUnit, Podman, CI/CD, Git)
 - **Software Engineer** @ Deimos Engenharia (2017–2021)
   - ESA Earth Observation Applications: S2G, ESOV, DFDL4S, Geoportals (Java, Swing, Eclipse
-    RCP, QF-Test, JUnit, Podman, CI/CD, Git, C++, OpenLayers, Leaflet, HTML, JS
+    RCP, JUnit, CI/CD, Git, C++, OpenLayers, Leaflet, HTML, JS
     and CSS)
 
 ---
