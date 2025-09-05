@@ -1,13 +1,13 @@
 # Eduardo Meireles Lopes – Personal Portfolio Website
 
-Welcome to my personal portfolio! This website showcases my professional journey as a Java Software Developer, including my skills, education, experience, and selected projects in enterprise and geospatial technologies.
+Welcome to my personal portfolio! This website showcases my professional journey as a Java Software Developer and Creative AI User, including my skills, education, experience, and selected projects in enterprise and geospatial technologies.
 
 I'm also a AI explorer in my free-time. Love to build static web pages that are awesome.
 ---
 
 ## 🌟 About Me
 
-Hello! I'm **Eduardo Meireles Lopes**, a Java Software Developer based in Lisbon, Portugal. Passioned for solving complex problems and building efficient, maintainable software solutions.
+Hello! I'm **Eduardo Meireles Lopes**, a Java Software Developer and Creative AI User based in Lisbon, Portugal. Passioned for solving complex problems and building efficient, maintainable software solutions.
 
 - **Primary Language:** Java
 - **Other Technologies:** Spring, Swing, Eclipse RCP, JavaScript, Python, Vaadin
