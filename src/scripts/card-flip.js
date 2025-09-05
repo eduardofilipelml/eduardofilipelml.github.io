@@ -10,14 +10,22 @@ function setupCardFlip() {
   const flipBtn = document.getElementById('flip-btn');
   const returnBtn = document.getElementById('return-btn');
   const cardFlip = document.querySelector('.card-flip');
+  
+  let isFlipping = false; // Prevent multiple clicks during animation
 
   // Flip to CV side
   if (flipBtn && returnBtn && cardFlip) {
     flipBtn.addEventListener('click', () => {
+      if (isFlipping) return;
+      
+      isFlipping = true;
       cardFlip.classList.add('flipped');
 
       // Reset scroll position when switching to back card
-      window.scrollTo(0, 0);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        isFlipping = false;
+      }, 400); // Half of the transition time
 
       // Announce to screen readers
       announceScreenReaderMessage('CV view activated');
@@ -25,10 +33,16 @@ function setupCardFlip() {
 
     // Return to profile side
     returnBtn.addEventListener('click', () => {
+      if (isFlipping) return;
+      
+      isFlipping = true;
       cardFlip.classList.remove('flipped');
 
       // Reset scroll position when switching to front card
-      window.scrollTo(0, 0);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        isFlipping = false;
+      }, 400); // Half of the transition time
 
       // Announce to screen readers
       announceScreenReaderMessage('Profile view activated');
