@@ -95,17 +95,29 @@ function switchLanguage(lang) {
 }
 
 /**
- * Set up card flip functionality
+ * Set up card flip functionality with dynamic scrolling
  */
 function setupCardFlip() {
     const flipBtn = document.getElementById('flip-btn');
     const returnBtn = document.getElementById('return-btn');
     const cardFlip = document.querySelector('.card-flip');
+    const body = document.body;
+    
+    // Initialize with front card active
+    body.classList.add('front-card-active');
+    body.classList.remove('back-card-active');
     
     // Flip to CV side
     if (flipBtn && returnBtn && cardFlip) {
         flipBtn.addEventListener('click', () => {
             cardFlip.classList.add('flipped');
+            
+            // Update body classes for dynamic scrolling
+            body.classList.remove('front-card-active');
+            body.classList.add('back-card-active');
+            
+            // Reset scroll position when switching to back card
+            window.scrollTo(0, 0);
             
             // Announce to screen readers
             announceScreenReaderMessage('CV view activated');
@@ -114,6 +126,13 @@ function setupCardFlip() {
         // Return to profile side
         returnBtn.addEventListener('click', () => {
             cardFlip.classList.remove('flipped');
+            
+            // Update body classes for dynamic scrolling
+            body.classList.remove('back-card-active');
+            body.classList.add('front-card-active');
+            
+            // Reset scroll position when switching to front card
+            window.scrollTo(0, 0);
             
             // Announce to screen readers
             announceScreenReaderMessage('Profile view activated');

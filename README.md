@@ -33,9 +33,12 @@ Hello! I'm **Eduardo Meireles Lopes**, a Java Software Developer based in Lisbon
 
 ## 💼 Professional Experience
 - **Java Developer** @ Profidata (2021–Present)
-  - Development and maintenance of Xentis software (Java, Spring, Swing, Eclipse RCP)
+  - Development and maintenance of Xentis software (Java, Spring, Swing, Eclipse
+    RCP, QF-Test, JUnit, Podman, CI/CD, Git)
 - **Software Engineer** @ Deimos Engenharia (2017–2021)
-  - ESA Earth Observation Applications: S2G, ESOV, DFDL4S, Geoportals (Java, Eclipse RCP, C++)
+  - ESA Earth Observation Applications: S2G, ESOV, DFDL4S, Geoportals (Java, Swing, Eclipse
+    RCP, QF-Test, JUnit, Podman, CI/CD, Git, C++, OpenLayers, Leaflet, HTML, JS
+    and CSS)
 
 ---
 
