@@ -250,10 +250,25 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
   position: relative;
   z-index: 2;
   flex-shrink: 0;
+}
+
+/* Profile Info Grouping */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.role-location-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
 }
 
 /* Hero Profile Image Container - Enhanced Prominence */
@@ -321,11 +336,12 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: 75% 85%; /* Focus more on bottom right */
   border-radius: 50%;
   transition: all 0.4s ease;
   display: block;
   filter: contrast(1.02) saturate(1.05);
+  transform: scale(1.15); /* Zoom in effect */
 }
 
 @keyframes profile-intro {
@@ -382,7 +398,7 @@ body {
   font-size: var(--fs-xl);
   font-weight: 500;
   color: var(--text-secondary);
-  margin: var(--space-6) 0 var(--space-3);
+  margin: 0;
   opacity: 0.9;
 }
 
@@ -393,8 +409,8 @@ body {
   justify-content: center;
   gap: var(--space-2);
   color: var(--text-muted);
-  font-size: var(--fs-md);
-  margin-bottom: var(--space-8);
+  font-size: var(--fs-sm);
+  margin: 0;
 }
 
 .location-icon {
@@ -451,10 +467,14 @@ body {
 .bio-section {
   text-align: center;
   max-width: 85%;
-  margin: 0 auto;
+  margin: 0 auto var(--space-8);
   position: relative;
   z-index: 2;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
 }
 
 .hero-tagline {
@@ -462,9 +482,10 @@ body {
   color: var(--text-secondary);
   font-weight: 400;
   line-height: 1.6;
-  margin-bottom: var(--space-6);
+  margin: 0;
   position: relative;
   font-style: normal;
+  max-width: 600px;
 }
 
 /* Modern Stats Section */
@@ -543,10 +564,11 @@ body {
   display: flex;
   justify-content: center;
   gap: var(--space-6);
-  margin-top: var(--space-8);
+  margin-top: auto;
   position: relative;
   z-index: 5;
   flex-shrink: 0;
+  padding-top: var(--space-4);
 }
 
 .social-link {

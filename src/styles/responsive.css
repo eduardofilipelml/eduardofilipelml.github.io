@@ -95,7 +95,16 @@
   }
 
   .language-selector {
-    display: none; /* Hide language selector on very small screens */
+    top: var(--space-2);
+    right: var(--space-2);
+    padding: var(--space-1);
+  }
+
+  .lang-btn {
+    padding: 4px 8px;
+    font-size: 10px;
+    min-width: 28px;
+    border-radius: 4px;
   }
 
   .stats-section {
