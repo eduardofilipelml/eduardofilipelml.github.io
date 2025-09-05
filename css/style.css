@@ -1323,6 +1323,8 @@ body.back-card-active {
     width: 100vw;
   }
   
+}
+
 @media (max-width: 480px) {
   :root {
     --card-height: 100vh;
