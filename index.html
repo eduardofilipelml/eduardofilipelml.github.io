@@ -5,23 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Eduardo Meireles Lopes - Java Software Developer & Creative AI User">
     <title>Eduardo Meireles Lopes | Java Software Developer & Creative AI User</title>
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
-    
+    <link rel="icon" type="image/png" href="public/icons/favicon.ico">
+
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/components.css">
+    <link rel="stylesheet" href="src/styles/responsive.css">
 </head>
 <body>
-    <div class="container">
-        <div class="scene">
-            <div class="card-container">
-                <div class="card-flip">
+    <div class="card-container">
+        <div class="card-flip">
                 <!-- Front Card - Profile -->
                 <div class="card-front">
+                    <!-- Flip Button -->
+                    <button id="flip-btn" class="resume-btn animate delay-8" aria-label="View Resume">
+                        <i class="fas fa-file-text"></i>
+                    </button>
+                    
                     <!-- Decorative shapes -->
                     <div class="shape shape-1"></div>
                     <div class="shape shape-2"></div>
@@ -29,14 +34,13 @@
                     <!-- Language selector -->
                     <div class="language-selector">
                         <button id="en-btn" class="lang-btn active" data-lang="en">EN</button>
-                        <span>/</span>
                         <button id="pt-btn" class="lang-btn" data-lang="pt">PT</button>
                     </div>
                     
                     <!-- Profile Header -->
                     <div class="profile-header animate">
                         <div class="profile-image-container">
-                            <img src="assets/images/profile.webp" alt="Eduardo Meireles Lopes" class="profile-image">
+                            <img src="public/images/profile.webp" alt="Eduardo Meireles Lopes" class="profile-image">
                         </div>
                         <h1 class="name">Eduardo Meireles Lopes</h1>
                         <h2 class="role" data-en="Java Software Developer & Creative AI User" data-pt="Programador Java & Utilizador Criativo de IA">Java Software Developer & Creative AI User</h2>
@@ -79,12 +83,6 @@
                             <i class="fas fa-envelope fa-lg"></i>
                         </a>
                     </div>
-                    
-                    <!-- Resume Button -->
-                    <button id="flip-btn" class="resume-btn animate delay-8" aria-label="View Resume">
-                        <i class="fas fa-file-alt fa-lg"></i>
-                        <span class="pulse-dot"></span>
-                    </button>
                 </div>
                 
                 <!-- Back Card - CV -->
@@ -96,171 +94,19 @@
                     
                     <!-- CV Content -->
                     <div class="cv-content">
-                        <!-- Introduction Section -->
-                        <section class="cv-section cv-intro">
-                            <div class="intro-content">
-                                <h1 class="intro-name">Eduardo Meireles Lopes</h1>
-                                <p class="intro-title" data-en="Java Software Developer & Creative AI User" data-pt="Programador Java & Utilizador Criativo de IA">Java Software Developer & Creative AI User</p>
-                                <div class="intro-divider"></div>
-                            </div>
-                        </section>
-                        
-                        <!-- Experience Section -->
-                        <section class="cv-section">
-                            <h3 class="cv-section-title" data-en="Work Experience" data-pt="Experiência Profissional">Work Experience</h3>
-                            <div class="timeline">
-                                <!-- Experience Item 1 -->
-                                <div class="timeline-item">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <h4 class="timeline-title">Java Developer</h4>
-                                        <span class="timeline-period">2021 - Present</span>
-                                        <p class="timeline-description" data-en="Profidata • Xentis System - Development and maintenance of Xentis software (Java, Spring, Swing, Eclipse RCP, QF-Test, JUnit, Podman, CI/CD, Git)" data-pt="Profidata • Sistema Xentis - Desenvolvimento e manutenção do software Xentis (Java, Spring, Swing, Eclipse RCP, QF-Test, JUnit, Podman, CI/CD, Git)">Profidata • Xentis System - Development and maintenance of Xentis software (Java, Spring, Swing, Eclipse RCP, QF-Test, JUnit, Podman, CI/CD, Git)</p>
-                                        <div class="timeline-tech">
-                                            <span class="tech-tag">Java</span>
-                                            <span class="tech-tag">Spring</span>
-                                            <span class="tech-tag">Swing</span>
-                                            <span class="tech-tag">Eclipse RCP</span>
-                                            <span class="tech-tag">QF-Test</span>
-                                            <span class="tech-tag">JUnit</span>
-                                            <span class="tech-tag">Podman</span>
-                                            <span class="tech-tag">CI/CD</span>
-                                            <span class="tech-tag">Git</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Experience Item 2 -->
-                                <div class="timeline-item">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <h4 class="timeline-title">Software Engineer</h4>
-                                        <span class="timeline-period">2017 - 2021</span>
-                                        <p class="timeline-description" data-en="Deimos Engenharia • ESA Projects - ESA Earth Observation Applications: S2G, ESOV, DFDL4S, Geoportals (Java, Swing, Eclipse RCP, JUnit, CI/CD, Git, C++, OpenLayers, Leaflet, HTML, JS and CSS)" data-pt="Deimos Engenharia • Projetos ESA - Aplicações de Observação da Terra ESA: S2G, ESOV, DFDL4S, Geoportais (Java, Swing, Eclipse RCP, JUnit, CI/CD, Git, C++, OpenLayers, Leaflet, HTML, JS and CSS)">Deimos Engenharia • ESA Projects - ESA Earth Observation Applications: S2G, ESOV, DFDL4S, Geoportals (Java, Swing, Eclipse RCP, JUnit, CI/CD, Git, C++, OpenLayers, Leaflet, HTML, JS and CSS)</p>
-                                        <div class="timeline-tech">
-                                            <span class="tech-tag">Java</span>
-                                            <span class="tech-tag">Swing</span>
-                                            <span class="tech-tag">Eclipse RCP</span>
-                                            <span class="tech-tag">JUnit</span>
-                                            <span class="tech-tag">CI/CD</span>
-                                            <span class="tech-tag">Git</span>
-                                            <span class="tech-tag">C++</span>
-                                            <span class="tech-tag">OpenLayers</span>
-                                            <span class="tech-tag">Leaflet</span>
-                                            <span class="tech-tag">HTML</span>
-                                            <span class="tech-tag">JS</span>
-                                            <span class="tech-tag">CSS</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <!-- Projects Section -->
-                        <section class="cv-section">
-                            <h3 class="cv-section-title" data-en="Key Projects" data-pt="Projetos Principais">Key Projects</h3>
-                            <div class="projects-grid">
-                                <!-- Project 1 -->
-                                <div class="project-card">
-                                    <div class="project-header">
-                                        <h4 class="project-title">Xentis Investment Management</h4>
-                                        <span class="project-year">CURRENT</span>
-                                    </div>
-                                    <p class="project-description" data-en="Enterprise financial software for investment management (Java, Spring, Swing, Eclipse RCP, QF-Test)" data-pt="Software financeiro empresarial para gestão de investimentos (Java, Spring, Swing, Eclipse RCP, QF-Test)">Enterprise financial software for investment management (Java, Spring, Swing, Eclipse RCP, QF-Test)</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Java</span>
-                                        <span class="tech-tag">Spring</span>
-                                        <span class="tech-tag">Swing</span>
-                                        <span class="tech-tag">Eclipse RCP</span>
-                                        <span class="tech-tag">QF-Test</span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Project 2 -->
-                                <div class="project-card">
-                                    <div class="project-header">
-                                        <h4 class="project-title">ESOV NG Visualization</h4>
-                                        <span class="project-year">ESA</span>
-                                    </div>
-                                    <p class="project-description" data-en="Visualization of ESA satellite swaths and orbits (Java, Swing, Eclipse RCP, XML)" data-pt="Visualização de órbitas e faixas de satélite ESA (Java, Swing, Eclipse RCP, XML)">Visualization of ESA satellite swaths and orbits (Java, Swing, Eclipse RCP, XML)</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Java</span>
-                                        <span class="tech-tag">Swing</span>
-                                        <span class="tech-tag">Eclipse RCP</span>
-                                        <span class="tech-tag">XML</span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Project 3 -->
-                                <div class="project-card">
-                                    <div class="project-header">
-                                        <h4 class="project-title">DFDL4S Data Format</h4>
-                                        <span class="project-year">ESA</span>
-                                    </div>
-                                    <p class="project-description" data-en="Binary data binding library for space data (Java, C++, XML)" data-pt="Biblioteca de vinculação de dados binários para dados espaciais (Java, C++, XML)">Binary data binding library for space data (Java, C++, XML)</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Java</span>
-                                        <span class="tech-tag">C++</span>
-                                        <span class="tech-tag">XML</span>
-                                    </div>
-                                </div>
-                                
-                                <!-- Project 4 -->
-                                <div class="project-card">
-                                    <div class="project-header">
-                                        <h4 class="project-title">S2G Earth Observation</h4>
-                                        <span class="project-year">ESA</span>
-                                    </div>
-                                    <p class="project-description" data-en="Inspection of CCSDS-compliant satellite data (Java, Eclipse RCP, JNI)" data-pt="Inspeção de dados de satélite compatíveis com CCSDS (Java, Eclipse RCP, JNI)">Inspection of CCSDS-compliant satellite data (Java, Eclipse RCP, JNI)</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Java</span>
-                                        <span class="tech-tag">Eclipse RCP</span>
-                                        <span class="tech-tag">JNI</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <!-- Education -->
-                        <section class="cv-section">
-                            <h3 class="cv-section-title" data-en="Education" data-pt="Educação">Education</h3>
-                            <div class="timeline">
-                                <div class="timeline-item">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <h4 class="timeline-title" data-en="Master in Computer Science" data-pt="Mestrado em Ciências da Computação">Master in Computer Science</h4>
-                                        <span class="timeline-period">2015 - 2020</span>
-                                        <p class="timeline-description" data-en="FCT-UNL - Web development, data analysis, machine learning, visualization" data-pt="FCT-UNL - Desenvolvimento web, análise de dados, aprendizagem automática, visualização">FCT-UNL - Web development, data analysis, machine learning, visualization</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="timeline-item">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <h4 class="timeline-title" data-en="Bachelor in Computer Science" data-pt="Licenciatura em Ciências da Computação">Bachelor in Computer Science</h4>
-                                        <span class="timeline-period">2010 - 2015</span>
-                                        <p class="timeline-description" data-en="FCT-UNL - Software development, algorithms, OOP" data-pt="FCT-UNL - Desenvolvimento de software, algoritmos, POO">FCT-UNL - Software development, algorithms, OOP</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="timeline-item">
-                                    <div class="timeline-marker"></div>
-                                    <div class="timeline-content">
-                                        <h4 class="timeline-title" data-en="Socio-Economic Sciences" data-pt="Ciências Socioeconómicas">Socio-Economic Sciences</h4>
-                                        <span class="timeline-period">2007 - 2010</span>
-                                        <p class="timeline-description" data-en="Forte da Casa High School - Foundation studies" data-pt="Escola Secundária do Forte da Casa - Estudos base">Forte da Casa High School - Foundation studies</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                        <!-- CV sections will be dynamically loaded -->
+                        <div id="cv-sections"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
     
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <!-- Scripts -->
+    <script src="src/data/cv-data.js"></script>
+    <script src="src/scripts/components.js"></script>
+    <script src="src/scripts/language.js"></script>
+    <script src="src/scripts/animations.js"></script>
+    <script src="src/scripts/card-flip.js"></script>
+    <script src="src/scripts/main.js"></script>
 </body>
 </html>

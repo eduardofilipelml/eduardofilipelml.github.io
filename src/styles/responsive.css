@@ -1,0 +1,186 @@
+/* Responsive Design */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .stats-section {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .stat-item {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .social-links {
+    gap: var(--space-4);
+  }
+
+  .language-selector {
+    top: var(--space-1);
+    right: var(--space-1);
+  }
+
+  .lang-btn {
+    padding: var(--space-1) var(--space-2);
+    font-size: var(--fs-xs);
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .name {
+    font-size: var(--fs-2xl);
+  }
+
+  .hero-tagline {
+    font-size: var(--fs-base);
+    padding: 0 var(--space-4);
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 576px) {
+  .container {
+    padding: var(--space-4);
+  }
+
+  .profile-header {
+    margin-bottom: var(--space-6);
+  }
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .name {
+    font-size: var(--fs-xl);
+  }
+
+  .role {
+    font-size: var(--fs-base);
+  }
+
+  .location {
+    font-size: var(--fs-xs);
+  }
+
+  .hero-tagline {
+    font-size: var(--fs-sm);
+  }
+
+  .stat-value {
+    font-size: var(--fs-3xl);
+  }
+
+  .social-links {
+    gap: var(--space-3);
+  }
+
+  .social-link {
+    width: 45px;
+    height: 45px;
+  }
+
+  .resume-btn {
+    top: var(--space-3);
+    left: var(--space-3);
+    width: 45px;
+    height: 45px;
+    position: absolute;
+  }
+
+  .return-button {
+    top: var(--space-3);
+    left: var(--space-3);
+    width: 45px;
+    height: 45px;
+    position: absolute;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .container {
+    padding: var(--space-2);
+  }
+
+  .language-selector {
+    display: none; /* Hide language selector on very small screens */
+  }
+
+  .stats-section {
+    gap: var(--space-3);
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-link i {
+    font-size: 1rem;
+  }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .profile-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .name {
+    font-size: var(--fs-4xl);
+  }
+
+  .hero-tagline {
+    font-size: var(--fs-xl);
+    max-width: 700px;
+  }
+
+  .stats-section {
+    gap: var(--space-12);
+  }
+
+  .stat-value {
+    font-size: var(--fs-5xl);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .language-selector,
+  .social-links,
+  .resume-btn,
+  .return-button {
+    display: none !important;
+  }
+
+  .card-front {
+    display: block !important;
+  }
+
+  .card-back {
+    display: block !important;
+  }
+
+  .container {
+    box-shadow: none;
+    background: white;
+  }
+}

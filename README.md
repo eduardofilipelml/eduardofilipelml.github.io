@@ -3,6 +3,51 @@
 Welcome to my personal portfolio! This website showcases my professional journey as a Java Software Developer and Creative AI User, including my skills, education, experience, and selected projects in enterprise and geospatial technologies.
 
 I'm also a AI explorer in my free-time. Love to build static web pages that are awesome.
+
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/eduardofilipelml/eduardofilipelml.github.io.git
+cd eduardofilipelml.github.io
+
+# Install dependencies (optional)
+npm install
+
+# Start development server
+npm run dev
+
+# Or simply open index.html in your browser
+npm run preview
+```
+
+## 📁 Project Structure
+
+```
+eduardofilipelml.github.io/
+├── index.html                 # Main HTML file
+├── package.json              # Project metadata
+├── README.md                 # This file
+├── src/
+│   ├── data/
+│   │   └── cv-data.js       # CV content data
+│   ├── scripts/
+│   │   ├── main.js          # Application entry point
+│   │   ├── components.js    # CV components generator
+│   │   ├── language.js      # Language switching
+│   │   ├── animations.js    # Animation handlers
+│   │   └── card-flip.js     # Card flip functionality
+│   └── styles/
+│       ├── main.css         # Main styles
+│       ├── components.css   # Component styles
+│       └── responsive.css   # Responsive styles
+└── public/
+    ├── images/
+    │   └── profile.webp     # Profile image
+    └── icons/
+        └── favicon.ico      # Favicon
+```
+
 ---
 
 ## 🌟 About Me
