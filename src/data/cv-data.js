@@ -20,6 +20,11 @@ window.cvData = {
     github: "https://github.com/eduardofilipelml"
   },
 
+  about: {
+    en: "With a foundation in computer science and a career spanning space technology and finance, I thrive on bridging the gap between intricate problems and clear, creative solutions. My journey is fueled by curiosity and a belief that every line of code can shape something valuable—especially when inspired by the possibilities of AI.",
+    pt: "Com uma base em ciência da computação e uma carreira que abrange tecnologia espacial e finanças, prospero em preencher a lacuna entre problemas intrincados e soluções claras e criativas. A minha jornada é alimentada pela curiosidade e pela crença de que cada linha de código pode moldar algo valioso—especialmente quando inspirada pelas possibilidades da IA."
+  },
+
   hero: {
     tagline: {
       en: "Turning curiosity into creation—where code meets imagination, and AI expands what's possible.",
