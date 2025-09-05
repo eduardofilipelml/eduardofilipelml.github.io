@@ -13,9 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Set up card flip functionality
     setupCardFlip();
-    
-    // Test for 3D transform support
-    checkFor3DSupport();
 });
 
 /**
@@ -101,20 +98,11 @@ function setupCardFlip() {
     const flipBtn = document.getElementById('flip-btn');
     const returnBtn = document.getElementById('return-btn');
     const cardFlip = document.querySelector('.card-flip');
-    const body = document.body;
-    
-    // Initialize with front card active
-    body.classList.add('front-card-active');
-    body.classList.remove('back-card-active');
     
     // Flip to CV side
     if (flipBtn && returnBtn && cardFlip) {
         flipBtn.addEventListener('click', () => {
             cardFlip.classList.add('flipped');
-            
-            // Update body classes for dynamic scrolling
-            body.classList.remove('front-card-active');
-            body.classList.add('back-card-active');
             
             // Reset scroll position when switching to back card
             window.scrollTo(0, 0);
@@ -126,10 +114,6 @@ function setupCardFlip() {
         // Return to profile side
         returnBtn.addEventListener('click', () => {
             cardFlip.classList.remove('flipped');
-            
-            // Update body classes for dynamic scrolling
-            body.classList.remove('back-card-active');
-            body.classList.add('front-card-active');
             
             // Reset scroll position when switching to front card
             window.scrollTo(0, 0);
@@ -168,18 +152,6 @@ function announceScreenReaderMessage(message) {
     }, 3000);
 }
 
-/**
- * Check for 3D transform support
- */
-function checkFor3DSupport() {
-    const isSupported = 'transform-style' in document.documentElement.style &&
-        'perspective' in document.documentElement.style;
-    
-    if (!isSupported) {
-        document.body.classList.add('no-preserve-3d');
-    }
-}
-
 // Add smooth scroll polyfill for Safari
 if (!('scrollBehavior' in document.documentElement.style)) {
     // Use script tag approach instead of import
@@ -190,29 +162,6 @@ if (!('scrollBehavior' in document.documentElement.style)) {
     };
     document.head.appendChild(script);
 }
-
-// Smooth scroll for navigation links
-navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetId);
-        
-        if (targetSection) {
-            const navHeight = document.querySelector('.nav').offsetHeight;
-            const targetPosition = targetSection.offsetTop - navHeight;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Scroll event listener
-window.addEventListener('scroll', updateActiveNavLink);
-updateActiveNavLink();
 
 // Timeline animations
 const timelineItems = document.querySelectorAll('.timeline-item');

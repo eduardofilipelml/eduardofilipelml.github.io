@@ -6,43 +6,23 @@
 
 /* Modern Variables with Extended Color Palette */
 :root {
-  /* Core dimensions */
-  --card-width: 100vw;
-  --card-height: 100vh;
-  
   /* Modern color scheme - Sage and Stone */
   --primary: #5e8c70;
   --primary-light: #e8f2ec;
-  --primary-dark: #3a6b51;
-  --primary-glass: rgba(94, 140, 112, 0.1);
   
   --accent: #ff7e5f;
-  --accent-light: #ffd0c2;
-  --accent-dark: #d95c42;
   
   --neutral-50: #f9fafb;
   --neutral-100: #f3f4f6;
-  --neutral-200: #e5e7eb;
-  --neutral-300: #d1d5db;
-  --neutral-400: #9ca3af;
   --neutral-500: #6b7280;
   --neutral-600: #4b5563;
-  --neutral-700: #374151;
   --neutral-800: #1f2937;
-  --neutral-900: #111827;
   
   /* Text colors */
   --text-primary: var(--neutral-800);
   --text-secondary: var(--neutral-600);
   --text-muted: var(--neutral-500);
   --text-light: var(--neutral-50);
-  
-  /* Background colors */
-  --bg-primary: var(--neutral-50);
-  --bg-secondary: var(--neutral-100);
-  --bg-tertiary: var(--primary-light);
-  --bg-card: rgba(255, 255, 255, 0.9);
-  --bg-glass: rgba(255, 255, 255, 0.8);
   
   /* Spacing system - 8pt grid */
   --space-1: 0.25rem; /* 4px */
@@ -118,16 +98,10 @@ body {
   padding: 0;
 }
 
-/* Dynamic scroll control based on card state */
-body.front-card-active {
-  overflow-y: auto; /* Allow front card to scroll if needed */
-  height: auto; /* Dynamic height for front card */
-  min-height: 100vh;
-}
-
-body.back-card-active {
-  overflow-y: auto; /* Back card can scroll */
-  height: auto; /* Dynamic height for back card */
+/* Dynamic scroll control - simplified */
+body {
+  overflow-y: auto;
+  height: auto; 
   min-height: 100vh;
 }
 
@@ -144,28 +118,26 @@ body.back-card-active {
   position: relative;
 }
 
-/* Scene - Maintains the 3D space */
+/* Scene */
 .scene {
   width: 100vw;
   min-height: 100vh;
   max-width: none;
-  perspective: 3000px;
   display: flex;
-  align-items: flex-start; /* Change to flex-start to allow content to flow naturally */
+  align-items: flex-start;
   justify-content: center;
-  overflow: visible; /* Allow content to extend beyond scene */
+  overflow: visible;
   position: relative;
   margin: 0;
 }
 
-/* Card Container with Perspective */
+/* Card Container */
 .card-container {
   width: 100vw;
   max-width: none;
-  min-height: 100vh; /* Changed from fixed height to min-height */
+  min-height: 100vh;
   margin: 0;
   position: relative;
-  transform-style: preserve-3d;
 }
 
 /* Card Flip Animation - ULTRA SIMPLE */
@@ -277,21 +249,6 @@ body.back-card-active {
   100% {
     border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
     transform: rotate(360deg) scale(1.1);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(255, 126, 95, 0.7);
-  }
-  70% {
-    transform: scale(1.2);
-    box-shadow: 0 0 0 5px rgba(255, 126, 95, 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(255, 126, 95, 0);
   }
 }
 
@@ -1030,11 +987,6 @@ body.back-card-active {
   100% { opacity: 1; transform: translateX(0); }
 }
 
-@keyframes scaleIn {
-  0% { opacity: 0; transform: scale(0.9); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
 .animate {
   animation: fadeIn 0.8s forwards;
   opacity: 0;
@@ -1050,12 +1002,6 @@ body.back-card-active {
   opacity: 0;
 }
 
-.animate-scale {
-  animation: scaleIn 0.8s forwards;
-  opacity: 0;
-}
-
-.delay-1 { animation-delay: 0.1s; }
 .delay-2 { animation-delay: 0.2s; }
 .delay-3 { animation-delay: 0.3s; }
 .delay-4 { animation-delay: 0.4s; }
@@ -1074,10 +1020,6 @@ body.back-card-active {
   .card-front, 
   .card-back {
     padding: var(--space-12);
-  }
-  
-  .cv-header {
-    padding: var(--space-12) var(--space-6) var(--space-8);
   }
   
   .cv-content {
@@ -1450,29 +1392,4 @@ body.back-card-active {
     z-index: 1000; /* Ensure it stays on top */
     position: fixed; /* Use fixed positioning on mobile */
   }
-}
-
-/* Fallback for browsers that don't support preserve-3d */
-.no-preserve-3d .card-flip {
-  overflow: hidden;
-}
-
-.no-preserve-3d .card-front,
-.no-preserve-3d .card-back {
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.no-preserve-3d .card-back {
-  opacity: 0;
-  transform: rotateY(0) translateX(100%);
-}
-
-.no-preserve-3d .card-flip.flipped .card-front {
-  opacity: 0;
-  transform: rotateY(0) translateX(-100%);
-}
-
-.no-preserve-3d .card-flip.flipped .card-back {
-  opacity: 1;
-  transform: rotateY(0) translateX(0);
 }
