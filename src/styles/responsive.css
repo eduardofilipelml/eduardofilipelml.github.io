@@ -1,4 +1,4 @@
-/* Responsive Design */
+/* Responsive Design - Only overrides, main styles in main.css */
 
 /* Tablet Styles */
 @media (max-width: 768px) {
@@ -27,9 +27,9 @@
     font-size: var(--fs-xs);
   }
 
-  .profile-image {
-    width: 100px;
-    height: 100px;
+  .profile-image-container {
+    width: 140px;
+    height: 140px;
   }
 
   .name {
@@ -52,9 +52,9 @@
     margin-bottom: var(--space-6);
   }
 
-  .profile-image {
-    width: 80px;
-    height: 80px;
+  .profile-image-container {
+    width: 120px;
+    height: 120px;
   }
 
   .name {
@@ -77,6 +77,11 @@
     font-size: var(--fs-3xl);
   }
 
+  .stats-section {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
   .social-links {
     gap: var(--space-3);
   }
@@ -91,7 +96,7 @@
     left: var(--space-3);
     width: 45px;
     height: 45px;
-    position: absolute;
+    font-size: 1rem;
   }
 
   .return-button {
@@ -99,7 +104,7 @@
     left: var(--space-3);
     width: 45px;
     height: 45px;
-    position: absolute;
+    font-size: 1rem;
   }
 }
 
@@ -139,9 +144,9 @@
     margin: 0 auto;
   }
 
-  .profile-image {
-    width: 140px;
-    height: 140px;
+  .profile-image-container {
+    width: 240px;
+    height: 240px;
   }
 
   .name {
@@ -162,6 +167,15 @@
   }
 }
 
+/* Extra Large Desktop */
+@media (min-width: 1400px) {
+  .language-selector,
+  .resume-btn,
+  .return-button {
+    scale: 1.1;
+  }
+}
+
 /* Print Styles */
 @media print {
   .language-selector,
@@ -171,10 +185,7 @@
     display: none !important;
   }
 
-  .card-front {
-    display: block !important;
-  }
-
+  .card-front,
   .card-back {
     display: block !important;
   }

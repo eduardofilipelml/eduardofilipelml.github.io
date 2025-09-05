@@ -192,44 +192,6 @@ body {
   }
 }
 
-/* Geometric Shape Decorations */
-.shape {
-  position: absolute;
-  opacity: 0.1;
-  z-index: 1;
-}
-
-.shape-1 {
-  top: -100px;
-  right: -100px;
-  width: 300px;
-  height: 300px;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  background-color: var(--primary);
-  animation: morph 15s linear infinite alternate;
-}
-
-.shape-2 {
-  bottom: -80px;
-  left: -80px;
-  width: 200px;
-  height: 200px;
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  background-color: var(--accent);
-  animation: morph 8s linear infinite alternate-reverse;
-}
-
-@keyframes morph {
-  0% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    transform: rotate(0deg) scale(1);
-  }
-  100% {
-    border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
-    transform: rotate(360deg) scale(1.1);
-  }
-}
-
 /* Modern Language Selector */
 .language-selector {
   position: fixed;
@@ -294,41 +256,60 @@ body {
   flex-shrink: 0;
 }
 
-/* Clean Image Container */
+/* Professional Profile Image Container */
 .profile-image-container {
-  width: 180px;
-  height: 180px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-8);
   position: relative;
-  padding: 0;
   background: #ffffff;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  border: 4px solid #f8fafc;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   flex-shrink: 0;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
 }
 
 .profile-image-container:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-}
-
-.profile-image-container::before {
-  display: none;
-}
-
-.profile-image-container:hover::before {
-  display: none;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.12),
+    0 4px 8px rgba(0, 0, 0, 0.15),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.03);
 }
 
 .profile-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: bottom right;
+  object-fit: cover;
+  object-position: center;
   border-radius: 50%;
-  background-color: #f8fafc;
+  transition: all 0.3s ease;
+  display: block;
+  filter: contrast(1.02) saturate(1.05);
+}
+
+@keyframes profile-intro {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Add intro animation to profile container */
+.profile-image-container.animate {
+  animation: profile-intro 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.profile-image:hover {
+  filter: contrast(1.05) saturate(1.08) brightness(1.02);
 }
 
 /* Modern Typography for Name and Role */
