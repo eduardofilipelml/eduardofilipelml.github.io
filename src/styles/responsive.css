@@ -1,0 +1,178 @@
+/* Responsive Design - Only overrides, main styles in main.css */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+  .social-links {
+    gap: var(--space-4);
+  }
+
+  .language-selector {
+    top: var(--space-1);
+    right: var(--space-1);
+  }
+
+  .lang-btn {
+    padding: var(--space-1) var(--space-2);
+    font-size: var(--fs-xs);
+  }
+
+  .profile-image-container {
+    width: 160px;
+    height: 160px;
+  }
+
+  .name {
+    font-size: var(--fs-2xl);
+  }
+
+  .hero-tagline {
+    font-size: var(--fs-base);
+    padding: 0 var(--space-4);
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 576px) {
+  .container {
+    padding: var(--space-4);
+  }
+
+  .profile-header {
+    margin-bottom: var(--space-6);
+  }
+
+  .profile-image-container {
+    width: 140px;
+    height: 140px;
+  }
+
+  .name {
+    font-size: var(--fs-xl);
+  }
+
+  .role {
+    font-size: var(--fs-base);
+  }
+
+  .location {
+    font-size: var(--fs-xs);
+  }
+
+  .hero-tagline {
+    font-size: var(--fs-sm);
+  }
+
+  .social-links {
+    gap: var(--space-3);
+  }
+
+  .social-link {
+    width: 45px;
+    height: 45px;
+  }
+
+  .resume-btn {
+    top: var(--space-3);
+    left: var(--space-3);
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .return-button {
+    top: var(--space-3);
+    left: var(--space-3);
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .container {
+    padding: var(--space-2);
+  }
+
+  .language-selector {
+    top: var(--space-2);
+    right: var(--space-2);
+    padding: var(--space-1);
+  }
+
+  .lang-btn {
+    padding: 4px 8px;
+    font-size: 10px;
+    min-width: 28px;
+    border-radius: 4px;
+  }
+
+  .stats-section {
+    gap: var(--space-3);
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-link i {
+    font-size: 1rem;
+  }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .profile-image-container {
+    width: 260px;
+    height: 260px;
+  }
+
+  .name {
+    font-size: var(--fs-4xl);
+  }
+
+  .hero-tagline {
+    font-size: var(--fs-xl);
+    max-width: 700px;
+  }
+}
+
+/* Extra Large Desktop */
+@media (min-width: 1400px) {
+  .language-selector,
+  .resume-btn,
+  .return-button {
+    scale: 1.1;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .language-selector,
+  .social-links,
+  .resume-btn,
+  .return-button {
+    display: none !important;
+  }
+
+  .card-front,
+  .card-back {
+    display: block !important;
+  }
+
+  .container {
+    box-shadow: none;
+    background: white;
+  }
+}

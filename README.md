@@ -1,16 +1,61 @@
 # Eduardo Meireles Lopes – Personal Portfolio Website
 
-Welcome to my personal portfolio! This website showcases my professional journey as a Java Software Developer, including my skills, education, experience, and selected projects in enterprise and geospatial technologies.
+Welcome to my personal portfolio! This website showcases my professional journey as a Java Software Developer and Creative AI User, including my skills, education, experience, and selected projects in enterprise and geospatial technologies.
 
 I'm also a AI explorer in my free-time. Love to build static web pages that are awesome.
+
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/eduardofilipelml/eduardofilipelml.github.io.git
+cd eduardofilipelml.github.io
+
+# Install dependencies (optional)
+npm install
+
+# Start development server
+npm run dev
+
+# Or simply open index.html in your browser
+npm run preview
+```
+
+## 📁 Project Structure
+
+```
+eduardofilipelml.github.io/
+├── index.html                 # Main HTML file
+├── package.json              # Project metadata
+├── README.md                 # This file
+├── src/
+│   ├── data/
+│   │   └── cv-data.js       # CV content data
+│   ├── scripts/
+│   │   ├── main.js          # Application entry point
+│   │   ├── components.js    # CV components generator
+│   │   ├── language.js      # Language switching
+│   │   ├── animations.js    # Animation handlers
+│   │   └── card-flip.js     # Card flip functionality
+│   └── styles/
+│       ├── main.css         # Main styles
+│       ├── components.css   # Component styles
+│       └── responsive.css   # Responsive styles
+└── public/
+    ├── images/
+    │   └── profile.webp     # Profile image
+    └── icons/
+        └── favicon.ico      # Favicon
+```
+
 ---
 
 ## 🌟 About Me
 
-Hello! I'm **Eduardo Meireles Lopes**, a Java Software Developer based in Lisbon, Portugal. Passioned for solving complex problems and building efficient, maintainable software solutions.
+Hello! I'm **Eduardo Meireles Lopes**, a Java Software Developer and Creative AI User based in Lisbon, Portugal. Passioned for solving complex problems and building efficient, maintainable software solutions.
 
 - **Primary Language:** Java
-- **Other Technologies:** Spring, Swing, Eclipse RCP, JavaScript, Python
+- **Other Technologies:** Spring, Swing, Eclipse RCP, JavaScript, Python, Vaadin
 - **Years of Experience:** 8+ (15+ years in tech)
 
 ### Technical Skills
@@ -24,7 +69,8 @@ Hello! I'm **Eduardo Meireles Lopes**, a Java Software Developer based in Lisbon
 
 ## 🎓 Education
 - **Master in Computer Science** – FCT-UNL (2015–2020)
-  - Focus: Web development, data analysis, machine learning, visualization
+  - Focus: Web development, data analysis, machine learning, visualization,
+    Leaflet/Openlayers, JS / CSS / HTML
 - **Bachelor in Computer Science** – FCT-UNL (2010–2015)
   - Focus: Software development, algorithms, OOP
 - **Diploma in Socio-Economic Sciences** – Forte da Casa High School (2007–2010)
@@ -33,9 +79,12 @@ Hello! I'm **Eduardo Meireles Lopes**, a Java Software Developer based in Lisbon
 
 ## 💼 Professional Experience
 - **Java Developer** @ Profidata (2021–Present)
-  - Development and maintenance of Xentis software (Java, Spring, Swing, Eclipse RCP)
+  - Development and maintenance of Xentis software (Java, Spring, Swing, Eclipse
+    RCP, QF-Test, JUnit, Podman, CI/CD, Git)
 - **Software Engineer** @ Deimos Engenharia (2017–2021)
-  - ESA Earth Observation Applications: S2G, ESOV, DFDL4S, Geoportals (Java, Eclipse RCP, C++)
+  - ESA Earth Observation Applications: S2G, ESOV, DFDL4S, Geoportals (Java, Swing, Eclipse
+    RCP, JUnit, CI/CD, Git, C++, OpenLayers, Leaflet, HTML, JS
+    and CSS)
 
 ---
 
