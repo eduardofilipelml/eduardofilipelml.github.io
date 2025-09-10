@@ -19,6 +19,20 @@ function generateCVIntro() {
 }
 
 /**
+ * Generate About Section
+ */
+function generateAboutSection() {
+  return `
+    <section class="cv-section cv-about">
+      <h3 class="cv-section-title" data-en="About Me" data-pt="Sobre Mim">About Me</h3>
+      <div class="about-content">
+        <p class="about-description" data-en="${window.cvData.about.en}" data-pt="${window.cvData.about.pt}">${window.cvData.about.en}</p>
+      </div>
+    </section>
+  `;
+}
+
+/**
  * Generate Experience Section
  */
 function generateExperienceSection() {
@@ -106,6 +120,7 @@ function initializeCVComponents() {
   if (cvSections) {
     cvSections.innerHTML = `
       ${generateCVIntro()}
+      ${generateAboutSection()}
       ${generateExperienceSection()}
       ${generateProjectsSection()}
       ${generateEducationSection()}
@@ -117,6 +132,7 @@ function initializeCVComponents() {
 window.CVComponents = {
   initialize: initializeCVComponents,
   generateIntro: generateCVIntro,
+  generateAbout: generateAboutSection,
   generateExperience: generateExperienceSection,
   generateProjects: generateProjectsSection,
   generateEducation: generateEducationSection
