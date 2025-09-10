@@ -20,8 +20,8 @@ window.cvData = {
     github: "https://github.com/eduardofilipelml"
   },
   about: {
-    en: "With a foundation in computer science and a career spanning space technology and finance, I thrive on bridging the gap between intricate problems and clear, creative solutions. My journey is fueled by curiosity and a belief that every line of code can shape something valuable—especially when inspired by the possibilities of AI.",
-    pt: "Com uma base em ciência da computação e uma carreira que abrange tecnologia espacial e finanças, prospero em preencher a lacuna entre problemas intrincados e soluções claras e criativas. A minha jornada é alimentada pela curiosidade e pela crença de que cada linha de código pode moldar algo valioso—especialmente quando inspirada pelas possibilidades da IA."
+    en: "With a background in Computer Science and experience spanning from space technology to the financial sector, I excel at turning complex challenges into clear, effective, and creative solutions. My journey is driven by curiosity and by the belief that every line of code can create real impact — especially when inspired by the possibilities of Artificial Intelligence.",
+    pt: "Com formação em Ciência da Computação e experiência que abrange desde a tecnologia espacial até ao setor financeiro, destaco-me por transformar desafios complexos em soluções claras, eficazes e criativas. A minha trajetória é guiada pela curiosidade e pela convicção de que cada linha de código pode gerar impacto real — sobretudo quando inspirada pelo potencial da Inteligência Artificial."
   },
   hero: {
     tagline: {
@@ -126,7 +126,7 @@ window.cvData = {
       period: "2007 - 2010",
       description: {
         en: "Foundation studies",
-        pt: "Estudos base"
+        pt: "Estudos de base"
       }
     }
   ]
