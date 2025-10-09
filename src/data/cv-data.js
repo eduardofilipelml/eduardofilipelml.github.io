@@ -8,8 +8,8 @@ window.cvData = {
   personal: {
     name: "Eduardo Meireles Lopes",
     title: {
-      en: "Java Software Developer & Creative AI User",
-      pt: "Programador Java & Utilizador Criativo de IA"
+      en: "Software Engineer & Creative AI User",
+      pt: "Engenheiro de Software & Utilizador Criativo de IA"
     },
     location: {
       en: "Mafra / Lisbon, Portugal",
