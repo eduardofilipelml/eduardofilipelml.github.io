@@ -98,6 +98,16 @@ window.cvData = {
       },
       technologies: ["Java", "Eclipse RCP", "JNI"],
       link: "https://earth.esa.int/eogateway/tools/s2g-data-viewer"
+    },
+    {
+      title: "Catarina Lopes Yoga",
+      status: "WEB",
+      description: {
+        en: "Professional website for yoga teacher with class schedules and booking (HTML, CSS, JavaScript)",
+        pt: "Website profissional para professora de yoga com horários e reservas (HTML, CSS, JavaScript)"
+      },
+      technologies: ["HTML", "CSS", "JavaScript"],
+      link: "https://catarinalopesyoga.com/"
     }
   ],
 
@@ -118,15 +128,6 @@ window.cvData = {
       description: {
         en: "Software development, algorithms, OOP",
         pt: "Desenvolvimento de software, algoritmos, POO"
-      }
-    },
-    {
-      title: { en: "Socio-Economic Sciences", pt: "Ciências Socioeconómicas" },
-      institution: "Forte da Casa High School",
-      period: "2007 - 2010",
-      description: {
-        en: "Foundation studies",
-        pt: "Estudos de base"
       }
     }
   ]

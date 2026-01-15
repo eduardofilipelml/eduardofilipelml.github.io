@@ -84,114 +84,43 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: var(--white);
+  background: var(--neutral-50);
   color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  perspective: 1000px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Card Container */
-.card-container {
-  width: 100vw;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
+/* Hero Section (Top) */
+.hero-section {
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  overflow: hidden;
-  box-sizing: border-box;
-  z-index: 1;
-}
-
-/* Card Flip Container */
-.card-flip {
+  padding: var(--space-6) var(--space-6);
+  background: linear-gradient(135deg, #ffffff 0%, var(--neutral-100) 100%);
   position: relative;
+}
+
+.hero-content {
+  max-width: 900px;
   width: 100%;
-  height: 100vh;
-  z-index: 2;
-  overflow: hidden;
-  perspective: 1000px; /* Enable 3D perspective for flip effect */
-}
-
-/* Card Animation System */
-.card-front,
-.card-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
-  backface-visibility: hidden; /* Hide the back face during flip */
-  transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-}
-
-/* Default state: show front, hide back */
-.card-front {
-  transform: rotateY(0deg);
-  z-index: 2;
-  opacity: 1;
-}
-
-.card-back {
-  transform: rotateY(180deg); /* Start rotated 180 degrees (hidden) */
-  z-index: 1;
-  background: #ffffff;
-  padding: 0;
-  overflow-y: auto;
-  box-sizing: border-box;
-  display: block;
-  visibility: visible;
-  opacity: 0;
-}
-
-/* Flipped state: hide front, show back */
-.card-flip.flipped .card-front {
-  transform: rotateY(-180deg); /* Rotate front card away */
-  z-index: 1;
-  opacity: 0;
-}
-
-.card-flip.flipped .card-back {
-  transform: rotateY(0deg); /* Rotate back card to front */
-  z-index: 2;
-  opacity: 1;
-}
-
-/* Front Card */
-.card-front {
-  padding: var(--space-12);
-  background: #ffffff;
-  overflow: visible;
-  z-index: 2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
-  gap: var(--space-4);
-  position: relative;
+  gap: var(--space-3);
 }
 
-/* Mobile adjustments for card padding */
-@media (max-width: 768px) {
-  .card-front {
-    padding: var(--space-8);
-  }
+/* CV Section (Bottom) */
+.cv-section {
+  padding: var(--space-16) var(--space-6);
+  background: white;
 }
 
 /* Clean Professional Language Selector */
@@ -199,17 +128,14 @@ body {
   position: fixed;
   top: var(--space-6);
   right: var(--space-6);
+  z-index: 1000;
   display: flex;
-  gap: 4px;
-  z-index: 1001;
+  gap: var(--space-2);
   background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  border-radius: 16px;
-  padding: 6px;
-  box-shadow: 
-    0 4px 20px rgba(0, 0, 0, 0.08),
-    0 1px 3px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: var(--space-2);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(10px);
 }
 
 .lang-btn {
@@ -461,14 +387,10 @@ body {
 .bio-section {
   text-align: center;
   max-width: 85%;
-  margin: 0 auto var(--space-8);
+  margin: 0 auto var(--space-4);
   position: relative;
   z-index: 2;
   flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-4);
 }
 
 .hero-tagline {
@@ -584,6 +506,124 @@ body {
   border-color: var(--text-primary);
 }
 
+/* Creative Scroll Indicator */
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  position: relative;
+  z-index: 5;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.scroll-mouse {
+  width: 24px;
+  height: 36px;
+  border: 2px solid var(--text-secondary);
+  border-radius: 12px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.scroll-mouse-wheel {
+  width: 4px;
+  height: 8px;
+  background: var(--text-secondary);
+  border-radius: 2px;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-wheel 2s infinite;
+}
+
+@keyframes scroll-wheel {
+  0%, 100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(-50%) translateY(4px);
+  }
+}
+
+.scroll-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: var(--space-2) 0;
+  position: relative;
+}
+
+.scroll-text::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background: var(--text-secondary);
+  transition: width 0.3s ease;
+}
+
+.scroll-indicator:hover .scroll-text::after {
+  width: 100%;
+}
+
+.scroll-dots {
+  display: flex;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.scroll-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-secondary);
+  opacity: 0.4;
+  transition: all 0.3s ease;
+  animation: dot-pulse 2s infinite;
+}
+
+.scroll-dot.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.scroll-dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.scroll-dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes dot-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
 
 
 /* Resume Button (Flip Button) - Attached to Front Card */
@@ -646,8 +686,7 @@ body {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  background: #ffffff;
-  /* Remove any height constraints and overflow settings */
+  background: transparent;
 }
 
 /* Introduction Section */
@@ -699,8 +738,8 @@ body {
 }
 
 /* Timeline Section */
-.cv-section {
-  margin-bottom: var(--space-20);
+.cv-section .cv-section {
+  margin-bottom: var(--space-12);
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease-out forwards;
@@ -715,11 +754,11 @@ body {
   overflow: visible;
 }
 
-.cv-section:nth-child(1) { animation-delay: 0.1s; }
-.cv-section:nth-child(2) { animation-delay: 0.2s; }
-.cv-section:nth-child(3) { animation-delay: 0.3s; }
-.cv-section:nth-child(4) { animation-delay: 0.4s; }
-.cv-section:nth-child(5) { animation-delay: 0.5s; }
+.cv-section .cv-section:nth-child(1) { animation-delay: 0.1s; }
+.cv-section .cv-section:nth-child(2) { animation-delay: 0.2s; }
+.cv-section .cv-section:nth-child(3) { animation-delay: 0.3s; }
+.cv-section .cv-section:nth-child(4) { animation-delay: 0.4s; }
+.cv-section .cv-section:nth-child(5) { animation-delay: 0.5s; }
 
 .cv-section-title {
   font-size: 1.5rem;
@@ -750,6 +789,10 @@ body {
 .cv-about .about-content {
   padding: 0;
   margin-top: var(--space-4);
+}
+
+.cv-about {
+  margin-bottom: var(--space-8) !important;
 }
 
 .about-description {
@@ -1470,4 +1513,27 @@ body {
     z-index: 1000; /* Ensure it stays on top */
     position: fixed; /* Use fixed positioning on mobile */
   }
+}
+
+/* Footer */
+.site-footer {
+  background: var(--neutral-50);
+  border-top: 1px solid var(--neutral-200);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  margin-top: var(--space-16);
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-tagline {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.8;
 }

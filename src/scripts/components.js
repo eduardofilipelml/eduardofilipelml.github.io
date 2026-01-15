@@ -7,15 +7,7 @@
  * Generate CV Intro Section
  */
 function generateCVIntro() {
-  return `
-    <section class="cv-section cv-intro">
-      <div class="intro-content">
-        <h1 class="intro-name">${window.cvData.personal.name}</h1>
-        <p class="intro-title" data-en="${window.cvData.personal.title.en}" data-pt="${window.cvData.personal.title.pt}">${window.cvData.personal.title.en}</p>
-        <div class="intro-divider"></div>
-      </div>
-    </section>
-  `;
+  return ``;
 }
 
 /**
@@ -119,7 +111,6 @@ function initializeCVComponents() {
   const cvSections = document.getElementById('cv-sections');
   if (cvSections) {
     cvSections.innerHTML = `
-      ${generateCVIntro()}
       ${generateAboutSection()}
       ${generateExperienceSection()}
       ${generateProjectsSection()}
