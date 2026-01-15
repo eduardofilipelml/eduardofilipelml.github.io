@@ -26,8 +26,7 @@ src/
 │   ├── main.js
 │   ├── components.js
 │   ├── language.js
-│   ├── animations.js
-│   └── card-flip.js
+│   └── animations.js
 └── styles/
     ├── variables.css    # Design tokens
     ├── base.css
