@@ -3,21 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Eduardo Meireles Lopes - Java Software Developer & Creative AI User">
+    <meta name="description" content="Eduardo Meireles Lopes - Java Software Developer & Creative AI User. Portfolio showcasing experience in enterprise software, space technology, and AI-driven solutions.">
+    <meta name="keywords" content="Java, Software Developer, AI, Web Development, Enterprise Software, Portfolio, Eduardo Meireles Lopes">
+    <meta name="author" content="Eduardo Meireles Lopes">
+    <meta name="theme-color" content="#5e8c70">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eduardofilipelml.github.io/">
+    <meta property="og:title" content="Eduardo Meireles Lopes - Java Software Developer & Creative AI User">
+    <meta property="og:description" content="Portfolio of a Java Software Developer with 15+ years in tech. From space technology to financial sector, turning complex challenges into elegant solutions.">
+    <meta property="og:image" content="https://eduardofilipelml.github.io/images/profile.webp">
+    <meta property="og:site_name" content="Eduardo Meireles Lopes Portfolio">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Eduardo Meireles Lopes - Java Software Developer & Creative AI User">
+    <meta name="twitter:description" content="Portfolio of a Java Software Developer with 15+ years in tech. From space technology to financial sector, turning complex challenges into elegant solutions.">
+    <meta name="twitter:image" content="https://eduardofilipelml.github.io/images/profile.webp">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Eduardo Meireles Lopes",
+      "url": "https://eduardofilipelml.github.io",
+      "email": "eduardofilipelml@gmail.com",
+      "jobTitle": "Software Engineer",
+      "image": "https://eduardofilipelml.github.io/images/profile.webp",
+      "sameAs": [
+        "https://linkedin.com/in/eduardomeireleslopes",
+        "https://github.com/eduardofilipelml"
+      ],
+      "description": "Java Software Developer with 15+ years of experience spanning space technology to the financial sector. Expertise in turning complex challenges into clear, effective, and creative solutions with AI-driven innovation."
+    }
+    </script>
+    
     <title>Eduardo Meireles Lopes | Java Software Developer & Creative AI User</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="icons/favicon.ico">
+    <link rel="canonical" href="https://eduardofilipelml.github.io/">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Preload Critical Resources -->
+    <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" crossorigin>
+    <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" crossorigin>
+    
     <!-- Styles -->
-    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/variables.css">
+    <link rel="stylesheet" href="src/styles/base.css">
+    <link rel="stylesheet" href="src/styles/hero.css">
+    <link rel="stylesheet" href="src/styles/cv-section.css">
+    <link rel="stylesheet" href="src/styles/cards.css">
     <link rel="stylesheet" href="src/styles/components.css">
     <link rel="stylesheet" href="src/styles/responsive.css">
 </head>
 <body>
+    <!-- Skip to main content link for keyboard users -->
+    <a href="#cv-section" class="skip-link">Skip to main content</a>
+    
     <!-- Language selector -->
     <div class="language-selector">
         <button id="en-btn" class="lang-btn active" data-lang="en">EN</button>
@@ -64,11 +112,6 @@
                     <div class="scroll-mouse-wheel"></div>
                 </div>
                 <span class="scroll-text">Explore My Journey</span>
-                <div class="scroll-dots">
-                    <div class="scroll-dot active"></div>
-                    <div class="scroll-dot"></div>
-                    <div class="scroll-dot"></div>
-                </div>
             </div>
         </div>
     </section>

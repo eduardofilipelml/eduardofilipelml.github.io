@@ -1,20 +1,15 @@
 {
   "name": "eduardofilipelml-portfolio",
   "version": "2.0.0",
-  "description": "Personal portfolio website for Eduardo Meireles Lopes - Java Software Developer & Creative AI User",
+  "description": "Personal portfolio website for Eduardo Meireles Lopes",
   "main": "index.html",
   "scripts": {
     "start": "python -m http.server 8000",
-    "dev": "python -m http.server 3000",
-    "build": "echo 'Static site - no build needed'",
-    "preview": "start index.html"
+    "dev": "python -m http.server 3000"
   },
   "keywords": [
     "portfolio",
     "web-development",
-    "javascript",
-    "html",
-    "css",
     "java",
     "ai",
     "developer"
@@ -29,10 +24,5 @@
   "devDependencies": {},
   "engines": {
     "node": ">=14.0.0"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "> 1%",
-    "not dead"
-  ]
+  }
 }

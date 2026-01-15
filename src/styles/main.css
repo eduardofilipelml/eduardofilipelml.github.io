@@ -777,10 +777,15 @@ body {
 .cv-about {
   margin-bottom: var(--space-20) !important;
   grid-column: 1 / -1;
+  background: #ffffff;
+  border: 1px solid var(--neutral-200);
+  padding: var(--space-8);
+  border-radius: var(--radius-none);
+  box-shadow: var(--shadow-sm);
 }
 
 .about-description {
-  font-size: 1.375rem;
+  font-size: 1rem;
   line-height: 1.8;
   color: var(--neutral-700);
   font-weight: 400;
