@@ -2,13 +2,27 @@
 
 /* Tablet Styles */
 @media (max-width: 768px) {
+  .hero-section {
+    padding: var(--space-6) var(--space-4);
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .cv-section {
+    padding: var(--space-12) var(--space-4);
+  }
+
+  .cv-content {
+    padding: var(--space-6) var(--space-4);
+  }
+
   .social-links {
     gap: var(--space-4);
   }
 
   .language-selector {
-    top: var(--space-1);
-    right: var(--space-1);
+    top: var(--space-4);
+    right: var(--space-4);
   }
 
   .lang-btn {
@@ -17,12 +31,12 @@
   }
 
   .profile-image-container {
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
   }
 
   .name {
-    font-size: var(--fs-2xl);
+    font-size: var(--fs-3xl);
   }
 
   .hero-tagline {
@@ -33,7 +47,17 @@
 
 /* Mobile Styles */
 @media (max-width: 576px) {
-  .container {
+  .hero-section {
+    padding: var(--space-4) var(--space-4);
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .cv-section {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .cv-content {
     padding: var(--space-4);
   }
 
@@ -47,7 +71,7 @@
   }
 
   .name {
-    font-size: var(--fs-xl);
+    font-size: var(--fs-2xl);
   }
 
   .role {
@@ -71,27 +95,36 @@
     height: 45px;
   }
 
-  .resume-btn {
-    top: var(--space-3);
-    left: var(--space-3);
-    width: 45px;
-    height: 45px;
-    font-size: 1rem;
+  .scroll-indicator {
+    margin-top: var(--space-4);
   }
 
-  .return-button {
-    top: var(--space-3);
-    left: var(--space-3);
-    width: 45px;
-    height: 45px;
-    font-size: 1rem;
+  .scroll-text {
+    font-size: 12px;
   }
+
+  .scroll-mouse {
+    width: 20px;
+    height: 30px;
+  }
+
+  .scroll-mouse-wheel {
+    width: 3px;
+    height: 6px;
+  }
+}
 }
 
 /* Small Mobile Styles */
 @media (max-width: 480px) {
-  .container {
-    padding: var(--space-2);
+  .hero-section {
+    padding: var(--space-3) var(--space-3);
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .cv-section {
+    padding: var(--space-6) var(--space-3);
   }
 
   .language-selector {
@@ -99,6 +132,25 @@
     right: var(--space-2);
     padding: var(--space-1);
   }
+
+  .scroll-indicator {
+    margin-top: var(--space-3);
+  }
+
+  .scroll-text {
+    font-size: 11px;
+  }
+
+  .scroll-mouse {
+    width: 18px;
+    height: 26px;
+  }
+
+  .scroll-mouse-wheel {
+    width: 2px;
+    height: 5px;
+  }
+}
 
   .lang-btn {
     padding: 4px 8px;
@@ -174,5 +226,24 @@
   .container {
     box-shadow: none;
     background: white;
+  }
+}
+
+/* Footer Responsive */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: var(--space-6) var(--space-4);
+    margin-top: var(--space-12);
+  }
+}
+
+@media (max-width: 576px) {
+  .site-footer {
+    padding: var(--space-4) var(--space-4);
+    margin-top: var(--space-8);
+  }
+
+  .footer-tagline {
+    font-size: var(--fs-xs);
   }
 }

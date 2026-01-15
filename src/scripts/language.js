@@ -25,6 +25,8 @@ function setupLanguageSwitcher() {
     } else if (browserLang === 'pt') {
       switchLanguage('pt');
     }
+  } else {
+    console.error('Language buttons not found - language switching disabled');
   }
 }
 
@@ -36,12 +38,14 @@ function switchLanguage(lang) {
   const ptBtn = document.getElementById('pt-btn');
 
   // Update active button state
-  if (lang === 'en') {
-    enBtn.classList.add('active');
-    ptBtn.classList.remove('active');
-  } else {
-    ptBtn.classList.add('active');
-    enBtn.classList.remove('active');
+  if (enBtn && ptBtn) {
+    if (lang === 'en') {
+      enBtn.classList.add('active');
+      ptBtn.classList.remove('active');
+    } else {
+      ptBtn.classList.add('active');
+      enBtn.classList.remove('active');
+    }
   }
 
   // Save preference
@@ -50,7 +54,9 @@ function switchLanguage(lang) {
   // Update all translatable elements
   const translatableElements = document.querySelectorAll(`[data-${lang}]`);
   translatableElements.forEach(el => {
-    el.textContent = el.getAttribute(`data-${lang}`);
+    if (el) {
+      el.textContent = el.getAttribute(`data-${lang}`);
+    }
   });
 }
 

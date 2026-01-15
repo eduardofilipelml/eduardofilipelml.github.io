@@ -3,100 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Eduardo Meireles Lopes - Java Software Developer & Creative AI User">
-    <title>Eduardo Meireles Lopes | Java Software Developer & Creative AI User</title>
+    <meta name="description" content="Eduardo Meireles Lopes - Java Software Developer & Creative AI User. Portfolio showcasing experience in enterprise software, space technology, and AI-driven solutions.">
+    <meta name="keywords" content="Java, Software Developer, AI, Web Development, Enterprise Software, Portfolio, Eduardo Meireles Lopes">
+    <meta name="author" content="Eduardo Meireles Lopes">
+    <meta name="theme-color" content="#5e8c70">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eduardofilipelml.github.io/">
+    <meta property="og:title" content="Eduardo Meireles Lopes - Java Software Developer & Creative AI User">
+    <meta property="og:description" content="Portfolio of a Java Software Developer with 15+ years in tech. From space technology to financial sector, turning complex challenges into elegant solutions.">
+    <meta property="og:image" content="https://eduardofilipelml.github.io/images/profile.webp">
+    <meta property="og:site_name" content="Eduardo Meireles Lopes Portfolio">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Eduardo Meireles Lopes - Java Software Developer & Creative AI User">
+    <meta name="twitter:description" content="Portfolio of a Java Software Developer with 15+ years in tech. From space technology to financial sector, turning complex challenges into elegant solutions.">
+    <meta name="twitter:image" content="https://eduardofilipelml.github.io/images/profile.webp">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Eduardo Meireles Lopes",
+      "url": "https://eduardofilipelml.github.io",
+      "email": "eduardofilipelml@gmail.com",
+      "jobTitle": "Software Engineer",
+      "image": "https://eduardofilipelml.github.io/images/profile.webp",
+      "sameAs": [
+        "https://linkedin.com/in/eduardomeireleslopes",
+        "https://github.com/eduardofilipelml"
+      ],
+      "description": "Java Software Developer with 15+ years of experience spanning space technology to the financial sector. Expertise in turning complex challenges into clear, effective, and creative solutions with AI-driven innovation."
+    }
+    </script>
+    
+    <title>Eduardo Meireles Lopes | Software Engineer</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="public/icons/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+    <link rel="canonical" href="https://eduardofilipelml.github.io/">
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    
     <!-- Styles -->
-    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/variables.css">
+    <link rel="stylesheet" href="src/styles/base.css">
+    <link rel="stylesheet" href="src/styles/hero.css">
+    <link rel="stylesheet" href="src/styles/cv-section.css">
+    <link rel="stylesheet" href="src/styles/cards.css">
     <link rel="stylesheet" href="src/styles/components.css">
     <link rel="stylesheet" href="src/styles/responsive.css">
 </head>
 <body>
-    <div class="card-container">
-        <div class="card-flip">
-                <!-- Front Card - Profile -->
-                <div class="card-front">
-                    <!-- Flip Button -->
-                    <button id="flip-btn" class="resume-btn animate delay-8" aria-label="View Resume">
-                        <i class="fas fa-file-text"></i>
-                    </button>
-                    
-                    <!-- Language selector -->
-                    <div class="language-selector">
-                        <button id="en-btn" class="lang-btn active" data-lang="en">EN</button>
-                        <button id="pt-btn" class="lang-btn" data-lang="pt">PT</button>
-                    </div>
-                    
-                    <!-- Profile Header -->
-                    <div class="profile-header animate">
-                        <div class="profile-image-container animate">
-                            <img src="public/images/profile.webp" alt="Eduardo Meireles Lopes" class="profile-image">
-                        </div>
-                        
-                        <div class="profile-info">
-                            <h1 class="name">Eduardo Meireles Lopes</h1>
-                            <div class="role-location-group">
-                                <h2 class="role" data-en="Software Engineer & Creative AI User" data-pt="Engenheiro de Software & Utilizador Criativo de IA">Software Engineer & Creative AI User</h2>
-                                <div class="location">
-                                    <i class="fas fa-map-marker-alt location-icon"></i>
-                                    <span data-en="Mafra / Lisbon, Portugal" data-pt="Mafra / Lisboa, Portugal">Mafra / Lisbon, Portugal</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Bio Section -->
-                    <div class="bio-section">
-                        <p class="hero-tagline animate delay-3" data-en="Turning curiosity into creation—where code meets imagination, and AI expands what's possible." data-pt="Transformo curiosidade em criação—onde o código encontra a imaginação e a IA amplia o possível.">Turning curiosity into creation—where code meets imagination, and AI expands what's possible.</p>
-                        
-                        <div class="curiosity-badge animate delay-4">
-                            <span class="curiosity-symbol">∞</span>
-                            <span class="curiosity-text" data-en="Curiosity Level" data-pt="Nível de Curiosidade">Curiosity Level</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Social Links -->
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/eduardomeireleslopes" class="social-link animate delay-5" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                            <i class="fab fa-linkedin-in fa-lg"></i>
-                        </a>
-                        <a href="https://github.com/eduardofilipelml" class="social-link animate delay-6" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-                            <i class="fab fa-github fa-lg"></i>
-                        </a>
-                        <a href="mailto:eduardofilipelml@gmail.com" class="social-link animate delay-7" aria-label="Email Contact">
-                            <i class="fas fa-envelope fa-lg"></i>
-                        </a>
-                    </div>
+    <!-- Skip to main content link for keyboard users -->
+    <a href="#cv-section" class="skip-link">Skip to main content</a>
+    
+    <!-- Language selector -->
+    <div class="language-selector">
+        <button id="en-btn" class="lang-btn active" data-lang="en">EN</button>
+        <button id="pt-btn" class="lang-btn" data-lang="pt">PT</button>
+    </div>
+    
+    <!-- Hero Section (Top) -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <!-- Profile Header -->
+            <div class="profile-header animate">
+                <div class="profile-image-container">
+                    <img src="images/profile.webp" alt="Eduardo Meireles Lopes" class="profile-image">
                 </div>
                 
-                <!-- Back Card - CV -->
-                <div class="card-back">
-                    <!-- Return Button -->
-                    <button id="return-btn" class="return-button">
-                        <i class="fas fa-user-circle"></i>
-                    </button>
-                    
-                    <!-- CV Content -->
-                    <div class="cv-content">
-                        <!-- CV sections will be dynamically loaded -->
-                        <div id="cv-sections"></div>
+                <div class="profile-info">
+                    <h1 class="name">Eduardo Meireles Lopes</h1>
+                    <div class="role-location-group">
+                        <h2 class="role" data-en="Software Engineer & Creative AI User" data-pt="Engenheiro de Software & Utilizador Criativo de IA">Software Engineer & Creative AI User</h2>
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt location-icon"></i>
+                            <span data-en="Mafra / Lisbon, Portugal" data-pt="Mafra / Lisboa, Portugal">Mafra / Lisbon, Portugal</span>
+                        </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="https://linkedin.com/in/eduardomeireleslopes" class="social-link animate" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin-in fa-lg"></i>
+                </a>
+                <a href="https://github.com/eduardofilipelml" class="social-link animate" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+                <a href="mailto:eduardofilipelml@gmail.com" class="social-link animate" aria-label="Email Contact">
+                    <i class="fas fa-envelope fa-lg"></i>
+                </a>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator animate" id="scroll-to-cv">
+                <div class="scroll-mouse">
+                    <div class="scroll-mouse-wheel"></div>
+                </div>
+                <span class="scroll-text">Explore My Journey</span>
+            </div>
         </div>
+    </section>
+    
+    <!-- CV Section (Bottom) -->
+    <section class="cv-section">
+        <div class="cv-content">
+            <!-- CV sections will be dynamically loaded -->
+            <div id="cv-sections"></div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="footer-tagline">Turning curiosity into creation—where code meets imagination, and AI expands what's possible.</p>
+            
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/eduardomeireleslopes" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/eduardofilipelml" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:eduardofilipelml@gmail.com" class="footer-social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">Eduardo Meireles Lopes © 2026</p>
+            </div>
+        </div>
+    </footer>
     
     <!-- Scripts -->
     <script src="src/data/cv-data.js"></script>
     <script src="src/scripts/components.js"></script>
     <script src="src/scripts/language.js"></script>
     <script src="src/scripts/animations.js"></script>
-    <script src="src/scripts/card-flip.js"></script>
     <script src="src/scripts/main.js"></script>
 </body>
 </html>

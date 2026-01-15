@@ -7,15 +7,7 @@
  * Generate CV Intro Section
  */
 function generateCVIntro() {
-  return `
-    <section class="cv-section cv-intro">
-      <div class="intro-content">
-        <h1 class="intro-name">${window.cvData.personal.name}</h1>
-        <p class="intro-title" data-en="${window.cvData.personal.title.en}" data-pt="${window.cvData.personal.title.pt}">${window.cvData.personal.title.en}</p>
-        <div class="intro-divider"></div>
-      </div>
-    </section>
-  `;
+  return ``;
 }
 
 /**
@@ -41,6 +33,7 @@ function generateExperienceSection() {
       <div class="timeline-marker"></div>
       <div class="timeline-content">
         <h4 class="timeline-title">${exp.title}</h4>
+        <span class="timeline-company">${exp.company}</span>
         <span class="timeline-period">${exp.period}</span>
         <p class="timeline-description" data-en="${exp.description.en}" data-pt="${exp.description.pt}">${exp.description.en}</p>
         <div class="timeline-tech">
@@ -64,7 +57,11 @@ function generateExperienceSection() {
  * Generate Projects Section
  */
 function generateProjectsSection() {
-  const projects = window.cvData.projects.map(project => `
+  const projects = window.cvData.projects.map(project => {
+    const hasLink = project.link && project.link !== '#';
+    const cta = hasLink ? `<div class="project-cta-wrapper"><a href="${project.link}" class="project-cta" target="_blank" rel="noopener noreferrer">View Project →</a></div>` : '';
+    
+    return `
     <div class="project-card">
       <div class="project-header">
         <h4 class="project-title">${project.title}</h4>
@@ -74,8 +71,10 @@ function generateProjectsSection() {
       <div class="project-tech">
         ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
       </div>
+      ${cta}
     </div>
-  `).join('');
+  `;
+  }).join('');
 
   return `
     <section class="cv-section">
@@ -119,7 +118,6 @@ function initializeCVComponents() {
   const cvSections = document.getElementById('cv-sections');
   if (cvSections) {
     cvSections.innerHTML = `
-      ${generateCVIntro()}
       ${generateAboutSection()}
       ${generateExperienceSection()}
       ${generateProjectsSection()}

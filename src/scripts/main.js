@@ -30,10 +30,8 @@ function initializeApplication() {
       window.AnimationsModule.initPulse();
     }
 
-    // Initialize card flip functionality
-    if (window.CardFlipModule) {
-      window.CardFlipModule.setup();
-    }
+    // Initialize scroll indicator
+    initializeScrollIndicator();
 
     // Add smooth scroll polyfill for Safari
     if (!('scrollBehavior' in document.documentElement.style)) {
@@ -48,6 +46,23 @@ function initializeApplication() {
     console.log('Portfolio application initialized successfully');
   } catch (error) {
     console.error('Error initializing application:', error);
+  }
+}
+
+/**
+ * Initialize scroll indicator functionality
+ */
+function initializeScrollIndicator() {
+  const scrollIndicator = document.getElementById('scroll-to-cv');
+  const cvSection = document.querySelector('.cv-section');
+
+  if (scrollIndicator && cvSection) {
+    scrollIndicator.addEventListener('click', () => {
+      cvSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
   }
 }
 
