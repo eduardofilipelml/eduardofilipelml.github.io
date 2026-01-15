@@ -59,7 +59,7 @@ function generateExperienceSection() {
 function generateProjectsSection() {
   const projects = window.cvData.projects.map(project => {
     const hasLink = project.link && project.link !== '#';
-    const cta = hasLink ? `<a href="${project.link}" class="project-cta" target="_blank" rel="noopener noreferrer">View Project →</a>` : '';
+    const cta = hasLink ? `<div class="project-cta-wrapper"><a href="${project.link}" class="project-cta" target="_blank" rel="noopener noreferrer">View Project →</a></div>` : '';
     
     return `
     <div class="project-card">
