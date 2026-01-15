@@ -63,9 +63,6 @@ function initializeScrollIndicator() {
         block: 'start'
       });
     });
-
-    // Add cursor pointer to indicate it's clickable
-    scrollIndicator.style.cursor = 'pointer';
   }
 }
 
