@@ -17,7 +17,7 @@
   --neutral-900: #1a202c;
   
   /* Text colors */
-  --text-primary: var(--neutral-900);
+  --text-primary: var(--neutral-800);
   --text-secondary: var(--neutral-600);
   --text-muted: var(--neutral-500);
   
