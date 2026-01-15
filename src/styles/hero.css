@@ -65,14 +65,6 @@
   background: var(--primary);
   border-radius: var(--radius-none);
 }
-  display: none;
-}
-
-.lang-btn:not(.active):hover {
-  color: var(--text-primary);
-  background: rgba(26, 32, 44, 0.05);
-  transform: none;
-}
 
 /* Profile Section */
 .profile-header {
@@ -156,28 +148,6 @@
   transform: scale(1.01);
 }
 
-@keyframes profile-intro {
-  0% {
-    transform: scale(0.7);
-    opacity: 0;
-    filter: blur(4px);
-  }
-  60% {
-    transform: scale(1.05);
-    opacity: 0.8;
-    filter: blur(1px);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-    filter: blur(0px);
-  }
-}
-
-.profile-image-container.animate {
-  animation: profile-intro 1.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
 .profile-image:hover {
   filter: contrast(1.05) saturate(1.08) brightness(1.02);
 }
@@ -228,52 +198,6 @@
   color: var(--primary);
 }
 
-/* Curiosity Badge */
-.curiosity-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  margin: var(--space-4) 0;
-  padding: var(--space-2) var(--space-4);
-  background: linear-gradient(135deg, 
-    rgba(102, 126, 234, 0.08) 0%, 
-    rgba(118, 75, 162, 0.06) 50%, 
-    rgba(79, 172, 254, 0.08) 100%);
-  border: 1px solid rgba(102, 126, 234, 0.15);
-  border-radius: 50px;
-  backdrop-filter: blur(8px);
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  transition: var(--transition-all);
-}
-
-.curiosity-badge:hover {
-  transform: translateY(-1px);
-  background: linear-gradient(135deg, 
-    rgba(102, 126, 234, 0.12) 0%, 
-    rgba(118, 75, 162, 0.08) 50%, 
-    rgba(79, 172, 254, 0.12) 100%);
-  border-color: rgba(102, 126, 234, 0.2);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
-}
-
-.curiosity-symbol {
-  font-size: var(--fs-lg);
-  font-weight: 600;
-  color: var(--primary);
-  line-height: 1;
-}
-
-.curiosity-text {
-  font-size: var(--fs-xs);
-  color: var(--text-secondary);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
 /* Bio Section */
 .bio-section {
   text-align: center;
@@ -314,7 +238,7 @@
   align-items: center;
   justify-content: center;
   padding: var(--space-4);
-  background-color: var(--white);
+  background-color: white;
   border-radius: 12px;
   transition: all 0.3s ease;
   border: 2px solid rgba(26, 32, 44, 0.1);
@@ -479,43 +403,4 @@
 
 .scroll-indicator:hover .scroll-text::after {
   transform: translateX(-50%) scaleX(1);
-}
-
-.scroll-dots {
-  display: flex;
-  gap: var(--space-2);
-  align-items: center;
-}
-
-.scroll-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--text-secondary);
-  opacity: 0.4;
-  animation: dot-pulse 2s infinite;
-}
-
-.scroll-dot.active {
-  opacity: 1;
-  transform: scale(1.2);
-}
-
-.scroll-dot:nth-child(2) {
-  animation-delay: 0.3s;
-}
-
-.scroll-dot:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-@keyframes dot-pulse {
-  0%, 100% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.1);
-  }
 }

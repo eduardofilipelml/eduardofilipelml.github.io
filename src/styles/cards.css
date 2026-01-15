@@ -32,10 +32,6 @@
   padding-bottom: var(--space-6);
 }
 
-.timeline-marker {
-  display: none;
-}
-
 .timeline-content {
   background: transparent;
   border-radius: 0;

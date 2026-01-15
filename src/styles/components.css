@@ -81,10 +81,6 @@
   opacity: 0.8;
 }
 
-.footer-divider {
-  display: none;
-}
-
 .footer-social {
   display: flex;
   gap: var(--space-3);
