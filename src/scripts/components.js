@@ -33,6 +33,7 @@ function generateExperienceSection() {
       <div class="timeline-marker"></div>
       <div class="timeline-content">
         <h4 class="timeline-title">${exp.title}</h4>
+        <span class="timeline-company">${exp.company}</span>
         <span class="timeline-period">${exp.period}</span>
         <p class="timeline-description" data-en="${exp.description.en}" data-pt="${exp.description.pt}">${exp.description.en}</p>
         <div class="timeline-tech">
@@ -56,7 +57,11 @@ function generateExperienceSection() {
  * Generate Projects Section
  */
 function generateProjectsSection() {
-  const projects = window.cvData.projects.map(project => `
+  const projects = window.cvData.projects.map(project => {
+    const hasLink = project.link && project.link !== '#';
+    const cta = hasLink ? `<a href="${project.link}" class="project-cta" target="_blank" rel="noopener noreferrer">View Project →</a>` : '';
+    
+    return `
     <div class="project-card">
       <div class="project-header">
         <h4 class="project-title">${project.title}</h4>
@@ -66,8 +71,10 @@ function generateProjectsSection() {
       <div class="project-tech">
         ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
       </div>
+      ${cta}
     </div>
-  `).join('');
+  `;
+  }).join('');
 
   return `
     <section class="cv-section">
