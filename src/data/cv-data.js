@@ -51,8 +51,8 @@ window.cvData = {
       company: "Profidata AG",
       period: "2021 - Present",
       description: {
-        en: "Development and maintenance of Xentis software.",
-        pt: "Desenvolvimento e manutenção do software Xentis."
+        en: "Development and maintenance of Xentis software, including creating automated tests with QF-Test.",
+        pt: "Desenvolvimento e manutenção do software Xentis, incluindo a criação de testes automatizados com QF-Test."
       },
       technologies: ["Java", "Spring", "Swing", "Eclipse RCP", "QF-Test", "JUnit", "Podman", "CI/CD", "Git"]
     },
