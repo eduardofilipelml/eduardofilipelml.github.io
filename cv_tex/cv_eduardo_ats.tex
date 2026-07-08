@@ -1,0 +1,80 @@
+\documentclass[9pt,a4paper]{extarticle}
+
+\usepackage[a4paper,margin=1.2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\setlist[itemize]{leftmargin=12pt,itemsep=0pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+
+\definecolor{heading}{HTML}{1F2937}
+\definecolor{textsoft}{HTML}{4B5563}
+
+\newcommand{\sectiontitle}[1]{%
+  \vspace{3pt}
+  {\small\bfseries\color{heading}#1}\par
+  \rule{\linewidth}{0.35pt}\vspace{1pt}
+}
+
+\newcommand{\roleheader}[3]{%
+  {\bfseries #1} \hfill {\color{textsoft}#2}\\[-1pt]
+  {\itshape #3\/}\\[-2pt]
+}
+
+\begin{document}
+
+{\Large\bfseries Eduardo Meireles Lopes}\\[-1pt]
+{\normalsize Software Engineer | Product Engineer}\\[-1pt]
+Mafra / Lisbon, Portugal \textbar\ \href{mailto:eduardofilipelml@gmail.com}{eduardofilipelml@gmail.com} \textbar\ \href{https://www.linkedin.com/in/eduardomeireleslopes/}{linkedin.com/in/eduardomeireleslopes}\\
+\href{https://github.com/eduardofilipelml}{github.com/eduardofilipelml} \textbar\ \href{https://eduardofilipelml.github.io/}{eduardofilipelml.github.io}
+
+\sectiontitle{Professional Summary}
+Software Engineer with 8+ years of experience building enterprise software across fintech, space technology and web applications. Experienced in designing reliable, maintainable systems spanning desktop, backend integrations and modern web interfaces, with a pragmatic approach to AI-assisted software development.
+
+\sectiontitle{Technical Skills}
+\textbf{Core Engineering:} Java, Swing, Eclipse RCP, Spring, C++, XML\\
+\textbf{Web Engineering:} JavaScript, React, Vite, HTML, CSS\\
+\textbf{Testing and Quality:} JUnit, QF-Test, test automation, regression testing\\
+\textbf{DevOps and Workflow:} Git, CI/CD, Podman, Agile delivery\\
+\textbf{AI-assisted Engineering:} GitHub Copilot, ChatGPT, Cursor, Claude Code
+
+\sectiontitle{Professional Experience}
+\roleheader{Software Developer, Profidata AG}{2021 \textendash{} Present}{Fintech product engineering}
+\begin{itemize}
+  \item Delivered and evolved core Xentis modules supporting portfolio operations, compliance workflows, and fund administration in regulated financial contexts.
+  \item Expanded automated regression and UI coverage, increasing release confidence while reducing manual validation effort.
+\end{itemize}
+
+\roleheader{Software Engineer, Deimos Engenharia}{2017 \textendash{} 2021}{ESA Earth Observation software}
+\begin{itemize}
+  \item Delivered engineering contributions to ESA Earth Observation applications including S2G, ESOV, and DFDL4S.
+  \item Built and evolved Java desktop tooling that improved telemetry visualization and technical data inspection workflows.
+\end{itemize}
+
+\roleheader{Freelance Web Developer, Independent Projects}{2025 \textendash{} Present}{Client web delivery}
+\begin{itemize}
+  \item Delivered custom websites for small businesses from requirements gathering to release.
+  \item Built responsive interfaces that improved readability, maintainability, and overall delivery quality.
+\end{itemize}
+
+\sectiontitle{Selected Projects}
+\textbf{Xentis Investment Management (CURRENT)} \textendash{} Enterprise platform for portfolio management, compliance, and fund administration.\\
+\textbf{ESA Tooling (ESOV, DFDL4S, S2G)} \textendash{} Java desktop and data tooling for mission analysis and telemetry workflows.\\
+\textbf{Web Delivery Portfolio (WEB)} \textendash{} Business websites with responsive UX and maintainable frontend structure.
+
+\sectiontitle{Education}
+\textbf{Master in Computer Science}, FCT-UNL \hfill 2015 \textendash{} 2020\\
+Focus areas: web development, data analysis, machine learning, and visualization.\\[-1pt]
+\textbf{Bachelor in Computer Science}, FCT-UNL \hfill 2010 \textendash{} 2015\\
+Core training in software engineering, algorithms, and object-oriented programming.
+
+\sectiontitle{Languages}
+Portuguese (Native), English (Professional working proficiency), Spanish (Beginner)
+
+\end{document}

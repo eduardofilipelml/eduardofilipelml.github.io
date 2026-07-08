@@ -21,14 +21,14 @@ window.cvData = {
   },
 
   about: {
-    en: "Software Engineer with 8+ years building and maintaining Java solutions in fintech and space-tech environments. I deliver reliable software across implementation, automated testing, and CI/CD, and I use AI-assisted workflows pragmatically to improve development speed and code quality.",
-    pt: "Engenheiro de Software com 8+ anos a desenvolver e manter soluções Java em ambientes fintech e space-tech. Entrego software fiável em todo o ciclo de implementação, testes automatizados e CI/CD, usando fluxos de trabalho assistidos por IA de forma pragmática para melhorar velocidade e qualidade de código."
+    en: "Software Engineer with 8+ years of experience building enterprise software across fintech, space technology, and web applications. Experienced in designing reliable, maintainable systems spanning desktop, backend integrations, and modern web interfaces, with a pragmatic approach to AI-assisted software development.",
+    pt: "Engenheiro de Software com 8+ anos de experiencia a construir software empresarial em fintech, tecnologia espacial e aplicacoes web. Experiente no desenho de sistemas fiaveis e manuteniveis em desktop, integracoes backend e interfaces web modernas, com uma abordagem pragmatica ao desenvolvimento assistido por IA."
   },
 
   hero: {
     tagline: {
-      en: "Building production-ready software with strong engineering fundamentals and practical AI-assisted development.",
-      pt: "Construo software pronto para produção com bases sólidas de engenharia e desenvolvimento assistido por IA de forma prática."
+      en: "Building reliable software across desktop, backend integration, and modern web delivery.",
+      pt: "Construo software fiavel em desktop, integracao backend e entrega web moderna."
     },
     stats: [
       { value: "8+", label: { en: "Years Java", pt: "Anos Java" } },
@@ -39,8 +39,12 @@ window.cvData = {
 
   skills: [
     {
-      category: { en: "Languages & Frameworks", pt: "Linguagens e Frameworks" },
-      items: ["Java", "Swing", "Eclipse RCP", "Spring", "JavaScript", "React", "Vite", "HTML", "CSS", "XML", "C++"]
+      category: { en: "Core Engineering", pt: "Engenharia Core" },
+      items: ["Java", "Swing", "Eclipse RCP", "Spring", "C++", "XML"]
+    },
+    {
+      category: { en: "Web Engineering", pt: "Engenharia Web" },
+      items: ["JavaScript", "React", "Vite", "HTML", "CSS"]
     },
     {
       category: { en: "Testing & Quality", pt: "Testes e Qualidade" },
@@ -64,6 +68,10 @@ window.cvData = {
     {
       language: { en: "English", pt: "Ingles" },
       level: { en: "Professional working proficiency", pt: "Proficiência profissional" }
+    },
+    {
+      language: { en: "Spanish", pt: "Espanhol" },
+      level: { en: "Beginner", pt: "Iniciante" }
     }
   ],
 
@@ -73,19 +81,19 @@ window.cvData = {
       company: "Profidata AG",
       period: "2021 - Present",
       description: {
-        en: "Contribute to core modules of Xentis, an investment management platform supporting portfolio operations, compliance workflows, and fund administration.",
-        pt: "Contribuo para modulos core do Xentis, uma plataforma de gestao de investimentos que suporta operacoes de portfolio, fluxos de compliance e administracao de fundos."
+        en: "Delivered and evolved core Xentis modules supporting portfolio operations, compliance workflows, and fund administration in regulated financial contexts.",
+        pt: "Entreguei e evolui modulos core do Xentis que suportam operacoes de portfolio, fluxos de compliance e administracao de fundos em contextos financeiros regulados."
       },
       achievements: {
         en: [
-          "Expanded automated UI and regression coverage with QF-Test and JUnit to increase release confidence.",
-          "Improved delivery reliability through CI/CD and containerized development workflows.",
-          "Delivered production changes for regulated financial workflows with high correctness requirements."
+          "Expanded automated regression and UI coverage, increasing release confidence while reducing manual validation effort.",
+          "Improved delivery consistency through CI/CD and containerized development workflows.",
+          "Delivered production changes for regulated workflows with strict correctness requirements."
         ],
         pt: [
-          "Expansao da cobertura de testes UI e regressao com QF-Test e JUnit para aumentar a confianca em release.",
-          "Melhoria da fiabilidade de entrega atraves de CI/CD e workflows de desenvolvimento containerizados.",
-          "Entrega de alteracoes em producao para fluxos financeiros regulados com elevada exigencia de correcao."
+          "Expansao da cobertura de regressao e UI, aumentando confianca em release e reduzindo esforco de validacao manual.",
+          "Melhoria da consistencia de entrega atraves de CI/CD e workflows de desenvolvimento containerizados.",
+          "Entrega de alteracoes em producao para fluxos regulados com exigencia elevada de correcao."
         ]
       },
       technologies: ["Java", "Spring", "Swing", "Eclipse RCP", "QF-Test", "JUnit", "Podman", "CI/CD", "Git", "Fintech"]
@@ -95,18 +103,18 @@ window.cvData = {
       company: "Deimos Engenharia",
       period: "2017 - 2021",
       description: {
-        en: "Contributed to ESA Earth Observation applications including S2G, ESOV, DFDL4S, and geospatial tooling for mission data analysis.",
-        pt: "Contribui para aplicacoes ESA de Observacao da Terra, incluindo S2G, ESOV, DFDL4S e ferramentas geoespaciais para analise de dados de missao."
+        en: "Delivered engineering contributions to ESA Earth Observation applications, including S2G, ESOV, DFDL4S, and geospatial tooling for mission data analysis.",
+        pt: "Entreguei contribuicoes de engenharia para aplicacoes ESA de Observacao da Terra, incluindo S2G, ESOV, DFDL4S e tooling geoespacial para analise de dados de missao."
       },
       achievements: {
         en: [
-          "Built and maintained Java-based desktop tools for satellite telemetry visualization and data inspection.",
-          "Supported engineering quality with automated tests and CI practices in mission-critical contexts.",
+          "Built and evolved Java desktop tools that improved telemetry visualization and technical data inspection workflows.",
+          "Strengthened engineering quality through automated testing and CI practices in mission-critical contexts.",
           "Delivered geospatial interfaces for technical users working with CCSDS-compliant datasets."
         ],
         pt: [
-          "Desenvolvimento e manutencao de ferramentas desktop em Java para visualizacao de telemetria e inspecao de dados.",
-          "Suporte a qualidade de engenharia com testes automatizados e praticas de CI em contextos mission-critical.",
+          "Desenvolvimento e evolucao de ferramentas desktop em Java, melhorando fluxos de visualizacao de telemetria e inspecao tecnica de dados.",
+          "Reforco da qualidade de engenharia com testes automatizados e praticas de CI em contextos mission-critical.",
           "Entrega de interfaces geoespaciais para utilizadores tecnicos com datasets compativeis com CCSDS."
         ]
       },
@@ -141,8 +149,8 @@ window.cvData = {
       title: "Xentis Investment Management",
       status: "CURRENT",
       description: {
-        en: "Enterprise platform for portfolio management, compliance, and fund administration in regulated financial environments.",
-        pt: "Plataforma enterprise para gestao de portfolios, compliance e administracao de fundos em ambientes financeiros regulados."
+        en: "Enterprise platform supporting portfolio management, compliance, and fund administration in regulated financial environments.",
+        pt: "Plataforma enterprise para portfolio management, compliance e administracao de fundos em ambientes financeiros regulados."
       },
       technologies: ["Java", "Swing", "Eclipse RCP", "QF-Test"],
       link: "https://www.profidata.com/en/solutions/xentis-suite"
@@ -152,7 +160,7 @@ window.cvData = {
       status: "ESA",
       description: {
         en: "Visualization tooling for ESA satellite orbits and instrument swaths used in mission analysis workflows.",
-        pt: "Ferramenta de visualizacao para orbitas de satelites ESA e faixas de instrumentos usada em fluxos de analise de missao."
+        pt: "Tooling de visualizacao para orbitas de satelites ESA e faixas de instrumentos usado em fluxos de analise de missao."
       },
       technologies: ["Java", "Swing", "XML"],
       link: "https://earth.esa.int/eogateway/tools/esov-software-tools-esov-ng-"
@@ -162,7 +170,7 @@ window.cvData = {
       status: "ESA",
       description: {
         en: "Binary data binding library enabling read and write operations for CCSDS space packets.",
-        pt: "Biblioteca de data binding binario que permite operacoes de leitura e escrita para pacotes espaciais CCSDS."
+        pt: "Biblioteca de data binding binario para operacoes de leitura e escrita em pacotes espaciais CCSDS."
       },
       technologies: ["Java", "JNI", "C++"],
       link: "https://eop-cfi.esa.int/index.php/applications/dfdl4s"
@@ -181,8 +189,8 @@ window.cvData = {
       title: "Carbon Solutions",
       status: "WEB",
       description: {
-        en: "Business website focused on clear service positioning and maintainable frontend structure.",
-        pt: "Website empresarial com foco em posicionamento claro de servicos e estrutura frontend manutenivel."
+        en: "Business website with clear service positioning and maintainable frontend structure.",
+        pt: "Website empresarial com posicionamento claro de servicos e estrutura frontend manutenivel."
       },
       technologies: ["HTML", "CSS", "JavaScript"],
       link: "https://www.carbonsolutions.pt/"
@@ -201,7 +209,7 @@ window.cvData = {
       title: "Catarina Lopes Yoga",
       status: "WEB",
       description: {
-        en: "Service website optimized for readability, trust signals, and straightforward contact flow.",
+        en: "Service website optimized for readability, trust signals, and direct contact flow.",
         pt: "Website de servicos otimizado para legibilidade, sinais de confianca e fluxo de contacto direto."
       },
       technologies: ["HTML", "CSS", "JavaScript"],

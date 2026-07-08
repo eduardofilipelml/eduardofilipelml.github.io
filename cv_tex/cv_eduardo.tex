@@ -52,9 +52,9 @@
 }
 
 \newcommand{\mainsection}[1]{%
-  \vspace{4pt}%
+  \vspace{2pt}%
   {\small\bfseries\color{mainAccent}#1}\\[-5pt]
-  \textcolor{mainRule}{\rule{\linewidth}{0.55pt}}\\[3pt]
+  \textcolor{mainRule}{\rule{\linewidth}{0.55pt}}\\[2pt]
 }
 
 \newcommand{\chip}[1]{%
@@ -77,7 +77,7 @@
 }
 
 \newcommand{\impactpoint}[1]{%
-  {\scriptsize\color{textMain}\textbullet\hspace{4pt}#1}\\[2pt]
+  {\scriptsize\color{textMain}\textbullet\hspace{4pt}#1}\\[1pt]
 }
 
 \newcommand{\projentry}[4]{%
@@ -134,6 +134,11 @@
       {\scriptsize\bfseries\color{sideAccent}AI-assisted Engineering}\\[2pt]
       {\scriptsize\color{sideText}GitHub Copilot, ChatGPT, Claude Code}\\[2pt]
 
+      \sidesection{Languages}
+      {\scriptsize\bfseries\color{sideAccent}Portuguese}\hfill{\scriptsize\color{sideText}Native}\\[2pt]
+      {\scriptsize\bfseries\color{sideAccent}English}\hfill{\scriptsize\color{sideText}Professional}\\[2pt]
+      {\scriptsize\bfseries\color{sideAccent}Spanish}\hfill{\scriptsize\color{sideText}Beginner}\\[2pt]
+
       \vfill
 
       \sidesection{Portfolio}
@@ -158,52 +163,49 @@
       \parbox[t]{\linewidth}{%
         \hspace{0pt}%
         \begin{minipage}[t]{8mm}
-          \color{heroStripe}\rule{8mm}{31mm}
+          \color{heroStripe}\rule{8mm}{27mm}
         \end{minipage}%
         \begin{minipage}[t]{\dimexpr\linewidth-8mm\relax}
-          \vspace{4mm}
+          \vspace{2mm}
           \hspace{5mm}
           \begin{minipage}[t]{\dimexpr\linewidth-10mm\relax}
             {\small\bfseries\color{mainAccent}Professional Summary}\\[2pt]
-            {\small\color{textMain}Software Engineer with 8+ years delivering Java products in fintech and space-tech environments. I build and maintain production software with a focus on reliability, testing discipline, and maintainable architecture, and I use AI-assisted workflows pragmatically to speed up delivery while preserving quality.}\\[4pt]
+            {\small\color{textMain}Software Engineer with 8+ years of experience building enterprise software across fintech, space technology and web applications. Experienced in designing reliable, maintainable systems spanning desktop, backend integrations and modern web interfaces, with a pragmatic approach to AI-assisted software development.}\\[2pt]
           \end{minipage}
-          \vspace{4mm}
+          \vspace{2mm}
         \end{minipage}%
       }%
     }
     \endgroup
-    \\[6pt]
+    \\[3pt]
 
     \mainsection{Impact Highlights}
     \impactpoint{Delivered software across regulated fintech and mission-critical space-tech environments.}
     \impactpoint{Improved release confidence by expanding automated regression and UI test coverage.}
-    \impactpoint{Combined engineering fundamentals with AI-assisted development to accelerate implementation cycles.}
+    \impactpoint{Applied AI-assisted development workflows to accelerate implementation cycles.}
 
 
     \mainsection{Experience}
     \expheader{2021 \textendash{} Present}{Software Developer}{Profidata AG}
     \begin{itemize}\itemsep1pt\parsep0pt\topsep0pt\partopsep0pt\leftmargin14pt
-      \item \scriptsize Developed and maintained core modules of Xentis supporting portfolio operations, compliance workflows, and fund administration.
-      \item \scriptsize Expanded automated UI and regression coverage using QF-Test and JUnit, improving release confidence and reducing manual validation effort.
-      \item \scriptsize Contributed to CI/CD and container-based development workflows to improve delivery consistency in a regulated product context.
+      \item \scriptsize Delivered and evolved core Xentis modules supporting portfolio operations, compliance workflows, and fund administration in regulated financial contexts.
+      \item \scriptsize Expanded automated regression and UI coverage, increasing release confidence while reducing manual validation effort.
     \end{itemize}
-    {\scriptsize\color{textSoft}\chip{Java}\chip{Spring}\chip{Swing}\chip{Eclipse RCP}\chip{QF-Test}\chip{JUnit}\chip{CI/CD}\chip{Podman}\chip{Git}\chip{Fintech}}\\[4pt]
+    {\scriptsize\color{textSoft}\chip{Java}\chip{Spring}\chip{Swing}\chip{Eclipse RCP}\chip{QF-Test}\chip{JUnit}\chip{CI/CD}\chip{Podman}\chip{Git}\chip{Fintech}}\\[2pt]
 
     \expheader{2017 \textendash{} 2021}{Software Engineer}{Deimos Engenharia}
     \begin{itemize}\itemsep1pt\parsep0pt\topsep0pt\partopsep0pt\leftmargin14pt
-      \item \scriptsize Contributed to ESA Earth Observation applications, including S2G, ESOV, and DFDL4S.
-      \item \scriptsize Built and maintained Java-based tooling for satellite telemetry visualization and data inspection.
-      \item \scriptsize Applied testing and CI practices in mission-critical engineering software projects.
+      \item \scriptsize Delivered engineering contributions to ESA Earth Observation applications, including S2G, ESOV, and DFDL4S.
+      \item \scriptsize Built and evolved Java tooling that improved telemetry visualization and technical data inspection workflows in mission-critical contexts.
     \end{itemize}
-    {\scriptsize\color{textSoft}\chip{Java}\chip{Swing}\chip{Eclipse RCP}\chip{JUnit}\chip{CI/CD}\chip{Git}\chip{C++}\chip{OpenLayers}\chip{Leaflet}\chip{ESA}}\\[4pt]
+    {\scriptsize\color{textSoft}\chip{Java}\chip{Swing}\chip{Eclipse RCP}\chip{JUnit}\chip{CI/CD}\chip{Git}\chip{C++}\chip{OpenLayers}\chip{Leaflet}\chip{ESA}}\\[2pt]
 
     \expheader{2025 \textendash{} Present}{Freelance Web Developer}{Independent Projects}
     \begin{itemize}\itemsep1pt\parsep0pt\topsep0pt\partopsep0pt\leftmargin14pt
       \item \scriptsize Delivered custom websites for small businesses from requirements gathering to launch.
-      \item \scriptsize Built responsive interfaces focused on readability, maintainability, and performance.
-      \item \scriptsize Structured reusable frontend components to accelerate delivery and future updates.
+      \item \scriptsize Built responsive interfaces that improved readability, maintainability, and overall delivery quality.
     \end{itemize}
-    {\scriptsize\color{textSoft}\chip{React}\chip{Vite}\chip{JavaScript}\chip{HTML}\chip{CSS}\chip{Client Delivery}}\\[4pt]
+    {\scriptsize\color{textSoft}\chip{React}\chip{Vite}\chip{JavaScript}\chip{HTML}\chip{CSS}\chip{Client Delivery}}\\[2pt]
 
     \mainsection{Selected Projects}
     \projentry{Xentis Investment Management}{CURRENT}
@@ -215,9 +217,6 @@
     \projentry{DFDL4S Data Format}{ESA}
       {Binary data binding library enabling read and write operations for CCSDS space packets.}
       {https://eop-cfi.esa.int/index.php/applications/dfdl4s}
-    \projentry{S2G Earth Observation}{ESA}
-      {Desktop viewer for inspection of CCSDS-compliant satellite telemetry data.}
-      {https://earth.esa.int/eogateway/tools/s2g-data-viewer}
     \projentry{Web Delivery Portfolio}{WEB}
       {Delivered multiple business websites with responsive UX, maintainable code structure, and clear conversion-oriented user journeys.}
       {https://eduardofilipelml.github.io/}
@@ -228,15 +227,7 @@
     {\scriptsize\color{textSoft}Focus areas: web development, data analysis, machine learning, and visualization.}\\[3pt]
     {\small\bfseries\color{textMain}Bachelor in Computer Science}\hfill{\scriptsize\color{textSoft}2010 \textendash{} 2015}\\[-2pt]
     {\small\itshape\color{mainAccent}FCT-UNL\/}\\[-2pt]
-    {\scriptsize\color{textSoft}Core training in software engineering, algorithms, and object-oriented programming.}\\[4pt]
-
-    \mainsection{Languages}
-    {\small\bfseries\color{textMain}Portuguese}\hfill{\scriptsize\color{textSoft}Native}\\[-1pt]
-    {\small\bfseries\color{textMain}English}\hfill{\scriptsize\color{textSoft}Professional working proficiency}
-
-    \vfill
-    \textcolor{mainRule}{\rule{\linewidth}{0.45pt}}\\[2pt]
-    {\scriptsize\itshape\color{textSoft}Production-focused software engineering with Java expertise, practical AI-assisted development, and strong delivery discipline.}
+    {\scriptsize\color{textSoft}Core training in software engineering, algorithms, and object-oriented programming.}\\[2pt]
 
   \end{minipage}%
 \end{minipage}%

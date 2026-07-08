@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.2)  8 JUL 2026 08:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.2)  8 JUL 2026 09:04
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/Projects/eduardofilipelml.github.io/cv_tex/cv_eduardo.tex
-(d:/Projects/eduardofilipelml.github.io/cv_tex/cv_eduardo.tex
+**./cv_eduardo.tex
+(cv_eduardo.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-04-28>
 (C:\Users\admin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -678,112 +677,117 @@ Package hyperref Info: Link coloring ON on input line 90.
 <images/profile3.jpg, id=6, 452.4403pt x 417.05812pt>
 File: images/profile3.jpg Graphic file (type jpg)
 <use images/profile3.jpg>
-Package pdftex.def Info: images/profile3.jpg  used on input line 149.
+Package pdftex.def Info: images/profile3.jpg  used on input line 154.
 (pdftex.def)             Requested size: 82.51271pt x 82.51285pt.
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on i
-nput line 149.
+nput line 154.
 
 (C:\Users\admin\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontaweso
 mefree2.fd)
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on i
-nput line 149.
+nput line 154.
 
 (C:\Users\admin\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontaweso
 mefree1.fd)
 LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on
- input line 149.
+ input line 154.
 
 (C:\Users\admin\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontaweso
 mebrands0.fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <9> not a
 vailable
 (Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead o
-n input line 149.
+n input line 154.
 LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on i
-nput line 149.
+nput line 154.
 
 (C:\Users\admin\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontaweso
 mefree0.fd)
-Underfull \hbox (badness 10000) in paragraph at lines 149--149
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 
  []
 
 
-Underfull \hbox (badness 3019) in paragraph at lines 149--149
+Underfull \hbox (badness 3019) in paragraph at lines 154--154
 []\T1/qhv/m/n/7 Java, Swing, Eclipse RCP, Spring, JavaScript,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--149
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--149
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 
  []
 
 <images/qrcode_web.png, id=11, 2055.68pt x 2055.68pt>
 File: images/qrcode_web.png Graphic file (type png)
 <use images/qrcode_web.png>
-Package pdftex.def Info: images/qrcode_web.png  used on input line 149.
+Package pdftex.def Info: images/qrcode_web.png  used on input line 154.
 (pdftex.def)             Requested size: 82.51299pt x 82.4955pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--176
+Underfull \hbox (badness 10000) in paragraph at lines 178--181
 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+qhv on input line 1
-78.
+83.
 (C:\Users\admin\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\ts1qhv.fd
 File: ts1qhv.fd 2009/09/25 v1.2 font definition file for TS1/qhv
 )
-Underfull \hbox (badness 10000) in paragraph at lines 177--181
+Underfull \hbox (badness 10000) in paragraph at lines 182--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--185
+Underfull \hbox (badness 10000) in paragraph at lines 188--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--224
+Underfull \hbox (badness 10000) in paragraph at lines 210--223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--232
+Underfull \hbox (badness 10000) in paragraph at lines 224--231
 
  []
 
@@ -806,22 +810,22 @@ Package rerunfilecheck Info: File `cv_eduardo.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 23048 strings out of 467683
- 447799 string characters out of 5414722
- 849398 words of memory out of 5000000
- 51773 multiletter control sequences out of 15000+600000
- 666961 words of font info for 60 fonts, out of 8000000 for 9000
+ 23045 strings out of 467683
+ 447648 string characters out of 5414722
+ 844666 words of memory out of 5000000
+ 51772 multiletter control sequences out of 15000+600000
+ 663735 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,12n,94p,437b,726s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,12n,94p,393b,726s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5
 /FontAwesome5Brands-Regular.pfb><C:/Users/admin/AppData/Local/Programs/MiKTeX/f
 onts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/admin/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/admin/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/adm
 in/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvri.pfb>
-Output written on cv_eduardo.pdf (1 page, 513644 bytes).
+Output written on cv_eduardo.pdf (1 page, 512290 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 66 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
