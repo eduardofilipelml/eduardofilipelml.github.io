@@ -11,14 +11,37 @@ function generateCVIntro() {
 }
 
 /**
- * Generate About Section
+ * Generate Professional Summary Section
  */
-function generateAboutSection() {
+function generateSummarySection() {
   return `
     <section class="cv-section cv-about">
-      <h3 class="cv-section-title" data-en="About Me" data-pt="Sobre Mim">About Me</h3>
+      <h3 class="cv-section-title" data-en="Professional Summary" data-pt="Resumo Profissional">Professional Summary</h3>
       <div class="about-content">
         <p class="about-description" data-en="${window.cvData.about.en}" data-pt="${window.cvData.about.pt}">${window.cvData.about.en}</p>
+      </div>
+    </section>
+  `;
+}
+
+/**
+ * Generate Skills Section
+ */
+function generateSkillsSection() {
+  const skills = (window.cvData.skills || []).map(skill => `
+    <div class="skill-group">
+      <h4 class="skill-group-title" data-en="${skill.category.en}" data-pt="${skill.category.pt}">${skill.category.en}</h4>
+      <div class="skill-group-tags">
+        ${skill.items.map(item => `<span class="tech-tag">${item}</span>`).join('')}
+      </div>
+    </div>
+  `).join('');
+
+  return `
+    <section class="cv-section">
+      <h3 class="cv-section-title" data-en="Technical Skills" data-pt="Competencias Tecnicas">Technical Skills</h3>
+      <div class="skills-grid">
+        ${skills}
       </div>
     </section>
   `;
@@ -36,6 +59,11 @@ function generateExperienceSection() {
         <span class="timeline-company">${exp.company}</span>
         <span class="timeline-period">${exp.period}</span>
         <p class="timeline-description" data-en="${exp.description.en}" data-pt="${exp.description.pt}">${exp.description.en}</p>
+        ${exp.achievements ? `
+          <ul class="timeline-achievements">
+            ${exp.achievements.en.map((item, index) => `<li data-en="${item}" data-pt="${exp.achievements.pt[index]}">${item}</li>`).join('')}
+          </ul>
+        ` : ''}
         <div class="timeline-tech">
           ${exp.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
         </div>
@@ -48,6 +76,27 @@ function generateExperienceSection() {
       <h3 class="cv-section-title" data-en="Work Experience" data-pt="Experiência Profissional">Work Experience</h3>
       <div class="timeline">
         ${experiences}
+      </div>
+    </section>
+  `;
+}
+
+/**
+ * Generate Languages Section
+ */
+function generateLanguagesSection() {
+  const languages = (window.cvData.languages || []).map(item => `
+    <div class="language-item">
+      <span class="language-name" data-en="${item.language.en}" data-pt="${item.language.pt}">${item.language.en}</span>
+      <span class="language-level" data-en="${item.level.en}" data-pt="${item.level.pt}">${item.level.en}</span>
+    </div>
+  `).join('');
+
+  return `
+    <section class="cv-section">
+      <h3 class="cv-section-title" data-en="Languages" data-pt="Idiomas">Languages</h3>
+      <div class="languages-list">
+        ${languages}
       </div>
     </section>
   `;
@@ -118,10 +167,12 @@ function initializeCVComponents() {
   const cvSections = document.getElementById('cv-sections');
   if (cvSections) {
     cvSections.innerHTML = `
-      ${generateAboutSection()}
+      ${generateSummarySection()}
+      ${generateSkillsSection()}
       ${generateExperienceSection()}
       ${generateProjectsSection()}
       ${generateEducationSection()}
+      ${generateLanguagesSection()}
     `;
   }
 }
@@ -130,8 +181,10 @@ function initializeCVComponents() {
 window.CVComponents = {
   initialize: initializeCVComponents,
   generateIntro: generateCVIntro,
-  generateAbout: generateAboutSection,
+  generateSummary: generateSummarySection,
+  generateSkills: generateSkillsSection,
   generateExperience: generateExperienceSection,
   generateProjects: generateProjectsSection,
-  generateEducation: generateEducationSection
+  generateEducation: generateEducationSection,
+  generateLanguages: generateLanguagesSection
 };

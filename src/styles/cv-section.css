@@ -129,6 +129,79 @@
   letter-spacing: -0.3px;
 }
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+}
+
+.skill-group {
+  border: 1px solid var(--neutral-200);
+  padding: var(--space-4);
+  background: #ffffff;
+}
+
+.skill-group-title {
+  margin: 0 0 var(--space-3) 0;
+  font-size: var(--fs-md);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.skill-group-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.timeline-achievements {
+  margin: 0 0 var(--space-3) 0;
+  padding-left: var(--space-4);
+  color: var(--neutral-700);
+}
+
+.timeline-achievements li {
+  margin-bottom: var(--space-2);
+  line-height: 1.6;
+}
+
+.languages-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-3);
+}
+
+.language-item {
+  border: 1px solid var(--neutral-200);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  background: #ffffff;
+}
+
+.language-name {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.language-level {
+  color: var(--text-secondary);
+  font-size: var(--fs-sm);
+}
+
+.cv-open-to {
+  border-top: 1px solid var(--neutral-200);
+  padding-top: var(--space-8) !important;
+}
+
+.open-to-description {
+  color: var(--neutral-700);
+  font-size: var(--fs-md);
+  line-height: 1.7;
+  margin: 0;
+}
+
 /* CV Footer */
 .cv-footer {
   display: flex;

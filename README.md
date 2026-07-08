@@ -1,6 +1,6 @@
 # Eduardo Meireles Lopes – Personal Portfolio
 
-My personal portfolio showcasing my work as a Java Software Developer and Creative AI User.
+My personal portfolio showcasing my work as a Software Engineer and Product Engineer.
 
 ## Quick Start
 

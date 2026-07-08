@@ -1,0 +1,243 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[a4paper,margin=0pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tgheros}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{ragged2e}
+\usepackage{tikz}
+
+\pagestyle{empty}
+\renewcommand{\familydefault}{\sfdefault}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\fboxsep}{0pt}
+
+\definecolor{sideBg}{HTML}{5E8C70}
+\definecolor{sideRule}{HTML}{7AA189}
+\definecolor{sideAccent}{HTML}{E8F2EC}
+\definecolor{sideText}{HTML}{F9FAFB}
+\definecolor{mainAccent}{HTML}{5E8C70}
+\definecolor{mainSoft}{HTML}{E8F2EC}
+\definecolor{mainRule}{HTML}{E5E7EB}
+\definecolor{textMain}{HTML}{1F2937}
+\definecolor{textSoft}{HTML}{4B5563}
+\definecolor{heroFill}{HTML}{F9FAFB}
+\definecolor{heroStripe}{HTML}{E8F2EC}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=mainAccent,
+  linkcolor=mainAccent,
+  pdftitle={Eduardo Meireles Lopes \textendash{} CV},
+  pdfauthor={Eduardo Meireles Lopes}
+}
+
+\newlength{\sideW}\setlength{\sideW}{68mm}
+\newlength{\sideP}\setlength{\sideP}{6mm}
+\newlength{\sideI}\setlength{\sideI}{56mm}
+\newlength{\mainW}\setlength{\mainW}{142mm}
+\newlength{\mainP}\setlength{\mainP}{7mm}
+\newlength{\mainI}\setlength{\mainI}{126mm}
+
+\newcommand{\sidesection}[1]{%
+  \vspace{6pt}%
+  {\scriptsize\bfseries\color{sideAccent}#1}\\[-3pt]
+  \textcolor{sideRule}{\rule{\linewidth}{0.5pt}}\\[3pt]
+}
+
+\newcommand{\mainsection}[1]{%
+  \vspace{4pt}%
+  {\small\bfseries\color{mainAccent}#1}\\[-5pt]
+  \textcolor{mainRule}{\rule{\linewidth}{0.55pt}}\\[3pt]
+}
+
+\newcommand{\chip}[1]{%
+  \begingroup
+  \setlength{\fboxsep}{2.2pt}%
+  \colorbox{mainSoft}{\tiny\textcolor{mainAccent}{\textbf{#1}}}%
+  \endgroup\hspace{1pt}%
+}
+
+\newcommand{\projectbadge}[1]{%
+  \begingroup
+  \setlength{\fboxsep}{2.2pt}%
+  \colorbox{mainSoft}{\tiny\textcolor{mainAccent}{\textbf{#1}}}%
+  \endgroup
+}
+
+\newcommand{\expheader}[3]{%
+  {\color{mainAccent}\large\textbullet}\hspace{5pt}{\scriptsize\bfseries\color{textSoft}#1}\\[-3pt]
+  \hspace{9pt}{\small\bfseries\color{textMain}#2}\hspace{4pt}{\color{mainRule}|}\hspace{4pt}{\small\itshape\color{mainAccent}#3\/}\\[2pt]
+}
+
+\newcommand{\impactpoint}[1]{%
+  {\scriptsize\color{textMain}\textbullet\hspace{4pt}#1}\\[2pt]
+}
+
+\newcommand{\projentry}[4]{%
+  \noindent
+  {\small\bfseries\color{textMain}#1}\hfill\projectbadge{#2}\\[-3pt]
+  {\scriptsize\color{textSoft}#3}\\[-3pt]
+  {\scriptsize\color{mainAccent}\faLink\ \href{#4}{View project}}\\[2pt]
+}
+
+\begin{document}
+
+\noindent
+\colorbox{sideBg}{%
+  \parbox[t][297mm][t]{\sideW}{%
+    \vspace{7mm}%
+    \hspace{\sideP}%
+    \begin{minipage}[t][278mm][t]{\sideI}
+
+      \begin{center}
+        \begin{tikzpicture}
+          \clip (0,0) circle (14.5mm);
+          \node at (0,0) {\includegraphics[width=29mm,height=29mm]{images/profile3.jpg}};
+          \draw[sideAccent, line width=1pt] (0,0) circle (14.5mm);
+        \end{tikzpicture}
+      \end{center}
+      \vspace{4mm}
+
+      {\fontsize{15}{17}\selectfont\bfseries\color{white}Eduardo\\[1pt]Meireles Lopes}\\[4pt]
+      {\scriptsize\bfseries\color{sideAccent}Software Engineer \\[-1pt] Product Engineer}\\[4pt]
+      {\scriptsize\color{sideText}\faMapMarker\hspace{3pt}Mafra / Lisbon, Portugal}\\[3pt]
+      \textcolor{sideRule}{\rule{\linewidth}{0.5pt}}
+
+      \sidesection{Contact}
+      {\small\color{sideAccent}\faEnvelope}\hspace{5pt}{\tiny\href{mailto:eduardofilipelml@gmail.com}{\textcolor{sideText}{eduardofilipelml@gmail.com}}}\\[4pt]
+      {\small\color{sideAccent}\faLinkedin}\hspace{5pt}{\tiny\href{https://www.linkedin.com/in/eduardomeireleslopes/}{\textcolor{sideText}{linkedin.com/in/eduardomeireleslopes}}}\\[4pt]
+      {\small\color{sideAccent}\faGithub}\hspace{5pt}{\tiny\href{https://github.com/eduardofilipelml}{\textcolor{sideText}{github.com/eduardofilipelml}}}\\[4pt]
+      {\small\color{sideAccent}\faGlobe}\hspace{5pt}{\tiny\href{https://eduardofilipelml.github.io/}{\textcolor{sideText}{eduardofilipelml.github.io}}}
+
+      \sidesection{Domains}
+      {\scriptsize\color{sideText}
+        \faChevronRight\hspace{4pt}Financial Software\\[2pt]
+        \faChevronRight\hspace{4pt}Space Technology (ESA)\\[2pt]
+        \faChevronRight\hspace{4pt}Web Product Delivery\\[2pt]
+        \faChevronRight\hspace{4pt}AI-assisted Engineering
+      }\\[2pt]
+
+      \sidesection{Skills}
+      {\scriptsize\bfseries\color{sideAccent}Languages \& Frameworks}\\[2pt]
+      {\scriptsize\color{sideText}Java, Swing, Eclipse RCP, Spring, JavaScript, React, Vite, HTML, CSS, XML, C++}\\[4pt]
+      {\scriptsize\bfseries\color{sideAccent}Testing \& Quality}\\[2pt]
+      {\scriptsize\color{sideText}JUnit, QF-Test, test automation, regression testing}\\[4pt]
+      {\scriptsize\bfseries\color{sideAccent}DevOps \& Workflow}\\[2pt]
+      {\scriptsize\color{sideText}Git, CI/CD, Podman, Agile delivery}\\[4pt]
+      {\scriptsize\bfseries\color{sideAccent}AI-assisted Engineering}\\[2pt]
+      {\scriptsize\color{sideText}GitHub Copilot, ChatGPT, Claude Code}\\[2pt]
+
+      \vfill
+
+      \sidesection{Portfolio}
+      \begin{center}
+        {\setlength{\fboxsep}{3pt}\setlength{\fboxrule}{0.7pt}%
+        \fcolorbox{sideAccent}{white}{\includegraphics[width=29mm]{images/qrcode_web.png}}}\\[4pt]
+        {\tiny\color{sideText}Scan to visit my website}
+      \end{center}
+
+    \end{minipage}%
+    \vspace{7mm}%
+  }%
+}%
+\begin{minipage}[t][297mm][t]{\mainW}
+  \vspace{7mm}%
+  \hspace{\mainP}%
+  \begin{minipage}[t][279mm][t]{\mainI}
+
+    \begingroup
+    \setlength{\fboxsep}{0pt}%
+    \colorbox{heroFill}{%
+      \parbox[t]{\linewidth}{%
+        \hspace{0pt}%
+        \begin{minipage}[t]{8mm}
+          \color{heroStripe}\rule{8mm}{31mm}
+        \end{minipage}%
+        \begin{minipage}[t]{\dimexpr\linewidth-8mm\relax}
+          \vspace{4mm}
+          \hspace{5mm}
+          \begin{minipage}[t]{\dimexpr\linewidth-10mm\relax}
+            {\small\bfseries\color{mainAccent}Professional Summary}\\[2pt]
+            {\small\color{textMain}Software Engineer with 8+ years delivering Java products in fintech and space-tech environments. I build and maintain production software with a focus on reliability, testing discipline, and maintainable architecture, and I use AI-assisted workflows pragmatically to speed up delivery while preserving quality.}\\[4pt]
+          \end{minipage}
+          \vspace{4mm}
+        \end{minipage}%
+      }%
+    }
+    \endgroup
+    \\[6pt]
+
+    \mainsection{Impact Highlights}
+    \impactpoint{Delivered software across regulated fintech and mission-critical space-tech environments.}
+    \impactpoint{Improved release confidence by expanding automated regression and UI test coverage.}
+    \impactpoint{Combined engineering fundamentals with AI-assisted development to accelerate implementation cycles.}
+
+
+    \mainsection{Experience}
+    \expheader{2021 \textendash{} Present}{Software Developer}{Profidata AG}
+    \begin{itemize}\itemsep1pt\parsep0pt\topsep0pt\partopsep0pt\leftmargin14pt
+      \item \scriptsize Developed and maintained core modules of Xentis supporting portfolio operations, compliance workflows, and fund administration.
+      \item \scriptsize Expanded automated UI and regression coverage using QF-Test and JUnit, improving release confidence and reducing manual validation effort.
+      \item \scriptsize Contributed to CI/CD and container-based development workflows to improve delivery consistency in a regulated product context.
+    \end{itemize}
+    {\scriptsize\color{textSoft}\chip{Java}\chip{Spring}\chip{Swing}\chip{Eclipse RCP}\chip{QF-Test}\chip{JUnit}\chip{CI/CD}\chip{Podman}\chip{Git}\chip{Fintech}}\\[4pt]
+
+    \expheader{2017 \textendash{} 2021}{Software Engineer}{Deimos Engenharia}
+    \begin{itemize}\itemsep1pt\parsep0pt\topsep0pt\partopsep0pt\leftmargin14pt
+      \item \scriptsize Contributed to ESA Earth Observation applications, including S2G, ESOV, and DFDL4S.
+      \item \scriptsize Built and maintained Java-based tooling for satellite telemetry visualization and data inspection.
+      \item \scriptsize Applied testing and CI practices in mission-critical engineering software projects.
+    \end{itemize}
+    {\scriptsize\color{textSoft}\chip{Java}\chip{Swing}\chip{Eclipse RCP}\chip{JUnit}\chip{CI/CD}\chip{Git}\chip{C++}\chip{OpenLayers}\chip{Leaflet}\chip{ESA}}\\[4pt]
+
+    \expheader{2025 \textendash{} Present}{Freelance Web Developer}{Independent Projects}
+    \begin{itemize}\itemsep1pt\parsep0pt\topsep0pt\partopsep0pt\leftmargin14pt
+      \item \scriptsize Delivered custom websites for small businesses from requirements gathering to launch.
+      \item \scriptsize Built responsive interfaces focused on readability, maintainability, and performance.
+      \item \scriptsize Structured reusable frontend components to accelerate delivery and future updates.
+    \end{itemize}
+    {\scriptsize\color{textSoft}\chip{React}\chip{Vite}\chip{JavaScript}\chip{HTML}\chip{CSS}\chip{Client Delivery}}\\[4pt]
+
+    \mainsection{Selected Projects}
+    \projentry{Xentis Investment Management}{CURRENT}
+      {Enterprise platform for portfolio management, compliance, and fund administration in regulated financial environments.}
+      {https://www.profidata.com/en/solutions/xentis-suite}
+    \projentry{ESOV NG Visualization}{ESA}
+      {Visualization tooling for ESA satellite orbits and instrument swaths used in mission analysis workflows.}
+      {https://earth.esa.int/eogateway/tools/esov-software-tools-esov-ng-}
+    \projentry{DFDL4S Data Format}{ESA}
+      {Binary data binding library enabling read and write operations for CCSDS space packets.}
+      {https://eop-cfi.esa.int/index.php/applications/dfdl4s}
+    \projentry{S2G Earth Observation}{ESA}
+      {Desktop viewer for inspection of CCSDS-compliant satellite telemetry data.}
+      {https://earth.esa.int/eogateway/tools/s2g-data-viewer}
+    \projentry{Web Delivery Portfolio}{WEB}
+      {Delivered multiple business websites with responsive UX, maintainable code structure, and clear conversion-oriented user journeys.}
+      {https://eduardofilipelml.github.io/}
+
+    \mainsection{Education}
+    {\small\bfseries\color{textMain}Master in Computer Science}\hfill{\scriptsize\color{textSoft}2015 \textendash{} 2020}\\[-2pt]
+    {\small\itshape\color{mainAccent}FCT-UNL\/}\\[-2pt]
+    {\scriptsize\color{textSoft}Focus areas: web development, data analysis, machine learning, and visualization.}\\[3pt]
+    {\small\bfseries\color{textMain}Bachelor in Computer Science}\hfill{\scriptsize\color{textSoft}2010 \textendash{} 2015}\\[-2pt]
+    {\small\itshape\color{mainAccent}FCT-UNL\/}\\[-2pt]
+    {\scriptsize\color{textSoft}Core training in software engineering, algorithms, and object-oriented programming.}\\[4pt]
+
+    \mainsection{Languages}
+    {\small\bfseries\color{textMain}Portuguese}\hfill{\scriptsize\color{textSoft}Native}\\[-1pt]
+    {\small\bfseries\color{textMain}English}\hfill{\scriptsize\color{textSoft}Professional working proficiency}
+
+    \vfill
+    \textcolor{mainRule}{\rule{\linewidth}{0.45pt}}\\[2pt]
+    {\scriptsize\itshape\color{textSoft}Production-focused software engineering with Java expertise, practical AI-assisted development, and strong delivery discipline.}
+
+  \end{minipage}%
+\end{minipage}%
+\end{document}

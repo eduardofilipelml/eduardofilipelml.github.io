@@ -1,0 +1,10 @@
+geometry
+lmodern
+xcolor
+hyperref
+enumitem
+tools
+titlesec
+paracol
+setspace
+ragged2e
